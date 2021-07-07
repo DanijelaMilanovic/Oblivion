@@ -24,5 +24,23 @@ namespace Oblivion_Prototip
         {
             InitializeComponent();
         }
+
+        private void LogInWindow_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            {
+                WindowState = WindowState.Normal;
+                WindowStyle = WindowStyle.ThreeDBorderWindow;
+            }
+
+        }
+
+        private void LogInWindow_StateChanged(object sender, EventArgs e)
+        {
+            if (WindowState == WindowState.Maximized)
+            {
+                WindowStyle = WindowStyle.None;
+            }
+        }
     }
 }

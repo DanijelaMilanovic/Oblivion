@@ -64,7 +64,6 @@
             Style="{StaticResource MaterialDesignFlatButton}"
             Background="#AA0B0808"
              Foreground="Gray"
-            ToolTip="MaterialDesignFlatButton"
             Content="Prijavi me" 
             HorizontalAlignment="Center"
             VerticalAlignment="Top"

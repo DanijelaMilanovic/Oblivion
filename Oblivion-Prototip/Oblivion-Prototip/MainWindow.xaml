@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Oblivion_Prototip"
         mc:Ignorable="d"
-        Title="MainWindow" Height="700" Width="1000" MinHeight="700" MinWidth="1000" WindowStyle="None" WindowState="Maximized" 
+        Title="Oblivion" Height="700" Width="1000" MinHeight="700" MinWidth="1000" WindowStyle="None" WindowState="Maximized" 
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
-        Background="Black"
+        Background="#FF01010C"
         PreviewKeyDown="LogInWindow_PreviewKeyDown" StateChanged="LogInWindow_StateChanged"
         FontFamily="Zen Tokyo Zoo" FontWeight="Bold" FontSize="15">
     <Grid>
@@ -29,8 +29,8 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Image Name="imgLogo" Grid.Column="1" Height="300" Width="300" Source="logo.png" />
-        <TextBlock  Foreground="White" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="WrapWithOverflow" 
+        <Image Name="imgLogo" Grid.Column="1" Height="450" Width="450" Source="logoOblivion.png" Grid.RowSpan="2"/>
+        <TextBlock  Foreground="White" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="WrapWithOverflow" 
                    Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit sapien eget ullamcorper placerat. Integer vulputate id eros in fringilla. Cras eget feugiat ipsum. Quisque elementum ac tortor congue molestie. Proin imperdiet eu felis sed tincidunt. Aenean cursus enim eu ante bibendum blandit. Maecenas interdum nisi quis facilisis rhoncus. Pellentesque sollicitudin fringilla libero non eleifend. Suspendisse vehicula, erat suscipit bibendum sollicitudin, nunc enim convallis elit, non faucibus neque tellus ac metus. Morbi tincidunt leo eu blandit molestie. In auctor ornare erat non viverra. Mauris placerat libero sit amet consequat consectetur." 
                    VerticalAlignment="Center"  Grid.RowSpan="5"/>
         <TextBox
@@ -39,9 +39,9 @@
             VerticalAlignment="Top"
             Style="{StaticResource MaterialDesignFilledTextBox}"
             AcceptsReturn="True"
-            TextWrapping="Wrap"
+            TextWrapping="NoWrap"
             MaxWidth="400"
-            materialDesign:HintAssist.Hint="Korisničko ime" 
+            materialDesign:HintAssist.Hint="Korisničko ime"
             Grid.Row="2"/>
         <PasswordBox
              Background="#AA0B0808"

@@ -25,6 +25,10 @@ namespace Oblivion_Prototip
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Logika izlaza iz aplikacije i omogućavanje promjene prikaza
+        /// </summary>
+        #region Upravljanje prikazom i izlazom iz aplikacije
         private void LogInWindow_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Escape)
@@ -42,5 +46,6 @@ namespace Oblivion_Prototip
                 WindowStyle = WindowStyle.None;
             }
         }
+        #endregion
     }
 }

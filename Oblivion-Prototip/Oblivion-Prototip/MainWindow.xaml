@@ -60,14 +60,14 @@
             Grid.Row="4"
             Style="{StaticResource MaterialDesignCheckBox}" 
         />
-        <Button
+        <Button x:Name="btnSignIn"
             Style="{StaticResource MaterialDesignFlatButton}"
             Background="#AA0B0808"
              Foreground="Gray"
             Content="Prijavi me" 
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Grid.Row="5"
+            Grid.Row="5" Click="btnSignIn_Click"
          />
         <TextBlock  FontSize="13" Foreground="Gray" HorizontalAlignment="Center" Grid.Row="6" TextWrapping="WrapWithOverflow" 
             Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit sapien eget ullamcorper placerat." 

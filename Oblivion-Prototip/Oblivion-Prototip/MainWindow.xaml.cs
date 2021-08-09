@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using MySql.Data.MySqlClient;
+
 namespace Oblivion_Prototip
 {
     /// <summary>
@@ -47,5 +49,13 @@ namespace Oblivion_Prototip
             }
         }
         #endregion
+
+        //ZAVRSITI KOD 
+        //FALE KORISNICKO IME I SIFRA...
+        private void btnSignIn_Click(object sender, RoutedEventArgs e)
+        {
+            string cmd_string = "SELECT * FROM `igraonica`.`radnik` WHERE ";
+            MySqlCommand cmd = new MySqlCommand();
+        }
     }
 }

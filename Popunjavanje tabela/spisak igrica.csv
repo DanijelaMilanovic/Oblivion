@@ -1,30 +1,30 @@
 naziv,slike,vrsta,igrivost
-Metal Gear Solid V: The Phantom Pain,metal_gear_5.jpg,"Akciona, Avantura",
-American McGee's Alice,AMA.jpg,"Akciona,  Avantura, platformer",
-Ark: Prezivljavanje Evolved,ark-survival-evolved.jpg,"Akciona, Avantura,  Prezivljavanje",
+Metal Gear Solid V: The Phantom Pain,metal_gear_5.jpg,"Akciona, Avantura",Multiplayer
+American McGee's Alice,AMA.jpg,"Akciona, Avantura, Platformer",Singleplayer
+Ark: Survival Evolved,ark-survival-evolved.jpg,"Akciona, Avantura, Preživljavanje",Multiplayer
 Age of Empires,Age_of_Empires.jpg,Strategija u realnom vremenu,Multiplayer
-ARMA 3,arma.jpg,Takticka pucacina,Multiplayer
+ARMA 3,arma.jpg,Takticka Pucaèina,Multiplayer
 Civilization IV,CivilizationIV.jpg,"Potezna strategija, 4X",Multiplayer
 Command & Conquer: Red Alert,command-conquer-red-alert.jpg,Strategija u realnom vremenu,Multiplayer
 Dark Souls II,Dark_Souls_II.jpg,"Akciona, Igranje uloga",Multiplayer
 Dark Souls III,Dark_Souls3.jpg,"Akciona, Igranje uloga",Multiplayer
-DayZ,DayZ.jpg,Prezivljavanje,Multiplayer
-Doom,Doom.jpg,Pucacina iz prvog lica,Multiplayer
-Doom 3,Doom_3.jpg,"Pucacina iz prvog lica, Prezivljavanje horror",Multiplayer
-Doom II: Hell on Earth,DOOM-II-Hell-on-Earth.jpg,Pucacina iz prvog lica,Multiplayer
+DayZ,DayZ.jpg,Preživljavanje,Multiplayer
+Doom,Doom.jpg,Pucaèina iz prvog lica,Multiplayer
+Doom 3,Doom_3.jpg,"Pucaèina iz prvog lica, Preživljavanje horror",Multiplayer
+Doom II: Hell on Earth,DOOM-II-Hell-on-Earth.jpg,Pucaèina iz prvog lica,Multiplayer
 Euro Truck Simulator 2,euro-truck-simulator-2.jpg,Simulacija voznje,Multiplayer
 EverQuest,EverQuest.jpg,MMORPG,Multiplayer
 Fall Guys,FallGuys.jpg,Bitka do poslednjeg,Multiplayer
 Guild Wars,GuildWars.jpg,MMORPG,Multiplayer
 Guild Wars 2,GuildWars2.jpg,MMORPG,Multiplayer
 Lords of the Realm II,Lords_of_the_Realm_II.jpg,Potezna strategija,Multiplayer
-PlayerUnknown's Battlegrounds,Pubg.jpg,"Pucacina, Bitka do poslednjeg",Multiplayer
-Rust,Rust.jpg,Prezivljavanje,Multiplayer
+PlayerUnknown's Battlegrounds,Pubg.jpg,"Pucaèina, Bitka do poslednjeg",Multiplayer
+Rust,Rust.jpg,Preživljavanje,Multiplayer
 StarCraft,StarCraft.jpg,Strategija u realnom vremenu,Multiplayer
 StarCraft II: Wings of Liberty,StarCraft2.jpg,Strategija u realnom vremenu,Multiplayer
-The Forest,Forest.jpg,Prezivljavanje,Multiplayer
+The Forest,Forest.jpg,Preživljavanje,Multiplayer
 The Sims 2,The_Sims_2.jpg,Simulacija zivota,Multiplayer
-Valheim,valheim.jpg,Prezivljavanje,Multiplayer
+Valheim,valheim.jpg,Preživljavanje,Multiplayer
 Warcraft II: Tides of Darkness,Warcraft-2-Tides-Of-Darkness.jpg,Strategija u realnom vremenu,Multiplayer
 Warcraft III: Reign of Chaos,WarcraftIII.jpg,Strategija u realnom vremenu,Multiplayer
 "Warhammer 40,000: Dawn of War (including expansions)",W40K-DOW.jpg,Strategija u realnom vremenu,Multiplayer
@@ -33,142 +33,143 @@ Caesar II,caesar-ii.jpg,Gradjenje grada game,Singleplayer
 Cities: Skylines,CitiesSkyline.jpg,Gradjenje grada,Singleplayer
 Cyberpunk 2077,Cyberpunk_2077.jpg,"Akciona, Igranje uloga",Singleplayer
 Final Fantasy VII,FFVII.jpg,Igranje uloga,Singleplayer
-Half-Life,Half-Life_1.jpg,Pucacina iz prvog lica,Singleplayer
+Half-Life,Half-Life_1.jpg,Pucaèina iz prvog lica,Singleplayer
 Last Ninja 2,LastNinja2.jpg,"Akciona, Avantura",Singleplayer
 Life Is Strange,life-is-strange.jpg,Graficka avantura,Singleplayer
 Myst,Mist.jpg,"Avantura, puzle",Singleplayer
 POD,POD.jpg,Trke,Singleplayer
 Riven,Riven.jpg,Graficka avantura,Singleplayer
-RollerCoaster Tycoon,RollerCoasterTaycoon.jpg,Simulacija gradjenja i upravljanja,Singleplayer
+RollerCoaster Tycoon,RollerCoasterTaycoon.jpg,Simulacija graðenja i upravljanja,Singleplayer
 RollerCoaster Tycoon 3,RollerCoasterTaycoon3.jpg,Simulacija izgradnje i upravljanja,Singleplayer
 SimCity 3000,SimCity3000.jpg,Gradjenje grada,Singleplayer
 The Last Ninja,Ninja.jpg,"Akciona, Avantura",Singleplayer
 The Sims,Sims1.jpg,Simulacija zivota,Singleplayer
 The Sims 3,thesims3.jpg,Simulacija zivota,Singleplayer
 The Witcher 3: Wild Hunt,Witcher-3-Wild-Hunt.jpg,"Akciona, Igranje uloga",Singleplayer
-Theme Park,Theme_Park.jpg,Simulacija gradjenja i upravljanja,Singleplayer
+Theme Park,Theme_Park.jpg,Simulacija graðenja i upravljanja,Singleplayer
 Where in the World Is Carmen Sandiego?,WITWICS.jpg,Obrazovna,Singleplayer
-Caesar III,caesar-iii.jpg,Gradjenje grada game,Singleplayer 
-Half-Life 2,Half-Life_2.jpg,Pucacina iz prvog lica,Singleplayer 
+Caesar III,caesar-iii.jpg,Gradjenje grada,Singleplayer 
+Half-Life 2,Half-Life_2.jpg,Pucaèina iz prvog lica,Singleplayer 
 Anno 1602,Anno_1602.jpg,Gradjenje grada,"Singleplayer, Multiplayer"
 Command & Conquer,Command_&_Conquer.jpg,Strategija u realnom vremenu,"Singleplayer, Multiplayer"
-Crysis,Crysis.jpg,Pucacina iz prvog lica,"Singleplayer, Multiplayer"
+Crysis,Crysis.jpg,Pucaèina iz prvog lica,"Singleplayer, Multiplayer"
 Dark Souls,Dark_Souls.jpg,"Akciona, Igranje uloga","Singleplayer, Multiplayer"
 Diablo,Diablo.jpg,"Akciona, Igranje uloga","Singleplayer, Multiplayer"
 Diablo II,DiabloII.jpg,"Akciona, Igranje uloga","Singleplayer, Multiplayer"
 Diablo III,DiabloIII.jpg,"Akciona, Igranje uloga","Singleplayer, Multiplayer"
-Factorio,Factorio.jpg,Simulacija gradjenja i upravljanjam,"Singleplayer, Multiplayer"
-Garry's Mod,Garry'sMod.jpg,Prezivljavanje,"Singleplayer, Multiplayer"
-Minecraft,Minecraft.jpg,"Sandbox, Prezivljavanje","Singleplayer, Multiplayer"
+Factorio,Factorio.jpg,Simulacija graðenja i upravljanjam,"Singleplayer, Multiplayer"
+Garry's Mod,Garry'sMod.jpg,Preživljavanje,"Singleplayer, Multiplayer"
+Minecraft,Minecraft.jpg,"Sandbox, Preživljavanje","Singleplayer, Multiplayer"
 Terraria,terraria.jpg,"Akciona, Avantura","Singleplayer, Multiplayer"
-Civilization V,civilization-v.jpg,"Potezna strategija, 4X","Singleplayer, Multiplayer "
-Grand Theft Auto V,GTAV.jpg,"Akciona, Avantura","Singleplayer,Multiplayer"
-Populous,Populous.jpg,Igra bogova,"Singleplayer,Multiplayer"
-7 Days to Die,7_Days_To_Die.jpg,Prezivljavanje horror,
-Age of Empires II: The Age of Kings,age-of-empires-ii-the-age-of-kings.jpg,Strategija u realnom vremenu,
-Age of Empires III,Aoeiii.jpg,Strategija u realnom vremenu,
-Age of Mythology,Age_of_Mythology.jpg,Strategija u realnom vremenu,
-American Truck Simulator,American_Truck_Simulator_Steam.jpg,Simulacija voznje,
-Anno 1503,Anno_1503.jpg,Gradjenje grada,
-Baldur's Gate,BGEE.jpg,Igranje uloga,
-Baldur's Gate II: Shadows of Amn,Baldurs-Gate-II-Shadows-of-Amn.jpg,Computer Igranje uloga,
-Battlefield 1942,battlefield-1942.jpg,Pucacina iz prvog lica,
-Battlefield Vietnam,Battlefield_Vietnam.jpg,Pucacina iz prvog lica,
-BioShock,bioshock.jpg,Pucacina iz prvog lica,
-Black & White,Black_&_White.jpg,God game,
-Blade Runner,blade-runner.jpg,Point-and-click,
-Civilization II,civilization-II.jpg,"Potezna strategija, 4X",
-Civilization III,Civilization_III.jpg,"Potezna strategija, 4X",
-Command & Conquer 3: Tiberium Wars,Cc3tw.jpg,Strategija u realnom vremenu,
-Command & Conquer: Red Alert 2,CCRA.jpg,Strategija u realnom vremenu,
-Command & Conquer: Tiberian Sun,Cncts-win.jpg,Strategija u realnom vremenu,
-Commandos: Behind Enemy Lines,commandos-behind-enemy-lines.jpg,Real-time tactics,
-Cossacks II: Napoleonic Wars,Cossacks_2.jpg,Strategija u realnom vremenu,
-Counter-Strike: Condition Zero,CS.jpg,Pucacina iz prvog lica,
-Counter-Strike: Source,Counter-Strike_Source.jpg,Pucacina iz prvog lica,
-Crusader Kings II,Crusader_Kings_II.jpg,Grand strategy,
-Crusader Kings III,Crusader_Kings_III.jpg,Grand strategy,
-Crysis Warhead,crysis-warhead.jpg,Pucacina iz prvog lica,
-Cuphead,Cuphead.jpg,Run and gun,
-Daryl F. Gates' Police Quest: SWAT,Daryl_F._Gates'_Police_Quest_-_SWAT.jpg,Interactive movie,
-Deer Hunter,Deer-Hunter.jpg,Sports,
-Divinity: Original Sin II,Divinity-Original-Sin-II.jpg,Igranje uloga,
-Duke Nukem 3D,Duke_Nukem_3D.jpg,Pucacina iz prvog lica,
-Dungeon Lords,dungeon-lords.jpg,Igranje uloga,
-Dungeon Siege,dungeon-siege.jpg,Igranje uloga,
-Empire Earth,empire-earth.jpg,Strategija u realnom vremenu,
-Europa Universalis IV,EuropaUniversalisIV.jpg,Grand strategy,
-Far Cry,FarCry.jpg,Pucacina iz prvog lica,
-Frogger,frogger.jpg,Akciona,
-Full Throttle,Full_Throttle.jpg,Graphic adventure,
-Glory of the Roman Empire,Glory_of_the_Roman_Empire.jpg,Gradjenje grada game,
-Grand Prix 2,Grand_Prix_2.jpg,Sim racing,
-Harry Potter and the Philosopher's Stone,Harry-Potter.jpg,"Akciona, Avantura",
-Hearts of Iron IV,hearts-of-iron-iv.jpg,"Strategija u realnom vremenu, grand strategy wargame",
-Hidden & Dangerous,hidden-dangerous.jpg,Akciona,
-Hidden & Dangerous 2,Hidden-dangerous2.jpg,Akciona,
-Hollow Knight,hollow-knight.jpg,Metroidvania,
-Hotel Giant,hotel-giant.jpg,Business simulation,
-Hydlide,Hydlide.jpg,"Akciona, Igranje uloga",
-Imperivm: Great Battles of Rome,Imperivm_RTC_-_Great_Battles_of_Rome.jpg,Strategija u realnom vremenu,
-Just Survive[e],Just-survive.jpg,Prezivljavanje,
-Killing Floor,killing-floor.jpg,Pucacina iz prvog lica,
-Kingdom Come: Deliverance,kingdom-come-deliverance.jpg,"Akciona, Igranje uloga game",
-Machinarium,Machinarium.jpg,"Graphic adventure, puzzle",
-Mafia: The City of Lost Heaven,mafia__the_city_of_lost_heaven.jpg,Third-person shooter,
-Magicka,Magicka.jpg,"Akciona, Avantura",
-Microsoft Flight Simulator X,FSX.jpg,Amateur flight simulation,
-Mordhau,Mordhau.jpg,Akciona,
-Neverwinter Nights,Neverwinter_Nights.jpg,Igranje uloga,
-Nier: Automata,Nier_Automata.jpg,"Akciona, Igranje uloga, hack and slash",
-Operation Flashpoint: Cold War Crisis,operation-flashpoint-cold-war-crisis.jpg,Tactical shooter,
-Pac-Man Championship Edition DX+,Pac-man.jpg,"Maze, arcade",
-Patrician III: Rise of the Hanse,Patrician_III_Rise_of_the_Hanse.jpg,Business simulation,
-Phantasmagoria,phantasmagoria.jpg,Interactive movie,
-Planet Coaster,planet-coaster.jpg,Simulacija gradjenja i upravljanja,
-Prison Architect,prison-architect.jpg,Simulacija gradjenja i upravljanja,
-Psychonauts,Psychonauts.jpg,Platform,
-Quake,Quake1.jpg,Pucacina iz prvog lica,
-Quake II,Quake2.jpg,Pucacina iz prvog lica,
-Railroad Tycoon II,Railroad_Tycoon_2.jpg,Simulacija gradjenja i upravljanja,
-Resident Evil 4: Ultimate HD Edition,resident-evil-4.jpg,"Third-person shooter, Prezivljavanje horror",
-Resident Evil 5,Resident_Evil_5.jpg,"Third-person shooter, Prezivljavanje horror",
-Resident Evil 6,resident-evil-6.jpg,"Third-person shooter, Prezivljavanje horror",
-Return to Castle Wolfenstein,Return_to_Castle_Wolfenstein.jpg,Pucacina iz prvog lica,
-Return to Zork,Return_to_Zork.jpg,Avantura,
-RoboCop,RoboCop.jpg,"Beat 'em up, run-and-gun",
-Rome: Total War,rome-total-war.jpg,Strategija u realnom vremenu,
-Runaway: A Road Adventure,runaway-a-road-adventure.jpg,Avantura,
-Sacred,sacred-gold.jpg,"Akciona, Igranje uloga",
-Satisfactory,Satisfactory.jpg,Simulacija gradjenja i upravljanja,
-Sega Mega Drive and Genesis Classics,sega-mega-drive-and-genesis-classics.jpg,Compilation,
-SimCity,SimCity.jpg,Gradjenje grada,
-SimCity 4,SimCity_4.jpg,Gradjenje grada,
-Space Engineers,SpaceEngineers.jpg,Simulacija,
-Spore,spore.jpg,God game,
-Star Wars Galaxies,Star_Wars_Galaxies.jpg,MMORPG,
-Star Wars: Rebel Assault,Swrebel.jpg,Rail shooter,
-StarCraft II: Heart of the Swarm,SC2_Heart_of_the_Swarm.jpg,Strategija u realnom vremenu,
-StarCraft II: Legacy of the Void,StarCraft_II_-_Legacy_of_the_Void.jpg,Strategija u realnom vremenu,
-Stardew Valley,Stardew-Valley.jpg,"Simulacija, Igranje uloga",
-Stellaris,stellatis.jpg,"RTS, 4X, Grand Strategy",
-Stickfight: The Game,stick-fight-the-game.jpg,Tuca,
-Stronghold,Stronghold.jpg,Strategija u realnom vremenu,
-Stronghold: Crusader,Stronghold-Crusader.jpg,Strategija u realnom vremenu,
-Supreme Commander,supreme-commander.jpg,Strategija u realnom vremenu,
-The Binding of Isaac,the-binding-of-isaac.jpg,"Akciona, Avantura, roguelike",
-The Legend of Sword and Fairy 3,The_Legend_of_Sword_and_Fairy_3.jpg,Igranje uloga,
-The Legend of Sword and Fairy 5,The-Legend-of-Sword-and-Fairy-5.jpg,Igranje uloga,
-The Stanley Parable,Stanley_parable.jpg,Interactive fiction,
-The Witcher,The_Witcher.jpg,"Akciona, Igranje uloga",
-The Witcher 2: Assassins of Kings,the-witcher-2-assassins-of-kings.jpg,"Akciona, Igranje uloga",
-Total Annihilation,Total annahilation.jpg,Strategija u realnom vremenu,
-Tropico,tropico.jpg,Simulacija gradjenja i upravljanja,
-Ultra Street Fighter IV,Ultra-street-fighter-IV.jpg,Fighting,
-Unreal,unreal-gold.jpg,Pucacina iz prvog lica,
-Unreal Tournament,Unrealtournament.jpg,Pucacina iz prvog lica,
-Vietcong,Vietcong.jpg,Tactical shooter,
-Warhammer Online: Age of Reckoning,Warhammer-online-age-of-reckoning.jpg,MMORPG,
-Who Wants to Be a Millionaire?,Millionare.jpg,Trivia game,
-Wing Commander 3: Heart of the Tiger,Wc3.jpg,Space combat simulation,
-Zoo Tycoon,zoo-tycoon.jpg,Business simulation,
+Civilization V,civilization-v.jpg,"Potezna strategija, 4X","Singleplayer, Multiplayer"
+Grand Theft Auto V,GTAV.jpg,"Akciona, Avantura","Singleplayer, Multiplayer"
+Populous,Populous.jpg,Igra bogova,"Singleplayer, Multiplayer"
+7 Days to Die,7_Days_To_Die.jpg,Preživljavanje horror,Multiplayer
+Age of Empires II: The Age of Kings,age-of-empires-ii-the-age-of-kings.jpg,Strategija u realnom vremenu,"Singleplayer, Multiplayer"
+Age of Empires III,Aoeiii.jpg,Strategija u realnom vremenu,"Singleplayer, Multiplayer"
+Age of Mythology,Age_of_Mythology.jpg,Strategija u realnom vremenu,"Singleplayer, Multiplayer"
+American Truck Simulator,American_Truck_Simulator_Steam.jpg,Simulacija voznje,"Singleplayer, Multiplayer"
+Anno 1503,Anno_1503.jpg,Gradjenje grada,Singleplayer
+Baldur's Gate,BGEE.jpg,Igranje uloga,Multiplayer
+Baldur's Gate II: Shadows of Amn,Baldurs-Gate-II-Shadows-of-Amn.jpg,Igranje uloga,Multiplayer
+Battlefield 1942,battlefield-1942.jpg,Pucaèina iz prvog lica,"Singleplayer, Multiplayer"
+Battlefield Vietnam,Battlefield_Vietnam.jpg,Pucaèina iz prvog lica,"Singleplayer, Multiplayer"
+BioShock,bioshock.jpg,Pucaèina iz prvog lica,Singleplayer
+Black & White,Black_&_White.jpg,Igra bogova,Multiplayer
+Blade Runner,blade-runner.jpg,Point-and-click igra,Singleplayer
+Civilization II,civilization-II.jpg,"Potezna strategija, 4X","Singleplayer, Multiplayer"
+Civilization III,Civilization_III.jpg,"Potezna strategija, 4X","Singleplayer, Multiplayer"
+Command & Conquer 3: Tiberium Wars,Cc3tw.jpg,Strategija u realnom vremenu,"Singleplayer, Multiplayer"
+Command & Conquer: Red Alert 2,CCRA.jpg,Strategija u realnom vremenu,"Singleplayer, Multiplayer"
+Command & Conquer: Tiberian Sun,Cncts-win.jpg,Strategija u realnom vremenu,"Singleplayer, Multiplayer"
+Commandos: Behind Enemy Lines,commandos-behind-enemy-lines.jpg,Strategija u realnom vremenu,Singleplayer
+Cossacks II: Napoleonic Wars,Cossacks_2.jpg,Strategija u realnom vremenu,"Singleplayer, Multiplayer"
+Counter-Strike: Condition Zero,CS.jpg,Pucaèina iz prvog lica,"Singleplayer, Multiplayer "
+Counter-Strike: Source,Counter-Strike_Source.jpg,Pucaèina iz prvog lica,Multiplayer
+Crusader Kings II,Crusader_Kings_II.jpg,Grand strategy,"Singleplayer, Multiplayer"
+Crusader Kings III,Crusader_Kings_III.jpg,Velika strategija,"Singleplayer, Multiplayer"
+Crysis Warhead,crysis-warhead.jpg,Pucaèina iz prvog lica,"Singleplayer, Multiplayer"
+Cuphead,Cuphead.jpg,Run and gun,"Singleplayer, Multiplayer"
+Daryl F. Gates' Police Quest: SWAT,Daryl_F._Gates'_Police_Quest_-_SWAT.jpg,Interaktivni film,Singleplayer
+Deer Hunter,Deer-Hunter.jpg,Sport,Singleplayer
+Divinity: Original Sin II,Divinity-Original-Sin-II.jpg,Igranje uloga,Multiplayer
+Duke Nukem 3D,Duke_Nukem_3D.jpg,Pucaèina iz prvog lica,Multiplayer
+Dungeon Lords,dungeon-lords.jpg,Igranje uloga,"Singleplayer, Multiplayer"
+Dungeon Siege,dungeon-siege.jpg,Igranje uloga,"Singleplayer, Multiplayer"
+Empire Earth,empire-earth.jpg,Strategija u realnom vremenu,"Singleplayer, Multiplayer"
+Europa Universalis IV,EuropaUniversalisIV.jpg,Velika strategija,"Singleplayer, Multiplayer"
+Far Cry,FarCry.jpg,Pucaèina iz prvog lica,"Singleplayer, Multiplayer"
+Frogger,frogger.jpg,Akciona,Singleplayer
+Full Throttle,Full_Throttle.jpg,Avantura,Singleplayer
+Glory of the Roman Empire,Glory_of_the_Roman_Empire.jpg,Gradjenje grada game,Singleplayer
+Grand Prix 2,Grand_Prix_2.jpg,Sim racing,Multiplayer
+Harry Potter and the Philosopher's Stone,Harry-Potter.jpg,"Akciona, Avantura",Singleplayer
+Hearts of Iron IV,hearts-of-iron-iv.jpg,"Strategija u realnom vremenu, Velika strategija",Multiplayer
+Hidden & Dangerous,hidden-dangerous.jpg,Akciona,"Singleplayer, Multiplayer"
+Hidden & Dangerous 2,Hidden-dangerous2.jpg,Akciona,Multiplayer
+Hollow Knight,hollow-knight.jpg,"Akciona, Avantura",Singleplayer
+Hotel Giant,hotel-giant.jpg,Poslovna simulacija,Multiplayer
+Hydlide,Hydlide.jpg,"Akciona, Igranje uloga",Singleplayer
+Imperivm: Great Battles of Rome,Imperivm_RTC_-_Great_Battles_of_Rome.jpg,Strategija u realnom vremenu,Singleplayer
+Just Survive,Just-survive.jpg,Preživljavanje,Multiplayer
+Killing Floor,killing-floor.jpg,Pucaèina iz prvog lica,"Singleplayer, Multiplayer"
+Kingdom Come: Deliverance,kingdom-come-deliverance.jpg,"Akciona, Igranje uloga game",Singleplayer
+Machinarium,Machinarium.jpg,"Grafièka avantura, puzzle",Singleplayer
+Mafia: The City of Lost Heaven,mafia__the_city_of_lost_heaven.jpg,3D Pucaèina,Singleplayer
+Magicka,Magicka.jpg,"Akciona, Avantura",Multiplayer
+Microsoft Flight Simulator X,FSX.jpg,Simulacija pilotiranja,Multiplayer
+Mordhau,Mordhau.jpg,Akciona,Multiplayer
+Neverwinter Nights,Neverwinter_Nights.jpg,Igranje uloga,"Singleplayer, Multiplayer"
+Nier: Automata,Nier_Automata.jpg,"Akciona, Igranje uloga",Singleplayer
+Operation Flashpoint: Cold War Crisis,operation-flashpoint-cold-war-crisis.jpg,Taktièka pucaèina,"Singleplayer, Multiplayer"
+Pac-Man Championship Edition DX+,Pac-man.jpg,"Lavirint, Arkadna",Singleplayer
+Patrician III: Rise of the Hanse,Patrician_III_Rise_of_the_Hanse.jpg,Poslovna simulacija,Singleplayer
+Phantasmagoria,phantasmagoria.jpg,Interaktivni film,Singleplayer
+Planet Coaster,planet-coaster.jpg,Simulacija graðenja i upravljanja,Singleplayer
+Prison Architect,prison-architect.jpg,Simulacija graðenja i upravljanja,Multiplayer
+Psychonauts,Psychonauts.jpg,Platform,Singleplayer
+Quake,Quake1.jpg,3D Pucaèina,Multiplayer
+Quake II,Quake2.jpg,Pucaèina iz prvog lica,"Singleplayer, Multiplayer"
+Railroad Tycoon II,Railroad_Tycoon_2.jpg,Simulacija graðenja i upravljanja,Multiplayer
+Resident Evil 4: Ultimate HD Edition,resident-evil-4.jpg,"3D Pucaèina, Preživljavanje horror",Singleplayer
+Resident Evil 5,Resident_Evil_5.jpg,"3D Pucaèina, Preživljavanje horror",Multiplayer
+Resident Evil 6,resident-evil-6.jpg,"3D Pucaèina, Preživljavanje horror",Multiplayer
+Return to Castle Wolfenstein,Return_to_Castle_Wolfenstein.jpg,Pucaèina iz prvog lica,"Singleplayer, Multiplayer"
+Return to Zork,Return_to_Zork.jpg,Avantura,Singleplayer
+RoboCop,RoboCop.jpg,"Akciona, run-and-gun",Singleplayer
+Rome: Total War,rome-total-war.jpg,Strategija u realnom vremenu,"Singleplayer, Multiplayer"
+Runaway: A Road Adventure,runaway-a-road-adventure.jpg,Avantura,Singleplayer
+Sacred,sacred-gold.jpg,"Akciona, Igranje uloga",Multiplayer
+Satisfactory,Satisfactory.jpg,Simulacija graðenja i upravljanja,Multiplayer
+Sega Mega Drive and Genesis Classics,sega-mega-drive-and-genesis-classics.jpg,Kompilacija,"Singleplayer, Multiplayer"
+SimCity,SimCity.jpg,Graðenje grada,"Singleplayer, Multiplayer"
+SimCity 4,SimCity_4.jpg,Graðenje grada,Singleplayer
+Space Engineers,SpaceEngineers.jpg,Simulacija,"Singleplayer, Multiplayer"
+Spore,spore.jpg,Igra bogova,Singleplayer
+Star Wars Galaxies,Star_Wars_Galaxies.jpg,MMORPG,Multiplayer
+Star Wars: Rebel Assault,Swrebel.jpg,Akciona,Singleplayer
+StarCraft II: Heart of the Swarm,SC2_Heart_of_the_Swarm.jpg,Strategija u realnom vremenu,Multiplayer
+StarCraft II: Legacy of the Void,StarCraft_II_-_Legacy_of_the_Void.jpg,Strategija u realnom vremenu,"Singleplayer, Multiplayer"
+Stardew Valley,Stardew-Valley.jpg,"Simulacija, Igranje uloga","Singleplayer, Multiplayer"
+Stellaris,stellatis.jpg,"RTS, 4X, Velika strategija","Singleplayer, Multiplayer"
+Stickfight: The Game,stick-fight-the-game.jpg,Tuèa,Multiplayer
+Stronghold,Stronghold.jpg,Strategija u realnom vremenu,"Singleplayer, Multiplayer"
+Stronghold: Crusader,Stronghold-Crusader.jpg,Strategija u realnom vremenu,"Singleplayer, Multiplayer"
+Supreme Commander,supreme-commander.jpg,Strategija u realnom vremenu,"Singleplayer, Multiplayer"
+The Binding of Isaac,the-binding-of-isaac.jpg,"Akciona, Avantura",Singleplayer
+The Legend of Sword and Fairy 3,The_Legend_of_Sword_and_Fairy_3.jpg,Igranje uloga,Singleplayer
+The Legend of Sword and Fairy 5,The-Legend-of-Sword-and-Fairy-5.jpg,Igranje uloga,Singleplayer
+The Stanley Parable,Stanley_parable.jpg,Interaktivna fikcija,Singleplayer
+The Witcher,The_Witcher.jpg,"Akciona, Igranje uloga",Singleplayer
+The Witcher 2: Assassins of Kings,the-witcher-2-assassins-of-kings.jpg,"Akciona, Igranje uloga",Singleplayer
+Total Annihilation,Total annahilation.jpg,Strategija u realnom vremenu,Multiplayer
+Tropico,tropico.jpg,Simulacija graðenja i upravljanja,Multiplayer
+Ultra Street Fighter IV,Ultra-street-fighter-IV.jpg,Tuèa,Multiplayer
+Unreal,unreal-gold.jpg,Pucaèina iz prvog lica,Multiplayer
+Unreal Tournament,Unrealtournament.jpg,Pucaèina iz prvog lica,"Singleplayer, Multiplayer"
+Vietcong,Vietcong.jpg,Taktièka pucaèina,"Singleplayer, Multiplayer"
+Warhammer Online: Age of Reckoning,Warhammer-online-age-of-reckoning.jpg,MMORPG,Multiplayer
+Who Wants to Be a Millionaire?,Millionare.jpg,Kviz,Singleplayer
+Wing Commander 3: Heart of the Tiger,Wc3.jpg,Simulacija svemirskog broda,Singleplayer
+Zoo Tycoon,zoo-tycoon.jpg,Poslovna simulacija,Singleplayer
+Call of Duty,Call_of_Duty.jpg,Pucaèina iz prvog lica,Singleplayer

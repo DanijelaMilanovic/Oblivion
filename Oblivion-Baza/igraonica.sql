@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 17, 2021 at 02:18 PM
+-- Generation Time: Aug 20, 2021 at 12:04 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `igraonica`
 --
+CREATE DATABASE IF NOT EXISTS `igraonica` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `igraonica`;
 
 -- --------------------------------------------------------
 
@@ -27,10 +29,13 @@ SET time_zone = "+00:00";
 -- Table structure for table `igra`
 --
 
-CREATE TABLE `igra` (
+CREATE TABLE IF NOT EXISTS `igra` (
   `igrica_idigrica` int(11) NOT NULL,
   `igrac_idigrac` int(11) NOT NULL,
-  `racunar_idracunara` int(11) NOT NULL
+  `racunar_idracunara` int(11) NOT NULL,
+  KEY `fk_igrica_has_igrac_igrac1_idx` (`igrac_idigrac`),
+  KEY `fk_igrica_has_igrac_igrica1_idx` (`igrica_idigrica`),
+  KEY `fk_igrica_has _racunar_racunar1_idx` (`racunar_idracunara`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -46,11 +51,12 @@ INSERT INTO `igra` (`igrica_idigrica`, `igrac_idigrac`, `racunar_idracunara`) VA
 -- Table structure for table `igrac`
 --
 
-CREATE TABLE `igrac` (
+CREATE TABLE IF NOT EXISTS `igrac` (
   `idigrac` int(11) NOT NULL,
   `ime` varchar(45) NOT NULL,
   `prezime` varchar(45) NOT NULL,
-  `redovnost` enum('Dnevni posjetilac','Sedmični posjetilac','Mjesečni posjetilac','Rijetko') NOT NULL
+  `redovnost` enum('Dnevni posjetilac','Sedmični posjetilac','Mjesečni posjetilac','Rijetko') NOT NULL,
+  PRIMARY KEY (`idigrac`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -265,14 +271,16 @@ INSERT INTO `igrac` (`idigrac`, `ime`, `prezime`, `redovnost`) VALUES
 -- Table structure for table `igraonica`
 --
 
-CREATE TABLE `igraonica` (
+CREATE TABLE IF NOT EXISTS `igraonica` (
   `reg_broj` int(11) NOT NULL,
   `broj_ispostave` int(11) NOT NULL,
   `naziv` varchar(45) NOT NULL,
   `adresa` varchar(100) NOT NULL,
   `vlasnik` varchar(45) NOT NULL,
   `telefon` varchar(45) NOT NULL,
-  `mjesto_ptt` int(11) NOT NULL
+  `mjesto_ptt` int(11) NOT NULL,
+  PRIMARY KEY (`reg_broj`),
+  KEY `fk_igraonica_mjesto_ptt_idx` (`mjesto_ptt`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -307,12 +315,13 @@ INSERT INTO `igraonica` (`reg_broj`, `broj_ispostave`, `naziv`, `adresa`, `vlasn
 -- Table structure for table `igrica`
 --
 
-CREATE TABLE `igrica` (
+CREATE TABLE IF NOT EXISTS `igrica` (
   `idigrica` int(11) NOT NULL,
   `naziv` varchar(100) NOT NULL,
   `slika` varchar(200) NOT NULL,
   `vrsta` varchar(45) NOT NULL,
-  `igrivost` varchar(45) NOT NULL
+  `igrivost` varchar(45) NOT NULL,
+  PRIMARY KEY (`idigrica`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -501,9 +510,11 @@ INSERT INTO `igrica` (`idigrica`, `naziv`, `slika`, `vrsta`, `igrivost`) VALUES
 -- Table structure for table `instalirano`
 --
 
-CREATE TABLE `instalirano` (
+CREATE TABLE IF NOT EXISTS `instalirano` (
   `racunar_broj_racunara` int(11) NOT NULL,
-  `igrica_idigrica` int(11) NOT NULL
+  `igrica_idigrica` int(11) NOT NULL,
+  KEY `fk_racunar_has_igrica_igrica1_idx` (`igrica_idigrica`),
+  KEY `fk_racunar_has_igrica_racunar1_idx` (`racunar_broj_racunara`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -4518,7 +4529,7 @@ INSERT INTO `instalirano` (`racunar_broj_racunara`, `igrica_idigrica`) VALUES
 -- Table structure for table `komponenta`
 --
 
-CREATE TABLE `komponenta` (
+CREATE TABLE IF NOT EXISTS `komponenta` (
   `idkomponenta` int(11) NOT NULL,
   `ime_proizvodjaca` varchar(45) NOT NULL,
   `tip_komponente` enum('Grafička kartica','Monitor','RAM','Hard disk','DVD-ROM','Matična ploča','Procesor') NOT NULL,
@@ -4532,7 +4543,9 @@ CREATE TABLE `komponenta` (
   `cipset` varchar(45) DEFAULT NULL,
   `frekvencija` varchar(45) DEFAULT NULL,
   `broj_jezgara` varchar(45) DEFAULT NULL,
-  `racunar_idracunara` int(11) NOT NULL
+  `racunar_idracunara` int(11) NOT NULL,
+  PRIMARY KEY (`idkomponenta`),
+  KEY `fk_komponenta_racunar_idracunara_idx` (`racunar_idracunara`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -5949,9 +5962,10 @@ INSERT INTO `komponenta` (`idkomponenta`, `ime_proizvodjaca`, `tip_komponente`, 
 -- Table structure for table `mjesto`
 --
 
-CREATE TABLE `mjesto` (
+CREATE TABLE IF NOT EXISTS `mjesto` (
   `ptt` int(11) NOT NULL,
-  `naziv` varchar(100) NOT NULL
+  `naziv` varchar(100) NOT NULL,
+  PRIMARY KEY (`ptt`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -6030,10 +6044,13 @@ INSERT INTO `mjesto` (`ptt`, `naziv`) VALUES
 -- Table structure for table `naplacuje`
 --
 
-CREATE TABLE `naplacuje` (
+CREATE TABLE IF NOT EXISTS `naplacuje` (
   `racun_idracuna` int(11) NOT NULL,
   `usluga_idusluge` int(11) NOT NULL,
-  `igrac_idigraca` int(11) NOT NULL
+  `igrac_idigraca` int(11) NOT NULL,
+  KEY `fk_naplacuje_racun_idracuna_idx` (`racun_idracuna`),
+  KEY `fk_naplacuje_usluga_idusluge_idx` (`usluga_idusluge`),
+  KEY `fk_naplacuje_igrac_idigraca_idx` (`igrac_idigraca`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -6110,10 +6127,12 @@ INSERT INTO `naplacuje` (`racun_idracuna`, `usluga_idusluge`, `igrac_idigraca`) 
 -- Table structure for table `racun`
 --
 
-CREATE TABLE `racun` (
+CREATE TABLE IF NOT EXISTS `racun` (
   `idracun` int(11) NOT NULL,
   `radnik_idradnika` varchar(13) NOT NULL,
-  `ukupna_cijena` double NOT NULL
+  `ukupna_cijena` double NOT NULL,
+  PRIMARY KEY (`idracun`),
+  KEY `fk_racun_radnik_idradnika_idx` (`radnik_idradnika`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -6148,10 +6167,12 @@ INSERT INTO `racun` (`idracun`, `radnik_idradnika`, `ukupna_cijena`) VALUES
 -- Table structure for table `racunar`
 --
 
-CREATE TABLE `racunar` (
+CREATE TABLE IF NOT EXISTS `racunar` (
   `broj_racunara` int(11) NOT NULL,
   `mrezno_ime` varchar(45) NOT NULL,
-  `igraonica_reg_broj` int(11) NOT NULL
+  `igraonica_reg_broj` int(11) NOT NULL,
+  PRIMARY KEY (`broj_racunara`),
+  KEY `fk_racunar_igraonica_reg_broj_idx` (`igraonica_reg_broj`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -6366,7 +6387,7 @@ INSERT INTO `racunar` (`broj_racunara`, `mrezno_ime`, `igraonica_reg_broj`) VALU
 -- Table structure for table `radnik`
 --
 
-CREATE TABLE `radnik` (
+CREATE TABLE IF NOT EXISTS `radnik` (
   `jmbg` varchar(13) NOT NULL,
   `ime` varchar(45) NOT NULL,
   `prezime` varchar(45) NOT NULL,
@@ -6374,7 +6395,10 @@ CREATE TABLE `radnik` (
   `plata` double NOT NULL,
   `mjesto_ptt` int(11) NOT NULL,
   `igraonica_reg_broj` int(11) NOT NULL,
-  `administrator` tinyint(4) DEFAULT NULL
+  `administrator` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`jmbg`),
+  KEY `fk_radnik_mjesto_ptt_idx` (`mjesto_ptt`),
+  KEY `fk_radnik_igraonica_reg_broj_idx` (`igraonica_reg_broj`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -6489,7 +6513,7 @@ INSERT INTO `radnik` (`jmbg`, `ime`, `prezime`, `dat_zaposlenja`, `plata`, `mjes
 -- Table structure for table `spisak igrica`
 --
 
-CREATE TABLE `spisak igrica` (
+CREATE TABLE IF NOT EXISTS `spisak igrica` (
   `MyUnknownColumn` int(11) DEFAULT NULL,
   `naziv` text DEFAULT NULL,
   `slike` text DEFAULT NULL,
@@ -6683,10 +6707,11 @@ INSERT INTO `spisak igrica` (`MyUnknownColumn`, `naziv`, `slike`, `vrsta`, `igri
 -- Table structure for table `usluga`
 --
 
-CREATE TABLE `usluga` (
+CREATE TABLE IF NOT EXISTS `usluga` (
   `idusluga` int(11) NOT NULL,
   `vrsta` varchar(45) NOT NULL,
-  `cijena` varchar(45) NOT NULL
+  `cijena` varchar(45) NOT NULL,
+  PRIMARY KEY (`idusluga`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -6699,93 +6724,6 @@ INSERT INTO `usluga` (`idusluga`, `vrsta`, `cijena`) VALUES
 (3, 'produzetak pola sata', '1'),
 (4, 'produzetak sat vremena', '2'),
 (5, 'pice', '2');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `igra`
---
-ALTER TABLE `igra`
-  ADD KEY `fk_igrica_has_igrac_igrac1_idx` (`igrac_idigrac`),
-  ADD KEY `fk_igrica_has_igrac_igrica1_idx` (`igrica_idigrica`),
-  ADD KEY `fk_igrica_has _racunar_racunar1_idx` (`racunar_idracunara`);
-
---
--- Indexes for table `igrac`
---
-ALTER TABLE `igrac`
-  ADD PRIMARY KEY (`idigrac`);
-
---
--- Indexes for table `igraonica`
---
-ALTER TABLE `igraonica`
-  ADD PRIMARY KEY (`reg_broj`),
-  ADD KEY `fk_igraonica_mjesto_ptt_idx` (`mjesto_ptt`);
-
---
--- Indexes for table `igrica`
---
-ALTER TABLE `igrica`
-  ADD PRIMARY KEY (`idigrica`);
-
---
--- Indexes for table `instalirano`
---
-ALTER TABLE `instalirano`
-  ADD KEY `fk_racunar_has_igrica_igrica1_idx` (`igrica_idigrica`),
-  ADD KEY `fk_racunar_has_igrica_racunar1_idx` (`racunar_broj_racunara`);
-
---
--- Indexes for table `komponenta`
---
-ALTER TABLE `komponenta`
-  ADD PRIMARY KEY (`idkomponenta`),
-  ADD KEY `fk_komponenta_racunar_idracunara_idx` (`racunar_idracunara`);
-
---
--- Indexes for table `mjesto`
---
-ALTER TABLE `mjesto`
-  ADD PRIMARY KEY (`ptt`);
-
---
--- Indexes for table `naplacuje`
---
-ALTER TABLE `naplacuje`
-  ADD KEY `fk_naplacuje_racun_idracuna_idx` (`racun_idracuna`),
-  ADD KEY `fk_naplacuje_usluga_idusluge_idx` (`usluga_idusluge`),
-  ADD KEY `fk_naplacuje_igrac_idigraca_idx` (`igrac_idigraca`);
-
---
--- Indexes for table `racun`
---
-ALTER TABLE `racun`
-  ADD PRIMARY KEY (`idracun`),
-  ADD KEY `fk_racun_radnik_idradnika_idx` (`radnik_idradnika`);
-
---
--- Indexes for table `racunar`
---
-ALTER TABLE `racunar`
-  ADD PRIMARY KEY (`broj_racunara`),
-  ADD KEY `fk_racunar_igraonica_reg_broj_idx` (`igraonica_reg_broj`);
-
---
--- Indexes for table `radnik`
---
-ALTER TABLE `radnik`
-  ADD PRIMARY KEY (`jmbg`),
-  ADD KEY `fk_radnik_mjesto_ptt_idx` (`mjesto_ptt`),
-  ADD KEY `fk_radnik_igraonica_reg_broj_idx` (`igraonica_reg_broj`);
-
---
--- Indexes for table `usluga`
---
-ALTER TABLE `usluga`
-  ADD PRIMARY KEY (`idusluga`);
 
 --
 -- Constraints for dumped tables

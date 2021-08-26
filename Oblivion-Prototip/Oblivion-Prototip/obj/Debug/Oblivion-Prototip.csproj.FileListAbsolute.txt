@@ -1,25 +1,21 @@
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.csproj.AssemblyReference.cache
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\MainWindow.g.cs
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\App.g.cs
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip_MarkupCompile.cache
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip_MarkupCompile.lref
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.exe
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.pdb
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\Oblivion-Prototip.exe.config
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.csprojResolveAssemblyReference.cache
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\MainWindow.g.cs
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\App.g.cs
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip_MarkupCompile.cache
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip_MarkupCompile.lref
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\Oblivion-Prototip.exe.config
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\Oblivion-Prototip.exe
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\Oblivion-Prototip.pdb
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\MaterialDesignColors.dll
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\MaterialDesignThemes.Wpf.dll
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\MaterialDesignColors.pdb
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\MaterialDesignThemes.Wpf.pdb
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.csprojAssemblyReference.cache
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\MainWindow.g.cs
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\App.g.cs
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip_MarkupCompile.cache
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip_MarkupCompile.lref
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\App.baml
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\MainWindow.baml
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.g.resources
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion_Prototip.Properties.Resources.resources
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.csproj.GenerateResource.cache
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.csproj.CoreCompileInputs.cache
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.csproj.CopyComplete
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.exe
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.pdb
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\MySql.Data.dll
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\System.Configuration.ConfigurationManager.dll
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\System.Security.AccessControl.dll
@@ -36,16 +32,25 @@ C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Obli
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\K4os.Compression.LZ4.dll
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\K4os.Hash.xxHash.dll
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\System.Configuration.ConfigurationManager.xml
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\System.Security.AccessControl.xml
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\System.Security.Permissions.xml
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\System.Security.Principal.Windows.xml
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.csproj.AssemblyReference.cache
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\MainWindow.g.cs
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\App.g.cs
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip_MarkupCompile.cache
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip_MarkupCompile.lref
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.exe
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.pdb
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\Oblivion-Prototip.exe.config
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.csprojResolveAssemblyReference.cache
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.csprojAssemblyReference.cache
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\App.baml
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\MainWindow.baml
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.g.resources
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion_Prototip.Properties.Resources.resources
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.csproj.GenerateResource.cache
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.csproj.CoreCompileInputs.cache
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.csproj.CopyComplete
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.exe
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.pdb
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\Dragablz.dll
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\Dragablz.pdb
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\Dragablz.xml
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\AdminWindow.g.cs
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\AdminWindow.baml

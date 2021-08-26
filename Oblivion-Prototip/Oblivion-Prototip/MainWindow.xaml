@@ -34,6 +34,7 @@
                    Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit sapien eget ullamcorper placerat. Integer vulputate id eros in fringilla. Cras eget feugiat ipsum. Quisque elementum ac tortor congue molestie. Proin imperdiet eu felis sed tincidunt. Aenean cursus enim eu ante bibendum blandit. Maecenas interdum nisi quis facilisis rhoncus. Pellentesque sollicitudin fringilla libero non eleifend. Suspendisse vehicula, erat suscipit bibendum sollicitudin, nunc enim convallis elit, non faucibus neque tellus ac metus. Morbi tincidunt leo eu blandit molestie. In auctor ornare erat non viverra. Mauris placerat libero sit amet consequat consectetur." 
                    VerticalAlignment="Center"  Grid.RowSpan="5"/>
         <TextBox
+            Name="tbKorisnickoIme"
             Background="#AA0B0808"
             Foreground="Gray"
             VerticalAlignment="Top"
@@ -44,22 +45,16 @@
             materialDesign:HintAssist.Hint="Korisničko ime"
             Grid.Row="2"/>
         <PasswordBox
-             Background="#AA0B0808"
-             Foreground="Gray"
-             VerticalAlignment="Top"
-             MaxWidth="400"
-             Grid.Row="3"
-             Style="{StaticResource MaterialDesignFilledPasswordBox}"
-             materialDesign:HintAssist.Hint="Lozinka" 
-        />
-        <CheckBox
-            Content="Prijavljujem se kao administrator"
+            Name="pbLozinka"
+            Background="#AA0B0808"
             Foreground="Gray"
-            HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Grid.Row="4"
-            Style="{StaticResource MaterialDesignCheckBox}" 
+            MaxWidth="400"
+            Grid.Row="3"
+            Style="{StaticResource MaterialDesignFilledPasswordBox}"
+            materialDesign:HintAssist.Hint="Lozinka" 
         />
+        <Label Name="lblGreska" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="10" Foreground="DarkRed"/>
         <Button x:Name="btnSignIn"
             Style="{StaticResource MaterialDesignFlatButton}"
             Background="#AA0B0808"
@@ -67,7 +62,7 @@
             Content="Prijavi me" 
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Grid.Row="5" Click="btnSignIn_Click"
+            Grid.Row="4" Click="btnSignIn_Click"
          />
         <TextBlock  FontSize="13" Foreground="Gray" HorizontalAlignment="Center" Grid.Row="6" TextWrapping="WrapWithOverflow" 
             Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit sapien eget ullamcorper placerat." 

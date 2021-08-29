@@ -50,12 +50,76 @@ namespace Oblivion_Prototip
         }
         #endregion
 
-        //ZAVRSITI KOD 
-        //FALE KORISNICKO IME I SIFRA...
+        /// <summary>
+        /// Prijava na sistem 
+        /// </summary>
+        #region SignIn
         private void btnSignIn_Click(object sender, RoutedEventArgs e)
         {
-            string cmd_string = "SELECT * FROM `igraonica`.`radnik` WHERE ";
-            MySqlCommand cmd = new MySqlCommand();
+            MySqlDataReader reader = null;
+            try
+            {
+                string cmd_string = "SELECT * FROM `igraonica`.`radnik` WHERE `radnik`.`korisnicko_ime`='" + tbKorisnickoIme.Text + "' AND `radnik`.`lozinka`=PASSWORD('" + pbLozinka.Password + "');";
+                MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+                reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    Korisnik logovaniKorisnik = null;
+                    string jmbg = reader["jmbg"].ToString();
+                    string ime = reader["ime"].ToString();
+                    string prezime = reader["prezime"].ToString();
+                    DateTime dat_zaposlenja = (DateTime)reader["dat_zaposlenja"];
+                    double plata = (double)reader["plata"];
+                    int mjesto_ptt = (int)reader["mjesto_ptt"];
+                    int igraonica_reg_broj = (int)reader["igraonica_reg_broj"];
+                    bool administrator = Convert.ToBoolean(reader.GetInt32("administrator"));
+                    string korisnicko_ime = reader["korisnicko_ime"].ToString();
+                    string lozinka = reader["lozinka"].ToString();
+
+                    reader.Close();
+
+                    logovaniKorisnik = new Korisnik(jmbg, ime, prezime, dat_zaposlenja, plata, mjesto_ptt, igraonica_reg_broj,
+                       administrator, korisnicko_ime, lozinka);
+
+                    if (logovaniKorisnik.Administrator)
+                    {
+                        tbKorisnickoIme.Text = "";
+                        pbLozinka.Password = "";
+                        lblGreska.Content = "";
+
+                        AdminWindow adminUpravljanje = new AdminWindow(logovaniKorisnik);
+
+                        adminUpravljanje.ShowDialog();
+                        this.Hide();
+                    }
+                    else if (!logovaniKorisnik.Administrator)
+                    {
+                        tbKorisnickoIme.Text = "";
+                        pbLozinka.Password = "";
+                        lblGreska.Content = "";
+                        MessageBox.Show("Nije admin");
+                    }
+                }
+                else
+                {
+                    tbKorisnickoIme.Text = "";
+                    pbLozinka.Password = "";
+                    lblGreska.Content = "Unijeli ste pogrešne podatke!";
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Neuspješno čitanje iz baze podataka", "Greška",MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            finally
+            {
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+            }
         }
+        #endregion
     }
 }

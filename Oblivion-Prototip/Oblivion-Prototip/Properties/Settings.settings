@@ -5,9 +5,9 @@
     <Setting Name="ConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Server=root;Database=igraonica;Uid=root;pwd=;&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Server=localhost;Database=igraonica;Uid=root;Pwd=;&lt;/ConnectionString&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Server=root;Database=igraonica;Uid=root;pwd=;</Value>
+      <Value Profile="(Default)">Server=localhost;Database=igraonica;Uid=root;Pwd=;</Value>
     </Setting>
   </Settings>
 </SettingsFile>

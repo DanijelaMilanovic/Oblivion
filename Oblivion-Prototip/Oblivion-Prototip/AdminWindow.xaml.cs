@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using MySql.Data.MySqlClient;
+
 namespace Oblivion_Prototip
 {
     /// <summary>
@@ -19,9 +22,13 @@ namespace Oblivion_Prototip
     /// </summary>
     public partial class AdminWindow : Window
     {
-        public AdminWindow()
+        Korisnik admin;
+
+        public AdminWindow(Korisnik korisnik)
         {
             InitializeComponent();
+            this.admin = korisnik;
+            ucitavanjeTabeleZaposlenik();
         }
 
         /// <summary>
@@ -46,5 +53,23 @@ namespace Oblivion_Prototip
             }
         }
         #endregion
+
+        private void ucitavanjeTabeleZaposlenik()
+        {
+            string cmd_string = "SELECT jmbg,ime,prezime,dat_zaposlenja,plata,`mjesto`.`naziv` as \"mjesto\",administrator FROM `radnik` " +
+                "JOIN `mjesto` ON (`radnik`.`mjesto_ptt`=`mjesto`.`ptt`) WHERE `radnik`.`igraonica_reg_broj` = " + admin.RegBrojIgraonice;
+            MySqlCommand cmd = new MySqlCommand(cmd_string,Connection.GetConnection());
+
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+            dataZaposleni.ItemsSource = dt.DefaultView;
+        }
+
+        private void dataZaposleni_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
+        {
+            dataZaposleni.UnselectAllCells();
+        }
     }
 }

@@ -65,14 +65,35 @@ namespace Oblivion_Prototip
 
                 if (reader.Read())
                 {
-                    if (reader.GetInt32("administrator") == 1)
+                    Korisnik logovaniKorisnik = null;
+                    string jmbg = reader["jmbg"].ToString();
+                    string ime = reader["ime"].ToString();
+                    string prezime = reader["prezime"].ToString();
+                    DateTime dat_zaposlenja = (DateTime)reader["dat_zaposlenja"];
+                    double plata = (double)reader["plata"];
+                    int mjesto_ptt = (int)reader["mjesto_ptt"];
+                    int igraonica_reg_broj = (int)reader["igraonica_reg_broj"];
+                    bool administrator = Convert.ToBoolean(reader.GetInt32("administrator"));
+                    string korisnicko_ime = reader["korisnicko_ime"].ToString();
+                    string lozinka = reader["lozinka"].ToString();
+
+                    reader.Close();
+
+                    logovaniKorisnik = new Korisnik(jmbg, ime, prezime, dat_zaposlenja, plata, mjesto_ptt, igraonica_reg_broj,
+                       administrator, korisnicko_ime, lozinka);
+
+                    if (logovaniKorisnik.Administrator)
                     {
                         tbKorisnickoIme.Text = "";
                         pbLozinka.Password = "";
                         lblGreska.Content = "";
-                        MessageBox.Show("ADMIN");
+
+                        AdminWindow adminUpravljanje = new AdminWindow(logovaniKorisnik);
+
+                        adminUpravljanje.ShowDialog();
+                        this.Hide();
                     }
-                    else if (reader.GetInt32("administrator") == 0)
+                    else if (!logovaniKorisnik.Administrator)
                     {
                         tbKorisnickoIme.Text = "";
                         pbLozinka.Password = "";

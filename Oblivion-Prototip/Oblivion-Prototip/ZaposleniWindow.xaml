@@ -1,0 +1,32 @@
+﻿<Window x:Class="Oblivion_Prototip.ZaposleniWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Oblivion_Prototip"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        mc:Ignorable="d"
+        Title="Zaposleni" Height="700" Width="1250" MinHeight="700" MinWidth="1250" WindowStyle="None" WindowState="Maximized"
+         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="#FF01010C"
+        PreviewKeyDown="ZaposleniWindow_PreviewKeyDown" StateChanged="ZaposleniWindow_StateChanged"
+        FontFamily="Zen Tokyo Zoo" FontWeight="Bold" FontSize="15">
+
+    <Grid Margin="10">
+        <dragablz:TabablzControl>
+            <dragablz:TabablzControl.InterTabController>
+                <dragablz:InterTabController/>
+            </dragablz:TabablzControl.InterTabController>
+            <TabItem Header="Home">
+            </TabItem>
+            <TabItem Header="Igrice" />
+            <TabItem Header="Igrac" />
+        </dragablz:TabablzControl>
+
+    </Grid>
+</Window>

@@ -57,19 +57,39 @@ namespace Oblivion_Prototip
         private void ucitavanjeTabeleZaposlenik()
         {
             string cmd_string = "SELECT jmbg,ime,prezime,dat_zaposlenja,plata,`mjesto`.`naziv` as \"mjesto\",administrator FROM `radnik` " +
-                "JOIN `mjesto` ON (`radnik`.`mjesto_ptt`=`mjesto`.`ptt`) WHERE `radnik`.`igraonica_reg_broj` = " + admin.RegBrojIgraonice;
+                "JOIN `mjesto` ON (`radnik`.`mjesto_ptt`=`mjesto`.`ptt`) WHERE `radnik`.`igraonica_reg_broj` = " + admin.RegBrojIgraonice + " AND `radnik`.`jmbg` <> " + admin.JMBG;
             MySqlCommand cmd = new MySqlCommand(cmd_string,Connection.GetConnection());
 
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
 
             da.Fill(dt);
+
+            dataZaposleni.ItemsSource = null;
             dataZaposleni.ItemsSource = dt.DefaultView;
         }
 
         private void dataZaposleni_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
         {
             dataZaposleni.UnselectAllCells();
+        }
+
+        private void btnBrisanje_Click(object sender, RoutedEventArgs e)
+        {
+            DataRowView dataRowView = (DataRowView)((Button)e.Source).DataContext;
+            String JMBG = dataRowView[0].ToString();
+            String ime = dataRowView[1].ToString();
+            String prezime = dataRowView[2].ToString();
+
+            if (MessageBox.Show("Da li ste sigurni da želite da obrišete zaposlenika :" + ime + " " + prezime, "Brisanje zaposlenika", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                string cmd_string = "DELETE from `radnik` WHERE `radnik`.jmbg = " + JMBG;
+                MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+                cmd.ExecuteNonQuery();
+
+                ucitavanjeTabeleZaposlenik();
+            }
         }
     }
 }

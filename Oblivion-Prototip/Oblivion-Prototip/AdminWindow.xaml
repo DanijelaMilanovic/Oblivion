@@ -48,7 +48,7 @@
                         <DataGridTemplateColumn Width="1.25*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button Name="btnBrisanje" Content="Obriši"  />
+                                    <Button Name="btnBrisanje" Content="Obriši" Click="btnBrisanje_Click"  />
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>

@@ -19,10 +19,13 @@ namespace Oblivion_Prototip
     /// </summary>
     public partial class ZaposleniWindow : Window
     {
-        public ZaposleniWindow()
+        Korisnik zaposlenik;
+
+        public ZaposleniWindow(Korisnik korisnik)
         {
             InitializeComponent();
 
+            this.zaposlenik = korisnik;
         }
 
         /// <summary>

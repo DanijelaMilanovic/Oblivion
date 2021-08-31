@@ -107,7 +107,20 @@ namespace Oblivion_Prototip
                         tbKorisnickoIme.Text = "";
                         pbLozinka.Password = "";
                         lblGreska.Content = "";
-                        MessageBox.Show("Nije admin");
+
+                        ZaposleniWindow zaposleniUpravljanje = new ZaposleniWindow(logovaniKorisnik);
+
+                        this.Hide();
+                        zaposleniUpravljanje.ShowDialog();
+
+                        if (zaposleniUpravljanje.DialogResult == true)
+                        {
+                            this.Show();
+                        }
+                        else
+                        {
+                            Application.Current.Shutdown();
+                        }
                     }
                 }
                 else

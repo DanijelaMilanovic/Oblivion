@@ -23,6 +23,7 @@
                 <dragablz:InterTabController/>
             </dragablz:TabablzControl.InterTabController>
             <TabItem Header="Home">
+                
             </TabItem>
             <TabItem Header="Igrice" />
             <TabItem Header="Igrac" />

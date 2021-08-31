@@ -90,8 +90,8 @@ namespace Oblivion_Prototip
 
                         AdminWindow adminUpravljanje = new AdminWindow(logovaniKorisnik);
 
-                        adminUpravljanje.ShowDialog();
                         this.Hide();
+                        adminUpravljanje.ShowDialog();
 
                         if (adminUpravljanje.DialogResult == true)
                         {

@@ -92,6 +92,15 @@ namespace Oblivion_Prototip
 
                         adminUpravljanje.ShowDialog();
                         this.Hide();
+
+                        if (adminUpravljanje.DialogResult == true)
+                        {
+                            this.Show();
+                        }
+                        else
+                        {
+                            Application.Current.Shutdown();
+                        }
                     }
                     else if (!logovaniKorisnik.Administrator)
                     {

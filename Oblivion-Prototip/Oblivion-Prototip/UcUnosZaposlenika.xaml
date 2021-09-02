@@ -14,12 +14,33 @@
              TextOptions.TextRenderingMode="Auto"
              Background="#FF01010C" FontFamily="Zen Tokyo Zoo" FontWeight="Bold" FontSize="15">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="103*"/>
-            <ColumnDefinition Width="97*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.ColumnSpan="2" Margin="0,0,0,-0.4">
-
+        <TextBlock  Foreground="White" Grid.ColumnSpan="3" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow" 
+                   Text="UNOS NOVOG ZAPOSLENIKA" 
+                   VerticalAlignment="Center" />
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="3">
+            <TextBox
+            Name="tbIme"
+            Background="#AA0B0808"
+            Foreground="Gray"
+            VerticalAlignment="Top"
+            Style="{StaticResource MaterialDesignFilledTextBox}"
+            AcceptsReturn="True"
+            TextWrapping="NoWrap"
+            MaxWidth="200"
+            materialDesign:HintAssist.Hint="Ime zaposlenika"
+            Grid.Column="1"/>
         </ScrollViewer>
     </Grid>
 </UserControl>

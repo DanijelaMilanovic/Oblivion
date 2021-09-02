@@ -66,6 +66,8 @@
                             <TextBlock Text="DODAJ NOVOG ZAPOSLENIKA"/>
                         </StackPanel>
                     </Button>
+                    <StackPanel Margin="5"/>
+
                 </Grid>
             </TabItem>
             <TabItem Header="Home" />

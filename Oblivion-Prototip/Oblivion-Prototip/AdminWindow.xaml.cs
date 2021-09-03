@@ -102,5 +102,18 @@ namespace Oblivion_Prototip
                 ucitavanjeTabeleZaposlenik();
             }
         }
+
+        private void btnDodajNovogZaposlenika_Click(object sender, RoutedEventArgs e)
+        {
+            UcUnosZaposlenika unos = new UcUnosZaposlenika();
+
+            ciscenjeSPa();
+            spDodavanjeZaposlenika.Children.Add(unos);
+        }
+
+        private void ciscenjeSPa()
+        {
+            spDodavanjeZaposlenika.Children.Clear();
+        }
     }
 }

@@ -52,8 +52,7 @@
             MaxWidth="400"
             Grid.Row="3"
             Style="{StaticResource MaterialDesignFilledPasswordBox}"
-            materialDesign:HintAssist.Hint="Lozinka" 
-        />
+            materialDesign:HintAssist.Hint="Lozinka" />
         <Label Name="lblGreska" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="10" Foreground="DarkRed"/>
         <Button x:Name="btnSignIn"
             Style="{StaticResource MaterialDesignFlatButton}"

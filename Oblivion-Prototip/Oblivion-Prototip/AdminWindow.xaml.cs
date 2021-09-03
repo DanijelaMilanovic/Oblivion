@@ -105,13 +105,14 @@ namespace Oblivion_Prototip
 
         private void btnDodajNovogZaposlenika_Click(object sender, RoutedEventArgs e)
         {
-            UcUnosZaposlenika unos = new UcUnosZaposlenika();
+            UcUnosZaposlenika unos = new UcUnosZaposlenika(this);
 
             ciscenjeSPa();
             spDodavanjeZaposlenika.Children.Add(unos);
+            btnDodajNovogZaposlenika.Visibility = Visibility.Hidden;
         }
 
-        private void ciscenjeSPa()
+        public void ciscenjeSPa()
         {
             spDodavanjeZaposlenika.Children.Clear();
         }

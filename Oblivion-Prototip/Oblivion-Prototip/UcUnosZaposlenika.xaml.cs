@@ -20,9 +20,18 @@ namespace Oblivion_Prototip
     /// </summary>
     public partial class UcUnosZaposlenika : UserControl
     {
-        public UcUnosZaposlenika()
+        AdminWindow parentWindow;
+
+        public UcUnosZaposlenika(AdminWindow parentWindow)
         {
             InitializeComponent();
+            this.parentWindow = parentWindow;
+        }
+
+        private void btnOdustani_Click(object sender, RoutedEventArgs e)
+        {
+            parentWindow.ciscenjeSPa();
+            parentWindow.btnDodajNovogZaposlenika.Visibility = Visibility.Visible;
         }
     }
 }

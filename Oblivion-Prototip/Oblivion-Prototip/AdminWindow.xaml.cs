@@ -56,7 +56,7 @@ namespace Oblivion_Prototip
 
         private void ucitavanjeTabeleZaposlenik()
         {
-            string cmd_string = "SELECT jmbg,ime,prezime,dat_zaposlenja,plata,`mjesto`.`naziv` as \"mjesto\",administrator FROM `radnik` " +
+            string cmd_string = "SELECT jmbg,ime,prezime,dat_zaposlenja,plata,`mjesto`.`naziv` as \"mjesto\",administrator,`mjesto_ptt` FROM `radnik` " +
                 "JOIN `mjesto` ON (`radnik`.`mjesto_ptt`=`mjesto`.`ptt`) WHERE `radnik`.`igraonica_reg_broj` = " + admin.RegBrojIgraonice + " AND `radnik`.`jmbg` <> " + admin.JMBG;
             MySqlCommand cmd = new MySqlCommand(cmd_string,Connection.GetConnection());
 
@@ -77,19 +77,44 @@ namespace Oblivion_Prototip
         private void btnBrisanje_Click(object sender, RoutedEventArgs e)
         {
             DataRowView dataRowView = (DataRowView)((Button)e.Source).DataContext;
-            String JMBG = dataRowView[0].ToString();
-            String ime = dataRowView[1].ToString();
-            String prezime = dataRowView[2].ToString();
+            string JMBG = dataRowView[0].ToString();
+            string ime = dataRowView[1].ToString();
+            string prezime = dataRowView[2].ToString();
+            DateTime datumZaposlenja = (DateTime)dataRowView[3];
+            double plata = Double.Parse(dataRowView[4].ToString());
+            bool administrator = Convert.ToBoolean(Int32.Parse(dataRowView[6].ToString()));
+            int mjestoPtt = Int32.Parse(dataRowView[7].ToString());
 
             if (MessageBox.Show("Da li ste sigurni da želite da obrišete zaposlenika :" + ime + " " + prezime, "Brisanje zaposlenika", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
-                string cmd_string = "DELETE from `radnik` WHERE `radnik`.jmbg = " + JMBG;
+                Korisnik korisnikZaBrisanje = new Korisnik(JMBG, ime, prezime, datumZaposlenja, plata, mjestoPtt, 0, administrator, "", "");
+
+                string cmd_string = "UPDATE `racun` SET `radnik_idradnika` = NULL WHERE `radnik_idradnika` = '" + korisnikZaBrisanje.JMBG + "'";
                 MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
 
+                korisnikZaBrisanje.StampanjeIzvjestaja();
+                cmd.ExecuteNonQuery();
+                cmd_string = "DELETE from `radnik` WHERE `radnik`.JMBG = '" + JMBG + "'";
+                cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
                 cmd.ExecuteNonQuery();
 
+                MessageBox.Show("Zaposlenik: " + korisnikZaBrisanje.Ime + " " + korisnikZaBrisanje.Prezime + " je obrisan. Svi računi koje je radnik isplatio nalaze se \"Evidenciji obrisanih zaposlenika\".", "Brisanje zaposlenika", MessageBoxButton.OK, MessageBoxImage.Information);
                 ucitavanjeTabeleZaposlenik();
             }
+        }
+
+        private void btnDodajNovogZaposlenika_Click(object sender, RoutedEventArgs e)
+        {
+            UcUnosZaposlenika unos = new UcUnosZaposlenika(this);
+
+            ciscenjeSPa();
+            spDodavanjeZaposlenika.Children.Add(unos);
+            btnDodajNovogZaposlenika.Visibility = Visibility.Hidden;
+        }
+
+        public void ciscenjeSPa()
+        {
+            spDodavanjeZaposlenika.Children.Clear();
         }
     }
 }

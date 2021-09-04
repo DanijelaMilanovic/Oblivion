@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 26, 2021 at 07:19 PM
+-- Generation Time: Sep 02, 2021 at 03:12 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -6129,7 +6129,7 @@ INSERT INTO `naplacuje` (`racun_idracuna`, `usluga_idusluge`, `igrac_idigraca`) 
 
 CREATE TABLE IF NOT EXISTS `racun` (
   `idracun` int(11) NOT NULL,
-  `radnik_idradnika` varchar(13) NOT NULL,
+  `radnik_idradnika` varchar(13) DEFAULT NULL,
   `ukupna_cijena` double NOT NULL,
   PRIMARY KEY (`idracun`),
   KEY `fk_racun_radnik_idradnika_idx` (`radnik_idradnika`)

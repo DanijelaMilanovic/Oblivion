@@ -98,3 +98,9 @@ C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Obli
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.csproj.CopyComplete
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.exe
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.pdb
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcRacunar.g.cs
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcUnosZaposlenika.g.cs
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\ZaposleniWindow.g.cs
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcRacunar.baml
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcUnosZaposlenika.baml
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\ZaposleniWindow.baml

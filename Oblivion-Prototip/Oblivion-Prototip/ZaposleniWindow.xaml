@@ -18,12 +18,22 @@
         FontFamily="Zen Tokyo Zoo" FontWeight="Bold" FontSize="15">
 
     <Grid Margin="10">
-        <dragablz:TabablzControl>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="424*"/>
+            <ColumnDefinition Width="187*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="311*"/>
+        </Grid.RowDefinitions>
+        <dragablz:TabablzControl Grid.RowSpan="2" Grid.ColumnSpan="2">
             <dragablz:TabablzControl.InterTabController>
                 <dragablz:InterTabController/>
             </dragablz:TabablzControl.InterTabController>
             <TabItem Header="Home">
-                
+                <ScrollViewer Margin="40" Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                    <WrapPanel x:Name="wrapRacunari"/>
+                </ScrollViewer>
             </TabItem>
             <TabItem Header="Igrice" />
             <TabItem Header="Igrac" />

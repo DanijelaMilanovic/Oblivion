@@ -26,6 +26,7 @@ namespace Oblivion_Prototip
             InitializeComponent();
 
             this.zaposlenik = korisnik;
+            UcitajKomponente();
         }
 
         /// <summary>
@@ -50,5 +51,11 @@ namespace Oblivion_Prototip
             }
         }
         #endregion
+
+        public void UcitajKomponente()
+        {
+            UcRacunar racunar = new UcRacunar();
+            wrapRacunari.Children.Add(racunar);
+        }
     }
 }

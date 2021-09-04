@@ -5,13 +5,30 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Oblivion_Prototip"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="200" Background="LightGray">
-    <Grid>
+             d:DesignHeight="200" d:DesignWidth="200" Background="{x:Null}">
+    <Border BorderBrush="	#353935" BorderThickness="2" CornerRadius="2">
+        <Grid Background="#525252">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="22*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
-        <Label Content="Racunar_1" Foreground="Black" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-
-    </Grid>
+        <Label Content="Racunar_1" Foreground="White" Background="#673AB7" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="2" FontWeight="ExtraBold"/>
+            <Label Content="Dolazak:" Foreground="#FF01010C" FontWeight="Bold" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center"/>
+            <Label Content="Uplatio:"  Foreground="#FF01010C" FontWeight="Bold" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center"/>
+            <Label Content="Preostalo:" Foreground="#FF01010C" FontWeight="Bold" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center"/>
+            <Separator Grid.ColumnSpan="2" Grid.Row="1" VerticalAlignment="Top" Background="#353935"/>
+            <Rectangle Grid.Row="1" Grid.ColumnSpan="2" Height="2" Fill="#353935" HorizontalAlignment="Stretch" VerticalAlignment="Top" />
+            <Label x:Name="lblDolazak" Content="00:00:00" Foreground="#FF01010C" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center"/>
+            <Label x:Name="lblUplatio" Content="00:00:00" Foreground="#FF01010C" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center"/>
+            <Label x:Name="lblPreostalo" Content="00:00:00" Foreground="#FF01010C" Grid.Column="1" FontSize="25" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center"/>
+        </Grid>
+    </Border>
 </UserControl>

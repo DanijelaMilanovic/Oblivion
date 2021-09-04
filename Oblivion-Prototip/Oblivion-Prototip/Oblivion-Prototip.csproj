@@ -108,6 +108,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Mjesto.cs" />
     <Compile Include="UcRacunar.xaml.cs">
       <DependentUpon>UcRacunar.xaml</DependentUpon>
     </Compile>

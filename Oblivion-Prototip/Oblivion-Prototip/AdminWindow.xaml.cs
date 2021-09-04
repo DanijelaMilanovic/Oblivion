@@ -22,7 +22,7 @@ namespace Oblivion_Prototip
     /// </summary>
     public partial class AdminWindow : Window
     {
-        Korisnik admin;
+        public Korisnik admin;
 
         public AdminWindow(Korisnik korisnik)
         {
@@ -54,7 +54,7 @@ namespace Oblivion_Prototip
         }
         #endregion
 
-        private void ucitavanjeTabeleZaposlenik()
+        public void ucitavanjeTabeleZaposlenik()
         {
             string cmd_string = "SELECT jmbg,ime,prezime,dat_zaposlenja,plata,`mjesto`.`naziv` as \"mjesto\",administrator,`mjesto_ptt` FROM `radnik` " +
                 "JOIN `mjesto` ON (`radnik`.`mjesto_ptt`=`mjesto`.`ptt`) WHERE `radnik`.`igraonica_reg_broj` = " + admin.RegBrojIgraonice + " AND `radnik`.`jmbg` <> " + admin.JMBG;

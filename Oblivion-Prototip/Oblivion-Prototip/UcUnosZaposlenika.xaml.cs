@@ -13,6 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using MySql.Data.MySqlClient;
+
+using System.Text.RegularExpressions;
+
 namespace Oblivion_Prototip
 {
     /// <summary>
@@ -26,6 +30,7 @@ namespace Oblivion_Prototip
         {
             InitializeComponent();
             this.parentWindow = parentWindow;
+            upisMjesta();
         }
 
         private void btnOdustani_Click(object sender, RoutedEventArgs e)
@@ -33,5 +38,63 @@ namespace Oblivion_Prototip
             parentWindow.ciscenjeSPa();
             parentWindow.btnDodajNovogZaposlenika.Visibility = Visibility.Visible;
         }
+
+        private void upisMjesta()
+        {
+            string cmd_string = "SELECT * FROM `mjesto`";
+            MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                cmbMjesta.Items.Add(new Mjesto(reader["naziv"].ToString(), (int)reader["ptt"]));
+            }
+
+            reader.Close();
+        }
+
+        private void tbJMBG_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void tbPlata_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9.]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+
+        private void btnPotvrda_Click(object sender, RoutedEventArgs e)
+        {
+            string jmbg = tbJMBG.Text;
+            string ime = tbIme.Text;
+            string prezime = tbPrezime.Text;
+            string dat_zaposlenja = DateTime.Now.ToString("yyyy-MM-dd");
+            double plata = Double.Parse(tbPlata.Text);
+            Mjesto mjesto = (Mjesto)cmbMjesta.SelectedItem;
+            int igraonica_reg_broj = parentWindow.admin.RegBrojIgraonice;
+            bool administrator = (bool)cbAdministrator.IsChecked;
+            string korisnickoIme = tbKorisnickoIme.Text;
+            string lozinka = pbLozinka.Password;
+
+            if (pbLozinka.Password == pbAutorizacija.Password)
+            {
+                string cmd_string = "INSERT INTO `radnik` (`jmbg`,`ime`,`prezime`,`dat_zaposlenja`,`plata`,`mjesto_ptt`,`igraonica_reg_broj`,`administrator`,`korisnicko_ime`,`lozinka`) " +
+                    "VALUES ('" + jmbg + "','" + ime + "','" + prezime + "','" + dat_zaposlenja +"'," + plata + "," + mjesto.PostanskiBroj + "," + igraonica_reg_broj + "," + administrator + ",'" + korisnickoIme + "'," + 
+                    "PASSWORD('" + lozinka + "'))";
+
+                MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+                cmd.ExecuteNonQuery();
+
+                parentWindow.ucitavanjeTabeleZaposlenik();
+                parentWindow.ciscenjeSPa();
+                parentWindow.btnDodajNovogZaposlenika.Visibility = Visibility.Visible;
+            }
+        }
+
     }
 }

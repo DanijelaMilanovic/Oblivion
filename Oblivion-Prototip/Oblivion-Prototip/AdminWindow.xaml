@@ -21,9 +21,8 @@
                 <dragablz:TabablzControl.InterTabController>
                     <dragablz:InterTabController/>
                 </dragablz:TabablzControl.InterTabController>
-                <TabItem Header="ZAPOSLENICI">
-
-                    <Grid>
+            <TabItem Header="ZAPOSLENICI">
+                <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*" />
                             <RowDefinition Height="60" />

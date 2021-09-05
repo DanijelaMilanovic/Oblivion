@@ -116,5 +116,10 @@ namespace Oblivion_Prototip
         {
             spDodavanjeZaposlenika.Children.Clear();
         }
+
+        private void btnOdjava_Click(object sender, RoutedEventArgs e)
+        {
+            this.DialogResult = true;
+        }
     }
 }

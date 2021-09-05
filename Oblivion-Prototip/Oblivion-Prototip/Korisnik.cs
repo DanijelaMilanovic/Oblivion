@@ -93,5 +93,33 @@ namespace Oblivion_Prototip
 
             File.WriteAllText(Path.Combine(path, Ime + " " + Prezime + " " + JMBG + ".txt"), this.ToString());
         }
+
+        public bool promjenaKorisnickogImenaiSifre(string novoKorisnickoIme, string novaLozinka)
+        {
+            string cmd_string = "SELECT COUNT(*) as \"postoji\" FROM `radnik` WHERE `korisnicko_ime` = '" + novoKorisnickoIme + "'";
+            MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            int postoji = (int)reader["postoji"];
+
+            reader.Close();
+
+            if ((postoji == 0) || (postoji == 1 && KorisnickoIme == novoKorisnickoIme))
+            {
+                string cmd_string_u = "UPDATE `radnik` SET korisnicko_ime='" + novoKorisnickoIme + "', lozinka=PASSWORD('" + novaLozinka + "') WHERE `JMBG` = '" + JMBG + "'";
+                MySqlCommand cmd_u = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+                cmd.ExecuteNonQuery();
+
+                /*
+                KorisnickoIme = novoKorisnickoIme;
+                Lozinka = novaLozinka;
+                */
+
+                return true;
+            }
+            return false;
+        }
     }
 }

@@ -17,7 +17,26 @@
         PreviewKeyDown="AdminWindow_PreviewKeyDown" StateChanged="AdminWindow_StateChanged"
         FontFamily="Zen Tokyo Zoo" FontWeight="Bold" FontSize="15">
         <Grid Margin="10 10 10 10" >
-            <dragablz:TabablzControl>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+             </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="70" />
+            <ColumnDefinition Width="70" />
+        </Grid.ColumnDefinitions>
+        <TextBlock  FontSize="80" Foreground="Gray" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow" 
+            Text="OBLIVION" 
+            VerticalAlignment="Center"
+          />
+        <Button Name="btnOdjava" Background="{x:Null}" Grid.Column="2" Margin="5" Click="btnOdjava_Click">
+            <materialDesign:PackIcon Kind="Logout" />
+        </Button>
+        <Button Name="btnPromjena" Background="{x:Null}" Grid.Column="1" Margin="5">
+            <materialDesign:PackIcon Kind="AccountCog" />
+        </Button>
+        <dragablz:TabablzControl Grid.Row="1" Grid.ColumnSpan="3">
                 <dragablz:TabablzControl.InterTabController>
                     <dragablz:InterTabController/>
                 </dragablz:TabablzControl.InterTabController>

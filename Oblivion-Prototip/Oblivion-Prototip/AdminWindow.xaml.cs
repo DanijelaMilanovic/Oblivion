@@ -87,7 +87,7 @@ namespace Oblivion_Prototip
 
             if (MessageBox.Show("Da li ste sigurni da želite da obrišete zaposlenika :" + ime + " " + prezime, "Brisanje zaposlenika", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
-                Korisnik korisnikZaBrisanje = new Korisnik(JMBG, ime, prezime, datumZaposlenja, plata, mjestoPtt, 0, administrator, "", "");
+                Korisnik korisnikZaBrisanje = new Korisnik(JMBG, ime, prezime, datumZaposlenja, plata, mjestoPtt, 0, administrator, "");
 
                 string cmd_string = "UPDATE `racun` SET `radnik_idradnika` = NULL WHERE `radnik_idradnika` = '" + korisnikZaBrisanje.JMBG + "'";
                 MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
@@ -120,6 +120,15 @@ namespace Oblivion_Prototip
         private void btnOdjava_Click(object sender, RoutedEventArgs e)
         {
             this.DialogResult = true;
+        }
+
+        private void btnPromjena_Click(object sender, RoutedEventArgs e)
+        {
+            UcPromjenaPodataka promjena = new UcPromjenaPodataka(this);
+
+            ciscenjeSPa();
+            spDodavanjeZaposlenika.Children.Add(promjena);
+            btnDodajNovogZaposlenika.Visibility = Visibility.Hidden;
         }
     }
 }

@@ -29,7 +29,7 @@
         <Button Name="btnOdjava" Background="{x:Null}" Grid.Column="2" Margin="5" Click="btnOdjava_Click">
             <materialDesign:PackIcon Kind="Logout" />
         </Button>
-        <Button Name="btnPromjena" Background="{x:Null}" Grid.Column="1" Margin="5">
+        <Button Name="btnPromjena" Background="{x:Null}" Grid.Column="1" Margin="5" Click="btnPromjena_Click">
             <materialDesign:PackIcon Kind="AccountCog" />
         </Button>
         <dragablz:TabablzControl Grid.Row="1" Grid.ColumnSpan="3">

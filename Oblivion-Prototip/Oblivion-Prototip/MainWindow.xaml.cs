@@ -75,12 +75,11 @@ namespace Oblivion_Prototip
                     int igraonica_reg_broj = (int)reader["igraonica_reg_broj"];
                     bool administrator = Convert.ToBoolean(reader.GetInt32("administrator"));
                     string korisnicko_ime = reader["korisnicko_ime"].ToString();
-                    string lozinka = reader["lozinka"].ToString();
 
                     reader.Close();
 
                     logovaniKorisnik = new Korisnik(jmbg, ime, prezime, dat_zaposlenja, plata, mjesto_ptt, igraonica_reg_broj,
-                       administrator, korisnicko_ime, lozinka);
+                       administrator, korisnicko_ime);
 
                     if (logovaniKorisnik.Administrator)
                     {

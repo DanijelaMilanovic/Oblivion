@@ -109,6 +109,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Mjesto.cs" />
+    <Compile Include="UcPromjenaPodataka.xaml.cs">
+      <DependentUpon>UcPromjenaPodataka.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UcRacunar.xaml.cs">
       <DependentUpon>UcRacunar.xaml</DependentUpon>
     </Compile>
@@ -139,6 +142,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UcPromjenaPodataka.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UcRacunar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

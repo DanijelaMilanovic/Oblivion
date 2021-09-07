@@ -20,10 +20,10 @@ namespace Oblivion_Prototip
         public int RegBrojIgraonice { get; set; }
         public bool Administrator { get; set; }
         public string KorisnickoIme { get; set; }
-        private string Lozinka { get; set; }
+        // private string Lozinka { get; set; }
 
         public Korisnik(string JMBG, string Ime, string Prezime, DateTime DatumZaposlenja, double Plata, int MjestoPTT, int RegBrojIgraonice, bool Administrator,
-            string KorisnickoIme, string Lozinka)
+            string KorisnickoIme)
         {
             this.JMBG = JMBG;
             this.Ime = Ime;
@@ -34,7 +34,7 @@ namespace Oblivion_Prototip
             this.RegBrojIgraonice = RegBrojIgraonice;
             this.Administrator = Administrator;
             this.KorisnickoIme = KorisnickoIme;
-            this.Lozinka = Lozinka;
+          //  this.Lozinka = Lozinka;
         }
 
         public override string ToString()
@@ -94,30 +94,45 @@ namespace Oblivion_Prototip
             File.WriteAllText(Path.Combine(path, Ime + " " + Prezime + " " + JMBG + ".txt"), this.ToString());
         }
 
-        public bool promjenaKorisnickogImenaiSifre(string novoKorisnickoIme, string novaLozinka)
+        public bool promjenaKorisnickogImenaiSifre(string novoKorisnickoIme, string novaLozinka, bool promjena_sifre)
         {
             string cmd_string = "SELECT COUNT(*) as \"postoji\" FROM `radnik` WHERE `korisnicko_ime` = '" + novoKorisnickoIme + "'";
             MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
 
             MySqlDataReader reader = cmd.ExecuteReader();
 
-            int postoji = (int)reader["postoji"];
+            reader.Read();
+            int postoji = reader.GetInt32("postoji");
 
             reader.Close();
 
-            if ((postoji == 0) || (postoji == 1 && KorisnickoIme == novoKorisnickoIme))
+            if (promjena_sifre == true)
             {
-                string cmd_string_u = "UPDATE `radnik` SET korisnicko_ime='" + novoKorisnickoIme + "', lozinka=PASSWORD('" + novaLozinka + "') WHERE `JMBG` = '" + JMBG + "'";
-                MySqlCommand cmd_u = new MySqlCommand(cmd_string, Connection.GetConnection());
+                if ((postoji == 0) || (postoji == 1 && KorisnickoIme == novoKorisnickoIme))
+                {
+                        string cmd_string_u = "UPDATE `radnik` SET korisnicko_ime='" + novoKorisnickoIme + "', lozinka=PASSWORD('" + novaLozinka + "') WHERE `jmbg` = '" + JMBG + "'";
+                        MySqlCommand cmd_u = new MySqlCommand(cmd_string_u, Connection.GetConnection());
 
-                cmd.ExecuteNonQuery();
+                        cmd_u.ExecuteNonQuery();
 
-                /*
-                KorisnickoIme = novoKorisnickoIme;
-                Lozinka = novaLozinka;
-                */
+                        KorisnickoIme = novoKorisnickoIme;
+                        // Lozinka = novaLozinka;
+                        return true;
+                }
+            }
+            else
+            {
+                if (postoji == 0)
+                {
+                        string cmd_string_u = "UPDATE `radnik` SET korisnicko_ime='" + novoKorisnickoIme + "' WHERE `jmbg` = '" + JMBG + "'";
+                        MySqlCommand cmd_u = new MySqlCommand(cmd_string_u, Connection.GetConnection());
 
-                return true;
+                        cmd_u.ExecuteNonQuery();
+
+                        KorisnickoIme = novoKorisnickoIme;
+                        // Lozinka = novaLozinka;
+                        return true;
+                }
             }
             return false;
         }

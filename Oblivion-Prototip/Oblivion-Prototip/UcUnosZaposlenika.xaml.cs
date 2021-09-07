@@ -69,10 +69,10 @@ namespace Oblivion_Prototip
 
         private void btnPotvrda_Click(object sender, RoutedEventArgs e)
         {
-            if (tbJMBG.Text.Length < 13)
+            if (tbJMBG.Text.Length == 13)
             {
-                try
-                {
+               try
+               { 
                     string jmbg = tbJMBG.Text;
                     string ime = tbIme.Text;
                     string prezime = tbPrezime.Text;
@@ -85,20 +85,54 @@ namespace Oblivion_Prototip
                     string lozinka = pbLozinka.Password;
 
                     // Provjera da li korisnicko ime postoji !!! 
-
-                    if (pbLozinka.Password == pbAutorizacija.Password)
+                    if (korisnickoIme != "")
                     {
-                        string cmd_string = "INSERT INTO `radnik` (`jmbg`,`ime`,`prezime`,`dat_zaposlenja`,`plata`,`mjesto_ptt`,`igraonica_reg_broj`,`administrator`,`korisnicko_ime`,`lozinka`) " +
-                            "VALUES ('" + jmbg + "','" + ime + "','" + prezime + "','" + dat_zaposlenja + "'," + plata + "," + mjesto.PostanskiBroj + "," + igraonica_reg_broj + "," + administrator + ",'" + korisnickoIme + "'," +
-                            "PASSWORD('" + lozinka + "'))";
+                        string cmd_string_postoji = "SELECT COUNT(*) as \"postoji\" FROM `radnik` WHERE `korisnicko_ime`='" + korisnickoIme + "'";
+                        MySqlCommand cmd_postoji = new MySqlCommand(cmd_string_postoji, Connection.GetConnection());
 
-                        MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+                        MySqlDataReader reader = cmd_postoji.ExecuteReader();
 
-                        cmd.ExecuteNonQuery();
+                        reader.Read();
+                        int postoji = reader.GetInt32("postoji");
 
-                        parentWindow.ucitavanjeTabeleZaposlenik();
-                        parentWindow.ciscenjeSPa();
-                        parentWindow.btnDodajNovogZaposlenika.Visibility = Visibility.Visible;
+                        reader.Close();
+
+                        if (postoji == 0)
+                        {
+                            if (pbLozinka.Password == pbAutorizacija.Password)
+                            {
+                                if (pbLozinka.Password.Length > 4)
+                                {
+                                    string cmd_string = "INSERT INTO `radnik` (`jmbg`,`ime`,`prezime`,`dat_zaposlenja`,`plata`,`mjesto_ptt`,`igraonica_reg_broj`,`administrator`,`korisnicko_ime`,`lozinka`) " +
+                                        "VALUES ('" + jmbg + "','" + ime + "','" + prezime + "','" + dat_zaposlenja + "'," + plata + "," + mjesto.PostanskiBroj + "," + igraonica_reg_broj + "," + administrator + ",'" + korisnickoIme + "'," +
+                                        "PASSWORD('" + lozinka + "'))";
+
+                                    MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+                                    cmd.ExecuteNonQuery();
+
+                                    parentWindow.ucitavanjeTabeleZaposlenik();
+                                    parentWindow.ciscenjeSPa();
+                                    parentWindow.btnDodajNovogZaposlenika.Visibility = Visibility.Visible;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Lozinka mora imati više od 4 karaktera.", "Upozorenje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Lozinka nije potvrđena.", "Upozorenje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Korisničko ime je zauzeto.", "Upozorenje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Unesite korisničko ime.", "Upozorenje", MessageBoxButton.OK, MessageBoxImage.Warning);
                     }
                 }
                 catch

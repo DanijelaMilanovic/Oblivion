@@ -92,7 +92,7 @@
 
         <CheckBox
             Name="cbAdministrator"
-            Style="{StaticResource MaterialDesignFilterChipCheckBox}"
+            Style="{StaticResource MaterialDesignFilterChipPrimaryCheckBox}"
             IsChecked="False"
             MaxWidth="200"
             HorizontalAlignment="Center"

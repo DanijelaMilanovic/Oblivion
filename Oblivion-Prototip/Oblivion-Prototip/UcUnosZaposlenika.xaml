@@ -27,7 +27,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock  Foreground="White" Grid.ColumnSpan="3" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow" 
+        <TextBlock x:Name="lblNaslov"  Foreground="White" Grid.ColumnSpan="3" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow" 
                    Text="UNOS NOVOG ZAPOSLENIKA" 
                    VerticalAlignment="Center" />
 
@@ -138,10 +138,9 @@
             VerticalAlignment="Center"
             Grid.Row="4" Grid.ColumnSpan="3" Background="{x:Null}" Width="400" Click="btnPotvrda_Click">
             <StackPanel Orientation="Horizontal">
-                <materialDesign:PackIcon Kind="AccountPlusOutline" />
-                <TextBlock Text="REGISTRUJ NOVOG ZAPOSLENIKA"/>
+                <materialDesign:PackIcon Name="myPackIcon" Kind="AccountPlusOutline" />
+                <TextBlock Name="btnPotvrdaTextBlock" Text="REGISTRUJ NOVOG ZAPOSLENIKA"/>
             </StackPanel>
         </Button>
-
     </Grid>
 </UserControl>

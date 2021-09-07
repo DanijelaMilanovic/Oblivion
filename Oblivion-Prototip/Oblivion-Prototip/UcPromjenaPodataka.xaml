@@ -82,7 +82,7 @@
             VerticalAlignment="Center"
             Grid.Row="5" Grid.ColumnSpan="3" Background="{x:Null}" Width="400" Click="btnPotvrda_Click">
             <StackPanel Orientation="Horizontal">
-                <materialDesign:PackIcon Kind="AccountEdit" />
+                <materialDesign:PackIcon Kind="AccountEditOutline" />
                 <TextBlock Text="POTVRDI NOVE PODATKE ZAPOSLENIKA"/>
             </StackPanel>
         </Button>

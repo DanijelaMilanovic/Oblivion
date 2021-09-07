@@ -105,7 +105,7 @@ namespace Oblivion_Prototip
 
         private void btnDodajNovogZaposlenika_Click(object sender, RoutedEventArgs e)
         {
-            UcUnosZaposlenika unos = new UcUnosZaposlenika(this);
+            UcUnosZaposlenika unos = new UcUnosZaposlenika(this, "", true);
 
             ciscenjeSPa();
             spDodavanjeZaposlenika.Children.Add(unos);
@@ -128,6 +128,18 @@ namespace Oblivion_Prototip
 
             ciscenjeSPa();
             spDodavanjeZaposlenika.Children.Add(promjena);
+            btnDodajNovogZaposlenika.Visibility = Visibility.Hidden;
+        }
+
+        private void btnModifikacija_Click(object sender, RoutedEventArgs e)
+        {
+            DataRowView dataRowView = (DataRowView)((Button)e.Source).DataContext;
+            string JMBG = dataRowView[0].ToString();
+
+            UcUnosZaposlenika promjenaPodatakaZaposlenika = new UcUnosZaposlenika(this, JMBG, false);
+
+            ciscenjeSPa();
+            spDodavanjeZaposlenika.Children.Add(promjenaPodatakaZaposlenika);
             btnDodajNovogZaposlenika.Visibility = Visibility.Hidden;
         }
     }

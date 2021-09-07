@@ -62,7 +62,7 @@
                                 <DataGridTemplateColumn Width="1.25*">
                                     <DataGridTemplateColumn.CellTemplate>
                                         <DataTemplate>
-                                            <Button Name="btnModifikacija" Content="Modifikacija"  />
+                                            <Button Name="btnModifikacija" Content="Modifikacija" Click="btnModifikacija_Click"  />
                                         </DataTemplate>
                                     </DataGridTemplateColumn.CellTemplate>
                                 </DataGridTemplateColumn>

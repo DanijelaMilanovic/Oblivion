@@ -59,7 +59,7 @@ namespace Oblivion_Prototip
             MySqlDataReader reader = null;
             try
             {
-                string cmd_string = "SELECT * FROM `igraonica`.`radnik` WHERE `radnik`.`korisnicko_ime`='" + tbKorisnickoIme.Text + "' AND `radnik`.`lozinka`=PASSWORD('" + pbLozinka.Password + "');";
+                string cmd_string = "SELECT * FROM `igraonica`.`radnik` WHERE `radnik`.`korisnicko_ime`='" + tbKorisnickoIme.Text + "' AND `radnik`.`lozinka`=PASSWORD('" + pbLozinka.Password + "') AND `radnik`.`zaposlen`=1;";
                 MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
                 reader = cmd.ExecuteReader();
 

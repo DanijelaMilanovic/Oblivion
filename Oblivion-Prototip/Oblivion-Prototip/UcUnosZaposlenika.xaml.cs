@@ -39,66 +39,7 @@ namespace Oblivion_Prototip
 
             if (!prikaz)
             {
-                MySqlDataReader reader = null;
-                try
-                {
-                    string cmd_string = "SELECT ime, prezime, lozinka, plata, administrator, mjesto_ptt, korisnicko_ime FROM `igraonica`.`radnik` WHERE `radnik`.`jmbg`='" + JMBG + "'";
-                    MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
-                    reader = cmd.ExecuteReader();
-
-                    if (reader.Read())
-                    {
-                        string ime = reader["ime"].ToString();
-                        string prezime = reader["prezime"].ToString();
-                        double plata = (double)reader["plata"];
-                        int mjesto_ptt = (int)reader["mjesto_ptt"];
-                        bool administrator = Convert.ToBoolean(reader.GetInt32("administrator"));
-                        string korisnicko_ime = reader["korisnicko_ime"].ToString();
-                        string lozinka = reader["lozinka"].ToString();
-
-                        reader.Close();
-
-                        lblNaslov.Text = "IZMJENA PODATAKA O ZAPOSLENOM";
-
-                        tbIme.Text = ime;
-                        tbIme.IsEnabled = false;
-                        tbPrezime.Text = prezime;
-                        tbPrezime.IsEnabled = false;
-                        tbKorisnickoIme.Text = korisnicko_ime;
-                        tbKorisnickoIme.IsEnabled = false;
-                        pbLozinka.Password = lozinka;
-                        pbLozinka.IsEnabled = false;
-                        pbAutorizacija.Password = lozinka;
-                        pbAutorizacija.IsEnabled = false;
-                        cbAdministrator.IsChecked = administrator;
-                        foreach (Mjesto mjesto in cmbMjesta.Items)
-                        {
-                            if (mjesto.PostanskiBroj == mjesto_ptt)
-                            {
-                                cmbMjesta.SelectedItem = mjesto;
-                                break;
-                            }
-                        }
-                        tbJMBG.Text = JMBG;
-                        tbJMBG.IsEnabled = false;
-                        tbPlata.Text = plata.ToString("0.#0");
-
-                        myPackIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.AccountEditOutline;
-                        btnPotvrdaTextBlock.Text = "POTVRDI NOVE PODATKE ZAPOSLENIKA";
-                    }
-                }
-                catch  
-                {
-                    MessageBox.Show("Neuspješno čitanje iz baze podataka", "Greška", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-                finally
-                {
-                    if (reader != null)
-                    {
-                        reader.Close();
-                    }
-                }
-                
+                ucitavanjePodatakaZaModifikaciju();
             }
         }
 
@@ -135,6 +76,68 @@ namespace Oblivion_Prototip
             e.Handled = regex.IsMatch(e.Text);
         }
 
+        private void ucitavanjePodatakaZaModifikaciju()
+        {
+            MySqlDataReader reader = null;
+            try
+            {
+                string cmd_string = "SELECT ime, prezime, lozinka, plata, administrator, mjesto_ptt, korisnicko_ime FROM `igraonica`.`radnik` WHERE `radnik`.`jmbg`='" + JMBG + "'";
+                MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+                reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    string ime = reader["ime"].ToString();
+                    string prezime = reader["prezime"].ToString();
+                    double plata = (double)reader["plata"];
+                    int mjesto_ptt = (int)reader["mjesto_ptt"];
+                    bool administrator = Convert.ToBoolean(reader.GetInt32("administrator"));
+                    string korisnicko_ime = reader["korisnicko_ime"].ToString();
+                    string lozinka = reader["lozinka"].ToString();
+
+                    reader.Close();
+
+                    lblNaslov.Text = "IZMJENA PODATAKA O ZAPOSLENOM";
+
+                    tbIme.Text = ime;
+                    tbIme.IsEnabled = false;
+                    tbPrezime.Text = prezime;
+                    tbPrezime.IsEnabled = false;
+                    tbKorisnickoIme.Text = korisnicko_ime;
+                    tbKorisnickoIme.IsEnabled = false;
+                    pbLozinka.Password = lozinka;
+                    pbLozinka.IsEnabled = false;
+                    pbAutorizacija.Password = lozinka;
+                    pbAutorizacija.IsEnabled = false;
+                    cbAdministrator.IsChecked = administrator;
+                    foreach (Mjesto mjesto in cmbMjesta.Items)
+                    {
+                        if (mjesto.PostanskiBroj == mjesto_ptt)
+                        {
+                            cmbMjesta.SelectedItem = mjesto;
+                            break;
+                        }
+                    }
+                    tbJMBG.Text = JMBG;
+                    tbJMBG.IsEnabled = false;
+                    tbPlata.Text = plata.ToString("0.#0");
+
+                    myPackIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.AccountEditOutline;
+                    btnPotvrdaTextBlock.Text = "POTVRDI NOVE PODATKE ZAPOSLENIKA";
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Neuspješno čitanje iz baze podataka", "Greška", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            finally
+            {
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+            }
+        }
 
         private void btnPotvrda_Click(object sender, RoutedEventArgs e)
         {
@@ -185,7 +188,7 @@ namespace Oblivion_Prototip
                                     {
                                         string cmd_string = "INSERT INTO `radnik` (`jmbg`,`ime`,`prezime`,`dat_zaposlenja`,`plata`,`mjesto_ptt`,`igraonica_reg_broj`,`administrator`,`korisnicko_ime`,`lozinka`) " +
                                             "VALUES ('" + jmbg + "','" + ime + "','" + prezime + "','" + dat_zaposlenja + "'," + plata + "," + mjesto.PostanskiBroj + "," + igraonica_reg_broj + "," + administrator + ",'" + korisnickoIme + "'," +
-                                            "PASSWORD('" + lozinka + "'))";
+                                            "PASSWORD('" + lozinka + "'),1)";
 
                                         MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
 

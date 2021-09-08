@@ -62,7 +62,7 @@
             Grid.Row="4" Click="btnSignIn_Click" IsDefault="True"
          />
         <TextBlock  FontSize="13" Foreground="Gray" HorizontalAlignment="Center" Grid.Row="6" TextWrapping="WrapWithOverflow" 
-            Text="Projekat 1 iz predmeta Baze podataka. Aplikacija na temu sistem za igraonicu. Radili: Danijela Milanović i Stefan Jokić" 
+            Text="Projekat 1 iz predmeta Baze podataka. Aplikacija na temu sistem za igraonicu.&#x0A;Radili: Danijela Milanović i Stefan Jokić" 
             VerticalAlignment="Center"
           />
         <Label Name="lblPodNaslov" Content="SISTEM ZA IGRAONICU" Foreground="#FF673AB7" Grid.Column="1" Grid.RowSpan="2" Grid.Row="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="20" Margin="0,0,40,20"/>

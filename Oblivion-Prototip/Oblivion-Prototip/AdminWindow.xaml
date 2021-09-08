@@ -27,11 +27,12 @@
             <ColumnDefinition Width="70" />
             <ColumnDefinition Width="70" />
         </Grid.ColumnDefinitions>
-        <Button Name="btnOdjava" Background="{x:Null}" Grid.Column="3" Margin="5,10" Click="btnOdjava_Click">
-            <materialDesign:PackIcon Kind="Logout" />
+
+        <Button Name="btnIgraonica" Background="{x:Null}" Grid.Column="0" Margin="5,10" >
+            <materialDesign:PackIcon Kind="GoogleController" Height="22" Width="28"/>
             <Button.ToolTip>
                 <ToolTip Background="#FF251149">
-                    <Label  Content="Odjava sa sistema" Background="Transparent"/>
+                    <Label  Content="Podaci o igraonici" Background="Transparent"/>
                 </ToolTip>
             </Button.ToolTip>
         </Button>
@@ -43,11 +44,26 @@
                 </ToolTip>
             </Button.ToolTip>
         </Button>
+        <Button Name="btnOdjava" Background="{x:Null}" Grid.Column="3" Margin="5,10" Click="btnOdjava_Click">
+            <materialDesign:PackIcon Kind="Logout" />
+            <Button.ToolTip>
+                <ToolTip Background="#FF251149">
+                    <Label  Content="Odjava sa sistema" Background="Transparent"/>
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+      
         <dragablz:TabablzControl Grid.Row="1" Grid.ColumnSpan="4">
             <dragablz:TabablzControl.InterTabController>
                 <dragablz:InterTabController/>
             </dragablz:TabablzControl.InterTabController>
-            <TabItem Header="ZAPOSLENICI">
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal" >
+                        <materialDesign:PackIcon Kind="AccountOutline" Foreground="WhiteSmoke"/>
+                        <TextBlock Text=" ZAPOSLENICI  " Foreground="WhiteSmoke"/>
+                    </StackPanel>
+                </TabItem.Header>
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -89,14 +105,109 @@
                     <Button Name="btnDodajNovogZaposlenika" Grid.Row="1" Margin="5 0 5 0" Click="btnDodajNovogZaposlenika_Click">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="AccountPlusOutline" />
-                            <TextBlock Text="DODAJ NOVOG ZAPOSLENIKA"/>
+                            <TextBlock Text=" DODAJ NOVOG ZAPOSLENIKA"/>
                         </StackPanel>
                     </Button>
                     <StackPanel Margin="5" Grid.Row="1" Grid.RowSpan="2" Name="spDodavanjeZaposlenika"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Home" />
-            <TabItem Header="RAČUNI">
+            <TabItem >
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="DesktopWindows" Foreground="WhiteSmoke"/>
+                        <TextBlock Text=" RAČUNARI  " Foreground="WhiteSmoke"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <DataGrid Name="dataRacunari" AutoGenerateColumns="False" CanUserAddRows="False"
+                        CanUserResizeColumns="False"
+                        Margin="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                        RowBackground="#FF01010C" FontWeight="Regular" Foreground="#525252"
+                        ScrollViewer.CanContentScroll="True" 
+                        AlternatingRowBackground="#FF10100C" BorderBrush="#000" BorderThickness="1"
+                        ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                        ScrollViewer.VerticalScrollBarVisibility="Auto" SelectedCellsChanged="dataRacunari_SelectedCellsChanged" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Mrežno ime računara" Binding="{Binding Path='mrezno_ime'}" Width="2*" IsReadOnly="True" />
+
+                            <DataGridTemplateColumn Width="*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Monitori" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <DataGridTemplateColumn Width="*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Procesor" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <DataGridTemplateColumn Width="1.2*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Matična ploča" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <DataGridTemplateColumn Width="*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="RAM" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <DataGridTemplateColumn Width="*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="HDD" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <DataGridTemplateColumn Width="*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="DVD-ROM" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <DataGridTemplateColumn Width="*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Name="btnObrisi" Content="Obriši" Click="btnObrisi_Click"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                <Button Name="btnDodavanjeNovogRacunara" Grid.Row="1" Margin="5 0 5 0" Click="btnDodavanjeNovogRacunara_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="DesktopClassic" />
+                        <TextBlock Text=" DODAJ NOVI RAČUNAR"/>
+                    </StackPanel>
+                </Button>
+                <StackPanel Margin="5" Grid.Row="1" Grid.RowSpan="2" Name="spRacunar"/>
+                </Grid>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal" >
+                        <materialDesign:PackIcon Kind="NoteSearchOutline" Foreground="WhiteSmoke"/>
+                        <TextBlock Text=" RAČUNI  " Foreground="WhiteSmoke"/>
+                    </StackPanel>
+                </TabItem.Header>
                 <DataGrid Name="dataRacun" AutoGenerateColumns="False" CanUserAddRows="False"
                         CanUserResizeColumns="False"
                         Margin="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
@@ -114,14 +225,6 @@
                 </DataGrid>
             </TabItem>
         </dragablz:TabablzControl>
-        <Button Name="btnIgraonica" Background="{x:Null}" Grid.Column="0" Margin="5,10" >
-            <materialDesign:PackIcon Kind="GoogleController" Height="22" Width="28"/>
-            <Button.ToolTip>
-                <ToolTip Background="#FF251149">
-                    <Label  Content="Podaci o igraonici" Background="Transparent"/>
-                </ToolTip>
-            </Button.ToolTip>
-        </Button>
 
     </Grid>
 </Window>

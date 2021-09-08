@@ -46,9 +46,11 @@ namespace Oblivion_Prototip
                     
                     int brojMreznihImena = reader.GetInt32("mreznoIme");
 
+                    reader.Close();
+
                     if (brojMreznihImena == 0)
                     {
-                        cmd_string = "INSERT INTO `racunar` VALUES (" + tbJibRacunara.Text + ",'" + tbMreznoIme.Text + "'," + korisnik.RegBrojIgraonice + ")";
+                        cmd_string = "INSERT INTO `racunar` VALUES(" + tbJibRacunara.Text + ",'" + tbMreznoIme.Text + "'," + korisnik.RegBrojIgraonice + ")";
                         cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
 
                         cmd.ExecuteNonQuery();

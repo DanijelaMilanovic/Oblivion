@@ -118,6 +118,9 @@
     <Compile Include="UcUnosZaposlenika.xaml.cs">
       <DependentUpon>UcUnosZaposlenika.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UnosRacunaraWindow.xaml.cs">
+      <DependentUpon>UnosRacunaraWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ZaposleniWindow.xaml.cs">
       <DependentUpon>ZaposleniWindow.xaml</DependentUpon>
     </Compile>
@@ -151,6 +154,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UcUnosZaposlenika.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UnosRacunaraWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

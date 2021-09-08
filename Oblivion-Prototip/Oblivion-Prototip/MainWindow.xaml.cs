@@ -95,6 +95,7 @@ namespace Oblivion_Prototip
                         if (adminUpravljanje.DialogResult == true)
                         {
                             this.Show();
+                            tbKorisnickoIme.Focus();
                         }
                         else
                         {

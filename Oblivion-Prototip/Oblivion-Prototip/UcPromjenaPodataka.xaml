@@ -80,7 +80,7 @@
         <Button x:Name="btnPotvrda"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Grid.Row="5" Grid.ColumnSpan="3" Background="{x:Null}" Width="400" Click="btnPotvrda_Click">
+            Grid.Row="5" Grid.ColumnSpan="3" Background="{x:Null}" Width="400" Click="btnPotvrda_Click" IsDefault="True">
             <StackPanel Orientation="Horizontal">
                 <materialDesign:PackIcon Kind="AccountEditOutline" />
                 <TextBlock Text="POTVRDI NOVE PODATKE ZAPOSLENIKA"/>

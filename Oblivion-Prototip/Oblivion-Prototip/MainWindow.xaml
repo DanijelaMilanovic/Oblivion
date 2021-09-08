@@ -61,7 +61,7 @@
             Content="Prijavi me" 
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Grid.Row="4" Click="btnSignIn_Click"
+            Grid.Row="4" Click="btnSignIn_Click" IsDefault="True"
          />
         <TextBlock  FontSize="13" Foreground="Gray" HorizontalAlignment="Center" Grid.Row="6" TextWrapping="WrapWithOverflow" 
             Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit sapien eget ullamcorper placerat." 

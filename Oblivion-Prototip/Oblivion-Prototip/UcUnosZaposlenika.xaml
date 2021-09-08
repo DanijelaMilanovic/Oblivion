@@ -92,7 +92,7 @@
 
         <CheckBox
             Name="cbAdministrator"
-            Style="{StaticResource MaterialDesignFilterChipPrimaryCheckBox}"
+            Style="{StaticResource MaterialDesignFilterChipPrimaryOutlineCheckBox}"            
             IsChecked="False"
             MaxWidth="200"
             HorizontalAlignment="Center"
@@ -136,10 +136,10 @@
         <Button x:Name="btnPotvrda"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Grid.Row="4" Grid.ColumnSpan="3" Background="{x:Null}" Width="400" Click="btnPotvrda_Click">
+            Grid.Row="4" Grid.ColumnSpan="3" Background="{x:Null}" Width="400" Click="btnPotvrda_Click" IsDefault="True">
             <StackPanel Orientation="Horizontal">
                 <materialDesign:PackIcon Name="myPackIcon" Kind="AccountPlusOutline" />
-                <TextBlock Name="btnPotvrdaTextBlock" Text="REGISTRUJ NOVOG ZAPOSLENIKA"/>
+                <TextBlock Name="btnPotvrdaTextBlock" Text=" REGISTRUJ NOVOG ZAPOSLENIKA"/>
             </StackPanel>
         </Button>
     </Grid>

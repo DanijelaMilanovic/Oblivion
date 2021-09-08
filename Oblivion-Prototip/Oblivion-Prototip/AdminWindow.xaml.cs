@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -29,6 +30,7 @@ namespace Oblivion_Prototip
             InitializeComponent();
             this.admin = korisnik;
             ucitavanjeTabeleZaposlenik();
+            ucitavanjeTabeleRacunara();
             ucitavanjeTabeleRacun();
         }
 
@@ -142,7 +144,68 @@ namespace Oblivion_Prototip
             btnDodajNovogZaposlenika.Visibility = Visibility.Hidden;
         }
         #endregion
+        #region racunari
+        private void ucitavanjeTabeleRacunara()
+        {
+            string cmd_string = "SELECT broj_racunara, mrezno_ime FROM `racunar` WHERE `igraonica_reg_broj` = " + admin.RegBrojIgraonice;
+            MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
 
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+
+            dataRacunari.ItemsSource = null;
+            dataRacunari.ItemsSource = dt.DefaultView;
+
+            dataRacunari.Items.SortDescriptions.Clear();
+            dataRacunari.Items.SortDescriptions.Add(new SortDescription("mrezno_ime", ListSortDirection.Ascending));
+            dataRacunari.Items.Refresh();
+        }
+        private void dataRacunari_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
+        {
+            dataRacunari.UnselectAllCells();
+        }
+        private void btnObrisi_Click(object sender, RoutedEventArgs e)
+        {
+            DataRowView dataRowView = (DataRowView)((Button)e.Source).DataContext;
+            int jib_racunara = Convert.ToInt32(dataRowView[0].ToString());
+            string mrezno_ime = dataRowView[1].ToString();
+
+            if (MessageBox.Show("Da li ste sigurni da želite da obrišete računar: " + mrezno_ime , "Brisanje računara", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                string cmd_string = "DELETE FROM `instalirano` WHERE racunar_broj_racunara = " + jib_racunara;
+                MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+                cmd.ExecuteNonQuery();
+
+                cmd_string = "DELETE FROM `komponenta` WHERE racunar_idracunara = " + jib_racunara;
+                cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+                cmd.ExecuteNonQuery();
+
+                cmd_string = "DELETE FROM `racunar`WHERE broj_racunara = " + jib_racunara;
+                cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Računar: " + mrezno_ime + " je obrisan.", "Brisanje računara", MessageBoxButton.OK, MessageBoxImage.Information);
+                ucitavanjeTabeleRacunara();
+            }
+        }
+        private void btnDodavanjeNovogRacunara_Click(object sender, RoutedEventArgs e)
+        {
+            UnosRacunaraWindow unos = new UnosRacunaraWindow(admin);
+
+            if (unos.ShowDialog() == true)
+            {
+                ucitavanjeTabeleRacunara();
+                MessageBox.Show("Računar: " + unos.MreznoIme + " je kreiran. Molimo ispunite podatke o komponentama.", "Informacija", MessageBoxButton.OK, MessageBoxImage.Information);
+                
+            }
+        }
+        #endregion
+        #region racuni
         private void dataRacun_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
         {
             dataRacun.UnselectAllCells();
@@ -161,5 +224,9 @@ namespace Oblivion_Prototip
             dataRacun.ItemsSource = null;
             dataRacun.ItemsSource = dt.DefaultView;
         }
+
+        #endregion
+
+
     }
 }

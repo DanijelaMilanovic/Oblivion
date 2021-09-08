@@ -29,6 +29,7 @@ namespace Oblivion_Prototip
             InitializeComponent();
             this.admin = korisnik;
             ucitavanjeTabeleZaposlenik();
+            ucitavanjeTabeleRacun();
         }
 
         /// <summary>
@@ -54,10 +55,11 @@ namespace Oblivion_Prototip
         }
         #endregion
 
+        #region zaposlenici
         public void ucitavanjeTabeleZaposlenik()
         {
             string cmd_string = "SELECT jmbg,ime,prezime,dat_zaposlenja,plata,`mjesto`.`naziv` as \"mjesto\",administrator,`mjesto_ptt` FROM `radnik` " +
-                "JOIN `mjesto` ON (`radnik`.`mjesto_ptt`=`mjesto`.`ptt`) WHERE `radnik`.`igraonica_reg_broj` = " + admin.RegBrojIgraonice + " AND `radnik`.`jmbg` <> " + admin.JMBG;
+                "JOIN `mjesto` ON (`radnik`.`mjesto_ptt`=`mjesto`.`ptt`) WHERE `radnik`.`igraonica_reg_broj` = " + admin.RegBrojIgraonice + " AND `radnik`.`jmbg` <> " + admin.JMBG + " AND `radnik`.`zaposlen`=1";
             MySqlCommand cmd = new MySqlCommand(cmd_string,Connection.GetConnection());
 
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
@@ -87,15 +89,12 @@ namespace Oblivion_Prototip
 
             if (MessageBox.Show("Da li ste sigurni da želite da obrišete zaposlenika :" + ime + " " + prezime, "Brisanje zaposlenika", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
-                Korisnik korisnikZaBrisanje = new Korisnik(JMBG, ime, prezime, datumZaposlenja, plata, mjestoPtt, 0, administrator, "", "");
+                Korisnik korisnikZaBrisanje = new Korisnik(JMBG, ime, prezime, datumZaposlenja, plata, mjestoPtt, 0, administrator, "");
 
-                string cmd_string = "UPDATE `racun` SET `radnik_idradnika` = NULL WHERE `radnik_idradnika` = '" + korisnikZaBrisanje.JMBG + "'";
+                string cmd_string = "UPDATE `radnik` SET zaposlen=0,korisnicko_ime='',lozinka=''  WHERE `radnik`.JMBG = '" + JMBG + "'";
                 MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
-
+               
                 korisnikZaBrisanje.StampanjeIzvjestaja();
-                cmd.ExecuteNonQuery();
-                cmd_string = "DELETE from `radnik` WHERE `radnik`.JMBG = '" + JMBG + "'";
-                cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Zaposlenik: " + korisnikZaBrisanje.Ime + " " + korisnikZaBrisanje.Prezime + " je obrisan. Svi računi koje je radnik isplatio nalaze se \"Evidenciji obrisanih zaposlenika\".", "Brisanje zaposlenika", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -105,7 +104,7 @@ namespace Oblivion_Prototip
 
         private void btnDodajNovogZaposlenika_Click(object sender, RoutedEventArgs e)
         {
-            UcUnosZaposlenika unos = new UcUnosZaposlenika(this);
+            UcUnosZaposlenika unos = new UcUnosZaposlenika(this, "", true);
 
             ciscenjeSPa();
             spDodavanjeZaposlenika.Children.Add(unos);
@@ -120,6 +119,47 @@ namespace Oblivion_Prototip
         private void btnOdjava_Click(object sender, RoutedEventArgs e)
         {
             this.DialogResult = true;
+        }
+
+        private void btnPromjena_Click(object sender, RoutedEventArgs e)
+        {
+            UcPromjenaPodataka promjena = new UcPromjenaPodataka(this);
+
+            ciscenjeSPa();
+            spDodavanjeZaposlenika.Children.Add(promjena);
+            btnDodajNovogZaposlenika.Visibility = Visibility.Hidden;
+        }
+
+        private void btnModifikacija_Click(object sender, RoutedEventArgs e)
+        {
+            DataRowView dataRowView = (DataRowView)((Button)e.Source).DataContext;
+            string JMBG = dataRowView[0].ToString();
+
+            UcUnosZaposlenika promjenaPodatakaZaposlenika = new UcUnosZaposlenika(this, JMBG, false);
+
+            ciscenjeSPa();
+            spDodavanjeZaposlenika.Children.Add(promjenaPodatakaZaposlenika);
+            btnDodajNovogZaposlenika.Visibility = Visibility.Hidden;
+        }
+        #endregion
+
+        private void dataRacun_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
+        {
+            dataRacun.UnselectAllCells();
+        }
+        private void ucitavanjeTabeleRacun()
+        {
+            string cmd_string = "select radnik.`prezime`, radnik.`ime`, radnik.`jmbg`, racun.`idracun`, racun.`ukupna_cijena` from `racun` join `radnik` on (racun.`radnik_idradnika` = radnik.`jmbg`) " +
+                "where radnik.`jmbg` in (select `jmbg` from `radnik` where igraonica_reg_broj = " + admin.RegBrojIgraonice + ")";
+            MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+
+            dataRacun.ItemsSource = null;
+            dataRacun.ItemsSource = dt.DefaultView;
         }
     }
 }

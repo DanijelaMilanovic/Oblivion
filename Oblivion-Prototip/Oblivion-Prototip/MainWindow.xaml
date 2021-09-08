@@ -29,10 +29,8 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Image Name="imgLogo" Grid.Column="1" Height="450" Width="450" Source="logoOblivion.png" Grid.RowSpan="2"/>
-        <TextBlock  Foreground="White" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="WrapWithOverflow" 
-                   Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit sapien eget ullamcorper placerat. Integer vulputate id eros in fringilla. Cras eget feugiat ipsum. Quisque elementum ac tortor congue molestie. Proin imperdiet eu felis sed tincidunt. Aenean cursus enim eu ante bibendum blandit. Maecenas interdum nisi quis facilisis rhoncus. Pellentesque sollicitudin fringilla libero non eleifend. Suspendisse vehicula, erat suscipit bibendum sollicitudin, nunc enim convallis elit, non faucibus neque tellus ac metus. Morbi tincidunt leo eu blandit molestie. In auctor ornare erat non viverra. Mauris placerat libero sit amet consequat consectetur." 
-                   VerticalAlignment="Center"  Grid.RowSpan="5"/>
+        <Image Name="imgLogo" Grid.Column="1" Height="450" Width="450" Source="logo.png" Grid.RowSpan="2"/>
+
         <TextBox
             Name="tbKorisnickoIme"
             Background="#AA0B0808"
@@ -64,8 +62,27 @@
             Grid.Row="4" Click="btnSignIn_Click" IsDefault="True"
          />
         <TextBlock  FontSize="13" Foreground="Gray" HorizontalAlignment="Center" Grid.Row="6" TextWrapping="WrapWithOverflow" 
-            Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit sapien eget ullamcorper placerat." 
+            Text="Projekat 1 iz predmeta Baze podataka. Aplikacija na temu sistem za igraonicu. Radili: Danijela Milanović i Stefan Jokić" 
             VerticalAlignment="Center"
           />
+        <Label Name="lblPodNaslov" Content="SISTEM ZA IGRAONICU" Foreground="#FF673AB7" Grid.Column="1" Grid.RowSpan="2" Grid.Row="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="20" Margin="0,0,40,20"/>
+        <Label Name="lblNaslov" Content="OBLIVION" Grid.Column="1" Grid.RowSpan="2" Grid.Row="2" HorizontalContentAlignment="Center" FontSize="130" VerticalContentAlignment="Center">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF673AB7" Offset="1"/>
+                    <GradientStop Color="#FFF6F4F9" Offset="0.382"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label Content="PRIJAVA NA SISTEM" Foreground="Gray" HorizontalContentAlignment="Center" FontSize="30" Grid.Row="1" VerticalContentAlignment="Top"/>
+        <Button Name="btnExit" Grid.Column="1" Background="{x:Null}" Margin="5" HorizontalAlignment="Right" VerticalAlignment="top" Click="btnExit_Click">
+            <materialDesign:PackIcon Kind="ExitRun" />
+            <Button.ToolTip>
+                <ToolTip Background="#FF251149">
+                    <Label  Content="Izlaz iz programa" Background="Transparent"/>
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
     </Grid>
 </Window>

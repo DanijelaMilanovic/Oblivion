@@ -33,6 +33,11 @@
 
         <Button Name="btnOdustani" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" Click="btnOdustani_Click">
             <materialDesign:PackIcon Kind="WindowClose" />
+            <Button.ToolTip>
+                <ToolTip Background="#FF251149">
+                    <Label  Content="Izlaz" Background="Transparent"/>
+                </ToolTip>
+            </Button.ToolTip>
         </Button>
         <TextBox
             Name="tbIme"

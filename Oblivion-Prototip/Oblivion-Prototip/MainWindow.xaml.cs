@@ -37,6 +37,8 @@ namespace Oblivion_Prototip
             {
                 WindowState = WindowState.Normal;
                 WindowStyle = WindowStyle.ThreeDBorderWindow;
+                lblNaslov.FontSize = 100;
+                lblPodNaslov.Margin = new Thickness(0, 0, 0, 20);
             }
 
         }
@@ -46,6 +48,8 @@ namespace Oblivion_Prototip
             if (WindowState == WindowState.Maximized)
             {
                 WindowStyle = WindowStyle.None;
+                lblNaslov.FontSize = 130;
+                lblPodNaslov.Margin = new Thickness(0, 0, 40, 20);
             }
         }
         #endregion
@@ -143,5 +147,10 @@ namespace Oblivion_Prototip
             }
         }
         #endregion
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

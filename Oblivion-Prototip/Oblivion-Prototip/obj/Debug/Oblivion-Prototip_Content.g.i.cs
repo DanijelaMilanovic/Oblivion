@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("logooblivion.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("logobutton.ico")]
 
 

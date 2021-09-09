@@ -94,17 +94,19 @@
             Style="{StaticResource MaterialDesignFilledPasswordBox}"
             materialDesign:HintAssist.Hint="Potvrdi lozinku" 
             Grid.Row="2" Grid.Column="1" />
-
-        <CheckBox
+        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <CheckBox
             Name="cbAdministrator"
-            Style="{StaticResource MaterialDesignFilterChipPrimaryCheckBox}"
+            Style="{StaticResource MaterialDesignActionDarkCheckBox}"            
             IsChecked="False"
             MaxWidth="200"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Content="Administrator" 
-            Grid.Row="3" Grid.Column="1" />
-
+             >
+                <CheckBox.Content>
+                    <materialDesign:PackIcon Kind="Close" />
+                </CheckBox.Content>
+            </CheckBox>
+            <Label  Content="Administrator" VerticalAlignment="Center"/>
+        </StackPanel>
         <ComboBox
             Name="cmbMjesta"
             materialDesign:HintAssist.Hint="Mjesto stanovanja"
@@ -141,10 +143,10 @@
         <Button x:Name="btnPotvrda"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Grid.Row="4" Grid.ColumnSpan="3" Background="{x:Null}" Width="400" Click="btnPotvrda_Click">
+            Grid.Row="4" Grid.ColumnSpan="3" Background="{x:Null}" Width="400" Click="btnPotvrda_Click" IsDefault="True">
             <StackPanel Orientation="Horizontal">
                 <materialDesign:PackIcon Name="myPackIcon" Kind="AccountPlusOutline" />
-                <TextBlock Name="btnPotvrdaTextBlock" Text="REGISTRUJ NOVOG ZAPOSLENIKA"/>
+                <TextBlock Name="btnPotvrdaTextBlock" Text=" REGISTRUJ NOVOG ZAPOSLENIKA"/>
             </StackPanel>
         </Button>
     </Grid>

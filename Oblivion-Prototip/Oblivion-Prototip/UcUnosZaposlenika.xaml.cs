@@ -123,7 +123,7 @@ namespace Oblivion_Prototip
                     tbPlata.Text = plata.ToString("0.#0");
 
                     myPackIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.AccountEditOutline;
-                    btnPotvrdaTextBlock.Text = "POTVRDI NOVE PODATKE ZAPOSLENIKA";
+                    btnPotvrdaTextBlock.Text = " POTVRDI NOVE PODATKE ZAPOSLENIKA";
                 }
             }
             catch

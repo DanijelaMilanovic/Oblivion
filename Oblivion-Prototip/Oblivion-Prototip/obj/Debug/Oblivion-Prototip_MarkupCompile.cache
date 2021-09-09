@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\
 Oblivion_Prototip
 none
 false
 DEBUG;TRACE
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\App.xaml
-9-1749727037
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\App.xaml
+101500235675
 
-171450985767
-281273259747
-AdminWindow.xaml;MainWindow.xaml;UcPrikazKomponenti.xaml;UcPromjenaPodataka.xaml;UcRacunar.xaml;UcUnosZaposlenika.xaml;UnosMonitorWindow.xaml;UnosRacunaraWindow.xaml;ZaposleniWindow.xaml;
+18-247592771
+132-1504954492
+AdminWindow.xaml;MainWindow.xaml;UcPrikazKomponenti.xaml;UcPromjenaPodataka.xaml;UcRacunar.xaml;UcUnosZaposlenika.xaml;UcZauzmi.xaml;UnosMonitorWindow.xaml;UnosRacunaraWindow.xaml;ZaposleniWindow.xaml;
 
-True
+False
 

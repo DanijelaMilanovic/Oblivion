@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
 
 namespace Oblivion_Prototip
 {
@@ -27,6 +28,8 @@ namespace Oblivion_Prototip
 
             this.zaposlenik = korisnik;
             UcitajKomponente();
+            
+            
         }
 
         /// <summary>
@@ -54,8 +57,21 @@ namespace Oblivion_Prototip
 
         public void UcitajKomponente()
         {
-            UcRacunar racunar = new UcRacunar();
-            wrapRacunari.Children.Add(racunar);
+            string upit = "select mrezno_ime from racunar where igraonica_reg_broj = " + zaposlenik.RegBrojIgraonice;
+            MySqlCommand cmd = new MySqlCommand(upit, Connection.GetConnection());
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string mrezno_ime = reader["mrezno_ime"].ToString();
+
+                int pozicija = mrezno_ime.IndexOf("_", 0);
+                String mreznoIme = mrezno_ime.Insert(pozicija, "_");
+
+                UcRacunar racunar = new UcRacunar(mreznoIme,spPodaci);
+                wrapRacunari.Children.Add(racunar);
+            }
         }
     }
 }

@@ -16,22 +16,13 @@ using System.Windows.Shapes;
 namespace Oblivion_Prototip
 {
     /// <summary>
-    /// Interaction logic for UcRacunar.xaml
+    /// Interaction logic for UcZauzmi.xaml
     /// </summary>
-    public partial class UcRacunar : UserControl
+    public partial class UcZauzmi : UserControl
     {
-        StackPanel podaci;
-        public UcRacunar(string mrezno_ime,StackPanel podaci)
+        public UcZauzmi()
         {
             InitializeComponent();
-            lblNaziv.Content = mrezno_ime;
-            this.podaci = podaci;
-        }
-
-        private void UserControl_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            UcZauzmi zauzmi = new UcZauzmi();
-            podaci.Children.Add(zauzmi);
         }
     }
 }

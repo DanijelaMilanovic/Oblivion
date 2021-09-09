@@ -144,6 +144,7 @@ namespace Oblivion_Prototip
             btnDodajNovogZaposlenika.Visibility = Visibility.Hidden;
         }
         #endregion
+
         #region racunari
         private void ucitavanjeTabeleRacunara()
         {
@@ -204,7 +205,53 @@ namespace Oblivion_Prototip
                 
             }
         }
+        private void btnMonitor_Click(object sender, RoutedEventArgs e)
+        {
+            DataRowView dataRowView = (DataRowView)((Button)e.Source).DataContext;
+            int jib_racunara = Convert.ToInt32(dataRowView[0].ToString());
+            string mrezno_ime = dataRowView[1].ToString();
+            UcPrikazKomponenti prikaz = new UcPrikazKomponenti(this, "monitor");
+
+
+            string cmd_string = "SELECT * FROM `komponenta` WHERE racunar_idracunara = " + jib_racunara + " AND tip_komponente = 'Monitor'";
+            MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            ciscenjeSPaRacunar();
+            prikaz.lvPrikazKomponenti.Items.Clear();
+
+            while (reader.Read())
+            {
+                int IDKomponente = reader.GetInt32("idkomponenta");
+                string NazivProizvodjaca = reader["ime_proizvodjaca"].ToString();
+                string Dimenzija = reader["dimenzija"].ToString();
+
+                prikaz.lvPrikazKomponenti.Items.Add(new Monitor(IDKomponente, NazivProizvodjaca, Dimenzija, jib_racunara));
+            }
+            reader.Close();
+
+            if (prikaz.lvPrikazKomponenti.Items.Count == 0)
+            {
+                 UnosMonitorWindow unos = new UnosMonitorWindow(new Monitor(0,"","",jib_racunara), true);
+
+                 if (unos.ShowDialog() == true)
+                  {
+                        prikaz.lvPrikazKomponenti.Items.Add(unos.monitor);
+                        prikaz.lvPrikazKomponenti.Items.Refresh();
+                    }
+            
+            }
+
+            spRacunar.Children.Add(prikaz);
+            btnDodavanjeNovogRacunara.Visibility = Visibility.Hidden;
+        }
+        public void ciscenjeSPaRacunar()
+        {
+            spRacunar.Children.Clear();
+        }
         #endregion
+
         #region racuni
         private void dataRacun_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
         {
@@ -225,8 +272,8 @@ namespace Oblivion_Prototip
             dataRacun.ItemsSource = dt.DefaultView;
         }
 
-        #endregion
 
+        #endregion
 
     }
 }

@@ -109,6 +109,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Mjesto.cs" />
+    <Compile Include="Monitor.cs" />
+    <Compile Include="UcPrikazKomponenti.xaml.cs">
+      <DependentUpon>UcPrikazKomponenti.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UcPromjenaPodataka.xaml.cs">
       <DependentUpon>UcPromjenaPodataka.xaml</DependentUpon>
     </Compile>
@@ -118,8 +122,8 @@
     <Compile Include="UcUnosZaposlenika.xaml.cs">
       <DependentUpon>UcUnosZaposlenika.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UcZauzmi.xaml.cs">
-      <DependentUpon>UcZauzmi.xaml</DependentUpon>
+    <Compile Include="UnosMonitorWindow.xaml.cs">
+      <DependentUpon>UnosMonitorWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="UnosRacunaraWindow.xaml.cs">
       <DependentUpon>UnosRacunaraWindow.xaml</DependentUpon>
@@ -148,6 +152,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UcPrikazKomponenti.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UcPromjenaPodataka.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -160,7 +168,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UcZauzmi.xaml">
+    <Page Include="UnosMonitorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

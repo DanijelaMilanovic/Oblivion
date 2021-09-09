@@ -120,7 +120,7 @@
                 </TabItem.Header>
                 <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*" />
                     <RowDefinition Height="60" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
@@ -138,7 +138,7 @@
                             <DataGridTemplateColumn Width="*">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Button Content="Monitori" />
+                                        <Button Name="btnMonitor"  Content="Monitori" Click="btnMonitor_Click" />
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
@@ -198,7 +198,7 @@
                         <TextBlock Text=" DODAJ NOVI RAČUNAR"/>
                     </StackPanel>
                 </Button>
-                <StackPanel Margin="5" Grid.Row="1" Grid.RowSpan="2" Name="spRacunar"/>
+                <StackPanel Margin="5" Grid.Row="1" Grid.RowSpan="2" Name="spRacunar" />
                 </Grid>
             </TabItem>
             <TabItem>

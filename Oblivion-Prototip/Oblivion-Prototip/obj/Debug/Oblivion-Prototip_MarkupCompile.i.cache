@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\App.xaml
-101500235675
+13-793629928
 
-19-1002162555
+25698541485
 281617694756
-AdminWindow.xaml;MainWindow.xaml;UcPrikazKomponenti.xaml;UcPromjenaPodataka.xaml;UcRacunar.xaml;UcUnosZaposlenika.xaml;UcZauzmi.xaml;UnosMonitorWindow.xaml;UnosRacunaraWindow.xaml;ZaposleniWindow.xaml;
+AdminWindow.xaml;MainWindow.xaml;UcPrikazKomponenti.xaml;UcPromjenaPodataka.xaml;UcRacunar.xaml;UcUnosZaposlenika.xaml;UcZauzmi.xaml;UnosMaticnaWindow.xaml;UnosMonitorWindow.xaml;UnosProcesorWindow.xaml;UnosRacunaraWindow.xaml;UnosRAMWindow.xaml;ZaposleniWindow.xaml;
 
-True
+False
 

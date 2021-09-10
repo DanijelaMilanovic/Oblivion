@@ -210,7 +210,7 @@ namespace Oblivion_Prototip
             DataRowView dataRowView = (DataRowView)((Button)e.Source).DataContext;
             int jib_racunara = Convert.ToInt32(dataRowView[0].ToString());
             string mrezno_ime = dataRowView[1].ToString();
-            UcPrikazKomponenti prikaz = new UcPrikazKomponenti(this, "monitor");
+            UcPrikazKomponenti prikaz = new UcPrikazKomponenti(this, "monitor", jib_racunara);
 
 
             string cmd_string = "SELECT * FROM `komponenta` WHERE racunar_idracunara = " + jib_racunara + " AND tip_komponente = 'Monitor'";
@@ -236,13 +236,145 @@ namespace Oblivion_Prototip
                  UnosMonitorWindow unos = new UnosMonitorWindow(new Monitor(0,"","",jib_racunara), true);
 
                  if (unos.ShowDialog() == true)
-                  {
+                 {
                         prikaz.lvPrikazKomponenti.Items.Add(unos.monitor);
                         prikaz.lvPrikazKomponenti.Items.Refresh();
-                    }
+                 }
             
             }
 
+            spRacunar.Children.Add(prikaz);
+            btnDodavanjeNovogRacunara.Visibility = Visibility.Hidden;
+        }
+
+        private void btnProcesor_Click(object sender, RoutedEventArgs e)
+        {
+            DataRowView dataRowView = (DataRowView)((Button)e.Source).DataContext;
+            int jib_racunara = Convert.ToInt32(dataRowView[0].ToString());
+            string mrezno_ime = dataRowView[1].ToString();
+            UcPrikazKomponenti prikaz = new UcPrikazKomponenti(this, "procesor", jib_racunara);
+
+
+            string cmd_string = "SELECT * FROM `komponenta` WHERE racunar_idracunara = " + jib_racunara + " AND tip_komponente = 'Procesor'";
+            MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            ciscenjeSPaRacunar();
+            prikaz.lvPrikazKomponenti.Items.Clear();
+
+            while (reader.Read())
+            {
+                int IDKomponente = reader.GetInt32("idkomponenta");
+                string NazivProizvodjaca = reader["ime_proizvodjaca"].ToString();
+                string Ime = reader["ime"].ToString();
+                string BrojJezgara = reader["broj_jezgara"].ToString();
+                string Frekvencija = reader["frekvencija"].ToString();
+
+                prikaz.lvPrikazKomponenti.Items.Add(new Procesor(IDKomponente, NazivProizvodjaca, Ime, Frekvencija, BrojJezgara, jib_racunara));
+            }
+            reader.Close();
+
+            if (prikaz.lvPrikazKomponenti.Items.Count == 0)
+            {
+                UnosProcesorWindow unos = new UnosProcesorWindow(new Procesor(0, "", "", "", "", jib_racunara), true);
+
+                if (unos.ShowDialog() == true)
+                {
+                    prikaz.lvPrikazKomponenti.Items.Add(unos.procesor);
+                    prikaz.lvPrikazKomponenti.Items.Refresh();
+                }
+            }
+            if (prikaz.lvPrikazKomponenti.Items.Count == 1)
+            {
+                prikaz.btnUnosNoveKomponente.IsEnabled = false;
+            }
+
+            spRacunar.Children.Add(prikaz);
+            btnDodavanjeNovogRacunara.Visibility = Visibility.Hidden;
+        }
+        private void btnMaticnaPloca_Click(object sender, RoutedEventArgs e)
+        {
+            DataRowView dataRowView = (DataRowView)((Button)e.Source).DataContext;
+            int jib_racunara = Convert.ToInt32(dataRowView[0].ToString());
+            string mrezno_ime = dataRowView[1].ToString();
+            UcPrikazKomponenti prikaz = new UcPrikazKomponenti(this, "maticna", jib_racunara);
+
+
+            string cmd_string = "SELECT * FROM `komponenta` WHERE racunar_idracunara = " + jib_racunara + " AND tip_komponente = 'Matična ploča'";
+            MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            ciscenjeSPaRacunar();
+            prikaz.lvPrikazKomponenti.Items.Clear();
+
+            while (reader.Read())
+            {
+                int IDKomponente = reader.GetInt32("idkomponenta");
+                string NazivProizvodjaca = reader["ime_proizvodjaca"].ToString();
+                string cipset = reader["cipset"].ToString();
+
+                prikaz.lvPrikazKomponenti.Items.Add(new MaticnaPloca(IDKomponente, NazivProizvodjaca, cipset, jib_racunara));
+            }
+            reader.Close();
+
+            if (prikaz.lvPrikazKomponenti.Items.Count == 0)
+            {
+                UnosMaticnaWindow unos = new UnosMaticnaWindow(new MaticnaPloca(0, "", "", jib_racunara), true);
+
+                if (unos.ShowDialog() == true)
+                {
+                    prikaz.lvPrikazKomponenti.Items.Add(unos.maticna);
+                    prikaz.lvPrikazKomponenti.Items.Refresh();
+                }
+            }
+            if (prikaz.lvPrikazKomponenti.Items.Count == 1)
+            {
+                prikaz.btnUnosNoveKomponente.IsEnabled = false;
+            }
+
+            spRacunar.Children.Add(prikaz);
+            btnDodavanjeNovogRacunara.Visibility = Visibility.Hidden;
+        }
+        private void btnRAM_Click(object sender, RoutedEventArgs e)
+        {
+            DataRowView dataRowView = (DataRowView)((Button)e.Source).DataContext;
+            int jib_racunara = Convert.ToInt32(dataRowView[0].ToString());
+            string mrezno_ime = dataRowView[1].ToString();
+            UcPrikazKomponenti prikaz = new UcPrikazKomponenti(this, "ram", jib_racunara);
+
+
+            string cmd_string = "SELECT * FROM `komponenta` WHERE racunar_idracunara = " + jib_racunara + " AND tip_komponente = 'RAM'";
+            MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            ciscenjeSPaRacunar();
+            prikaz.lvPrikazKomponenti.Items.Clear();
+
+            while (reader.Read())
+            {
+                int IDKomponente = reader.GetInt32("idkomponenta");
+                string NazivProizvodjaca = reader["ime_proizvodjaca"].ToString();
+                string tip = reader["tip"].ToString();
+                string kapacitet = reader["kapacitet"].ToString();
+
+                prikaz.lvPrikazKomponenti.Items.Add(new RAM(IDKomponente, NazivProizvodjaca, tip, kapacitet, jib_racunara));
+            }
+            reader.Close();
+
+            if (prikaz.lvPrikazKomponenti.Items.Count == 0)
+            {
+                UnosRAMWindow unos = new UnosRAMWindow(new RAM(0, "", "", "", jib_racunara), true);
+
+                if (unos.ShowDialog() == true)
+                {
+                    prikaz.lvPrikazKomponenti.Items.Add(unos.ram);
+                    prikaz.lvPrikazKomponenti.Items.Refresh();
+                }
+            }
+          
             spRacunar.Children.Add(prikaz);
             btnDodavanjeNovogRacunara.Visibility = Visibility.Hidden;
         }
@@ -271,6 +403,8 @@ namespace Oblivion_Prototip
             dataRacun.ItemsSource = null;
             dataRacun.ItemsSource = dt.DefaultView;
         }
+
+
 
 
         #endregion

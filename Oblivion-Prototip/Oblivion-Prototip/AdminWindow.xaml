@@ -114,7 +114,7 @@
             <TabItem >
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
-                        <materialDesign:PackIcon Kind="DesktopWindows" Foreground="WhiteSmoke"/>
+                        <materialDesign:PackIcon Kind="DesktopClassic" Foreground="WhiteSmoke"/>
                         <TextBlock Text=" RAČUNARI  " Foreground="WhiteSmoke"/>
                     </StackPanel>
                 </TabItem.Header>
@@ -146,7 +146,7 @@
                             <DataGridTemplateColumn Width="*">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Button Content="Procesor" />
+                                        <Button x:Name="btnProcesor" Content="Procesor" Click="btnProcesor_Click" />
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
@@ -154,7 +154,7 @@
                             <DataGridTemplateColumn Width="1.2*">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Button Content="Matična ploča" />
+                                        <Button Name="btnMaticnaPloca" Content="Matična ploča" Click="btnMaticnaPloca_Click" />
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
@@ -162,7 +162,7 @@
                             <DataGridTemplateColumn Width="*">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Button Content="RAM" />
+                                        <Button Name="btnRAM" Content="RAM" Click="btnRAM_Click" />
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>

@@ -14,14 +14,19 @@
              TextOptions.TextRenderingMode="Auto"
              Background="#FF01010C" FontFamily="Zen Tokyo Zoo" FontWeight="Bold" FontSize="15">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="lblNaslov"  Foreground="White" Grid.ColumnSpan="3" HorizontalAlignment="Left" TextWrapping="WrapWithOverflow" 
+        <TextBlock x:Name="lblNaslov" Grid.ColumnSpan="2"  Foreground="White" HorizontalAlignment="Left" TextWrapping="WrapWithOverflow" 
                    Text="MONITORI" 
-                   VerticalAlignment="Center" FontSize="50"/>
-        <Button Name="btnOdustani" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" Click="btnOdustani_Click">
+                   VerticalAlignment="Center" FontSize="50" Margin="0,10"/>
+        <Button Name="btnOdustani" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" Click="btnOdustani_Click" Grid.Column="1">
             <materialDesign:PackIcon Kind="WindowClose" />
             <Button.ToolTip>
                 <ToolTip Background="#FF251149">
@@ -29,8 +34,8 @@
                 </ToolTip>
             </Button.ToolTip>
         </Button>
-        <ScrollViewer Grid.Row="1" VerticalAlignment="Top" VerticalScrollBarVisibility="Auto">
-            <ListView Name="lvPrikazKomponenti" FontSize="20" PreviewMouseLeftButtonUp="lvPrikazKomponenti_PreviewMouseLeftButtonUp" >
+        <ScrollViewer Grid.Row="1" VerticalAlignment="Top" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2">
+            <ListView Name="lvPrikazKomponenti" FontSize="20" >
                 <ListViewItem
             Content="Hello" />
                 <ListViewItem
@@ -39,5 +44,29 @@
             Content=":)" />
             </ListView>
         </ScrollViewer>
+        <Button x:Name="btnUnosNoveKomponente"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Grid.Row="2" Background="{x:Null}" Width="250" Click="btnUnosNoveKomponente_Click"  >
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Name="btnNaslovUnos" Text=" UNOS NOVE KOMPONENTE"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnModifikacijaKomponente"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Grid.Row="2" Grid.ColumnSpan="2" Background="{x:Null}" Width="250" Click="btnModifikacijaKomponente_Click" >
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Name="btnNaslovModifikacija" Text=" MODIFIKACIJA KOMPONENTE"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnBrisanjeKomponente"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Grid.Row="2" Grid.Column="1" Background="{x:Null}" Width="250" Click="btnBrisanjeKomponente_Click" >
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Name="btnNaslovBrisanje" Text=" BRISANJE KOMPONENTE"/>
+            </StackPanel>
+        </Button>
     </Grid>
 </UserControl>

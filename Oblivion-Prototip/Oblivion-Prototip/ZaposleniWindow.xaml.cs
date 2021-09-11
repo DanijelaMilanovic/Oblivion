@@ -21,6 +21,9 @@ namespace Oblivion_Prototip
     public partial class ZaposleniWindow : Window
     {
         Korisnik zaposlenik;
+        string mrezno_ime = "";
+        int broj_racunara = 0;
+        int igraonica_reg_broj = 0;
 
         public ZaposleniWindow(Korisnik korisnik)
         {
@@ -57,21 +60,25 @@ namespace Oblivion_Prototip
 
         public void UcitajKomponente()
         {
-            string upit = "select mrezno_ime from racunar where igraonica_reg_broj = " + zaposlenik.RegBrojIgraonice;
+            string upit = "select * from racunar where igraonica_reg_broj = " + zaposlenik.RegBrojIgraonice;
             MySqlCommand cmd = new MySqlCommand(upit, Connection.GetConnection());
 
             MySqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read())
             {
-                string mrezno_ime = reader["mrezno_ime"].ToString();
+                broj_racunara = Int32.Parse( reader["broj_racunara"].ToString());
+                mrezno_ime = reader["mrezno_ime"].ToString();
+                igraonica_reg_broj = Int32.Parse(reader["igraonica_reg_broj"].ToString());
 
                 int pozicija = mrezno_ime.IndexOf("_", 0);
                 String mreznoIme = mrezno_ime.Insert(pozicija, "_");
 
-                UcRacunar racunar = new UcRacunar(mreznoIme,spPodaci);
+                UcRacunar racunar = new UcRacunar(mreznoIme,spPodaci,broj_racunara);
                 wrapRacunari.Children.Add(racunar);
             }
+
+            reader.Close();
         }
     }
 }

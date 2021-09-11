@@ -21,16 +21,19 @@ namespace Oblivion_Prototip
     public partial class UcRacunar : UserControl
     {
         StackPanel podaci;
-        public UcRacunar(string mrezno_ime,StackPanel podaci)
+        int brojRacunara = 0;
+        public UcRacunar(string mrezno_ime,StackPanel podaci,int brojRacunara)
         {
             InitializeComponent();
             lblNaziv.Content = mrezno_ime;
             this.podaci = podaci;
+            this.brojRacunara = brojRacunara;
         }
 
         private void UserControl_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            UcZauzmi zauzmi = new UcZauzmi();
+            podaci.Children.Clear();
+            UcZauzmi zauzmi = new UcZauzmi(brojRacunara,lblNaziv.Content.ToString());
             podaci.Children.Add(zauzmi);
         }
     }

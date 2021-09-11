@@ -41,7 +41,11 @@ namespace Oblivion_Prototip
             pbLozinka.IsEnabled = (bool)cbPromjenaSifre.IsChecked;
             pbAutorizacija.IsEnabled = (bool)cbPromjenaSifre.IsChecked;
         }
-
+        private void cbPromjenaSifre_Unchecked(object sender, RoutedEventArgs e)
+        {
+            pbLozinka.IsEnabled = (bool)cbPromjenaSifre.IsChecked;
+            pbAutorizacija.IsEnabled = (bool)cbPromjenaSifre.IsChecked;
+        }
         private void btnOdustani_Click(object sender, RoutedEventArgs e)
         {
             parentWindow.ciscenjeSPa();
@@ -94,5 +98,7 @@ namespace Oblivion_Prototip
                 MessageBox.Show("Unesite korisničko ime.", "Upozorenje", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
+
+     
     }
 }

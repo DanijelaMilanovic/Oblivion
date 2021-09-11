@@ -55,7 +55,7 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Content="Promjena šifre" 
-            Grid.Row="2" Grid.Column="1" Checked="cbPromjenaSifre_Checked" />
+            Grid.Row="2" Grid.Column="1" Checked="cbPromjenaSifre_Checked" Unchecked="cbPromjenaSifre_Unchecked"  />
 
         <PasswordBox
             Name="pbLozinka"

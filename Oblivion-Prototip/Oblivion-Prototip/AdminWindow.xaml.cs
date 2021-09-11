@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -32,6 +33,7 @@ namespace Oblivion_Prototip
             ucitavanjeTabeleZaposlenik();
             ucitavanjeTabeleRacunara();
             ucitavanjeTabeleRacun();
+            ucitavanjeTabeleUsluge();
         }
 
         /// <summary>
@@ -533,5 +535,54 @@ namespace Oblivion_Prototip
 
         #endregion
 
+        #region info o igraonici
+        private void btnIgraonica_Click(object sender, RoutedEventArgs e)
+        {
+            PrikazInformacijaIgraonica prikaz_info = new PrikazInformacijaIgraonica(admin);
+
+            prikaz_info.Show();
+        }
+        #endregion
+
+        private void dataUsluge_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
+        {
+            dataUsluge.UnselectAllCells();
+        }
+        public void ucitavanjeTabeleUsluge()
+        {
+            string cmd_string = "SELECT idusluga,vrsta,cijena FROM `usluga`";
+            MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+
+            dataUsluge.ItemsSource = null;
+            dataUsluge.ItemsSource = dt.DefaultView;
+        }
+
+        private void tbCijenaUsluge_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void tbCijenaUsluge_LostFocus(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                DataRowView dataRowView = (DataRowView)((TextBox)e.Source).DataContext;
+                string id_usluge = dataRowView[0].ToString();
+                string cmd_string = "UPDATE `usluga` SET cijena = '" + ((TextBox)e.Source).Text + "' WHERE idusluga = " + id_usluge;
+
+                MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+                cmd.ExecuteNonQuery();
+
+                ucitavanjeTabeleUsluge();
+            }
+            catch { }
+        }
     }
 }

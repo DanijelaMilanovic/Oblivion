@@ -96,7 +96,6 @@ C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Obli
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\System.Security.AccessControl.xml
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\System.Security.Permissions.xml
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\System.Security.Principal.Windows.xml
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.csprojAssemblyReference.cache
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\App.baml
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\AdminWindow.baml
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\MainWindow.baml
@@ -130,3 +129,4 @@ C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Obli
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosDVDWindow.g.cs
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\PrikazInformacijaIgraonica.baml
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosDVDWindow.baml
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.csprojAssemblyReference.cache

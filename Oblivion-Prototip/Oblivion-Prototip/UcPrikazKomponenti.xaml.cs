@@ -49,7 +49,7 @@ namespace Oblivion_Prototip
             }
             if (this.tip == "maticna")
             {
-                lblNaslov.Text = "MATIČNA";
+                lblNaslov.Text = "MATIČNA PLOČA";
                 btnNaslovUnos.Text = " UNOS NOVE MATIČNE PLOČE";
                 btnNaslovModifikacija.Text = " MODIFIKACIJA MATIČNE PLOČE";
                 btnNaslovBrisanje.Text = " OBRIŠI OZNAČENU MATIČNU";
@@ -60,6 +60,13 @@ namespace Oblivion_Prototip
                 btnNaslovUnos.Text = " UNOS NOVE RAM MEMORIJE";
                 btnNaslovModifikacija.Text = " MODIFIKACIJA RAM MEMORIJE";
                 btnNaslovBrisanje.Text = " OBRIŠI OZNAČENU RAM MEMORIJU";
+            }
+            if (this.tip == "hdd")
+            {
+                lblNaslov.Text = "HDD";
+                btnNaslovUnos.Text = " UNOS NOVOG HDD a";
+                btnNaslovModifikacija.Text = " MODIFIKACIJA HDD a";
+                btnNaslovBrisanje.Text = " OBRIŠI OZNAČENI HDD";
             }
         }
 
@@ -110,6 +117,16 @@ namespace Oblivion_Prototip
                     if (unos.ShowDialog() == true)
                     {
                         lvPrikazKomponenti.SelectedItem = unos.ram;
+                        lvPrikazKomponenti.Items.Refresh();
+                    }
+                }
+                if (tip == "hdd")
+                {
+                    UnosHDDWindow unos = new UnosHDDWindow((HDD)lvPrikazKomponenti.SelectedItem, false);
+
+                    if (unos.ShowDialog() == true)
+                    {
+                        lvPrikazKomponenti.SelectedItem = unos.hdd;
                         lvPrikazKomponenti.Items.Refresh();
                     }
                 }
@@ -166,6 +183,16 @@ namespace Oblivion_Prototip
                     lvPrikazKomponenti.Items.Refresh();
                 }
             }
+            if (tip == "hdd")
+            {
+                UnosHDDWindow unos = new UnosHDDWindow(new HDD(0, "", "", "", jib_racunara), true);
+
+                if (unos.ShowDialog() == true)
+                {
+                    lvPrikazKomponenti.Items.Add(unos.hdd);
+                    lvPrikazKomponenti.Items.Refresh();
+                }
+            }
         }
 
         private void btnBrisanjeKomponente_Click(object sender, RoutedEventArgs e)
@@ -217,6 +244,17 @@ namespace Oblivion_Prototip
                 {
                     RAM ram_za_brisanje = lvPrikazKomponenti.SelectedItem as RAM;
                     string cmd_string = "DELETE FROM `komponenta` WHERE idkomponenta = " + ram_za_brisanje.IDKomponente;
+                    MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+                    cmd.ExecuteNonQuery();
+
+                    lvPrikazKomponenti.Items.Remove(lvPrikazKomponenti.SelectedItem);
+                    lvPrikazKomponenti.Items.Refresh();
+                }
+                if (tip == "hdd")
+                {
+                    HDD hdd_za_brisanje = lvPrikazKomponenti.SelectedItem as HDD;
+                    string cmd_string = "DELETE FROM `komponenta` WHERE idkomponenta = " + hdd_za_brisanje.IDKomponente;
                     MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
 
                     cmd.ExecuteNonQuery();

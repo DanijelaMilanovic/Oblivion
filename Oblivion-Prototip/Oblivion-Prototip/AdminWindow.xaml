@@ -133,12 +133,82 @@
                         ScrollViewer.HorizontalScrollBarVisibility="Visible"
                         ScrollViewer.VerticalScrollBarVisibility="Auto" SelectedCellsChanged="dataRacunari_SelectedCellsChanged" >
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Mrežno ime računara" Binding="{Binding Path='mrezno_ime'}" Width="2*" IsReadOnly="True" />
+                            <DataGridTextColumn Header="Mrežno ime računara" Binding="{Binding Path='mrezno_ime'}" Width="1.25*" IsReadOnly="True" />
 
                             <DataGridTemplateColumn Width="*">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Button Name="btnMonitor"  Content="Monitori" Click="btnMonitor_Click" />
+                                        <Button Name="btnMonitor" Click="btnMonitor_Click">
+                                            <StackPanel Orientation="Horizontal">
+                                                <materialDesign:PackIcon Kind="Monitor" />
+                                                <TextBlock Text=" MONITORI"/>
+                                            </StackPanel>
+                                        </Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <DataGridTemplateColumn Width="0.75*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button x:Name="btnProcesor" Click="btnProcesor_Click" >
+                                            <StackPanel Orientation="Horizontal">
+                                                <materialDesign:PackIcon Kind="Cpu64Bit" />
+                                                <TextBlock Text=" CPU"/>
+                                            </StackPanel>
+                                        </Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <DataGridTemplateColumn Width="1.3*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Name="btnMaticnaPloca" Click="btnMaticnaPloca_Click">
+                                            <StackPanel Orientation="Horizontal">
+                                                <materialDesign:PackIcon Kind="Chip" />
+                                                <TextBlock Text=" MATIČNA PLOČA"/>
+                                            </StackPanel>
+                                        </Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <DataGridTemplateColumn Width="0.75*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Name="btnGPU" Click="btnGPU_Click" >
+                                            <StackPanel Orientation="Horizontal">
+                                                <materialDesign:PackIcon Kind="ExpansionCard" />
+                                                <TextBlock Text=" GPU"/>
+                                            </StackPanel>
+                                        </Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            
+                            <DataGridTemplateColumn Width="0.75*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Name="btnRAM" Click="btnRAM_Click">
+                                            <StackPanel Orientation="Horizontal">
+                                                <materialDesign:PackIcon Kind="Memory" />
+                                                <TextBlock  Text=" RAM"/>
+                                            </StackPanel>
+                                        </Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <DataGridTemplateColumn Width="0.75*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Name="btnHDD" Click="btnHDD_Click">
+                                            <StackPanel Orientation="Horizontal">
+                                                <materialDesign:PackIcon Kind="Harddisk" />
+                                                <TextBlock  Text=" HDD"/>
+                                            </StackPanel>
+                                        </Button>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
@@ -146,47 +216,29 @@
                             <DataGridTemplateColumn Width="*">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Button x:Name="btnProcesor" Content="Procesor" Click="btnProcesor_Click" />
+                                        <Button Name="btnDVD" Click="btnDVD_Click" >
+                                            <StackPanel Orientation="Horizontal">
+                                                <materialDesign:PackIcon Kind="RecordCircle" />
+                                                <TextBlock  Text=" DVD-ROM"/>
+                                            </StackPanel>
+                                        </Button>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
 
-                            <DataGridTemplateColumn Width="1.2*">
+                            <DataGridTemplateColumn Width="0.55*">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Button Name="btnMaticnaPloca" Content="Matična ploča" Click="btnMaticnaPloca_Click" />
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
-
-                            <DataGridTemplateColumn Width="*">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <Button Name="btnRAM" Content="RAM" Click="btnRAM_Click" />
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
-
-                            <DataGridTemplateColumn Width="*">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <Button Content="HDD" />
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
-
-                            <DataGridTemplateColumn Width="*">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <Button Content="DVD-ROM" />
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
-
-                            <DataGridTemplateColumn Width="*">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <Button Name="btnObrisi" Content="Obriši" Click="btnObrisi_Click"/>
+                                        <Button Name="btnObrisi" Click="btnObrisi_Click">
+                                            <Button.ToolTip>
+                                                <ToolTip Background="#FF251149">
+                                                    <Label  Content="Obriši računar" Background="Transparent"/>
+                                                </ToolTip>
+                                            </Button.ToolTip>
+                                            <StackPanel Orientation="Horizontal">
+                                                <materialDesign:PackIcon Kind="MonitorSpeakerOff" />
+                                            </StackPanel>
+                                        </Button>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
@@ -204,7 +256,7 @@
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal" >
-                        <materialDesign:PackIcon Kind="NoteSearchOutline" Foreground="WhiteSmoke"/>
+                        <materialDesign:PackIcon Kind="Receipt" Foreground="WhiteSmoke"/>
                         <TextBlock Text=" RAČUNI  " Foreground="WhiteSmoke"/>
                     </StackPanel>
                 </TabItem.Header>

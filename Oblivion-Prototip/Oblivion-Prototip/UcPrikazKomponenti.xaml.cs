@@ -35,6 +35,7 @@ namespace Oblivion_Prototip
 
             if (this.tip == "monitor")
             {
+                myPackIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.Monitor;
                 lblNaslov.Text = "MONITORI";
                 btnNaslovUnos.Text = " UNOS NOVOG MONITORA";
                 btnNaslovModifikacija.Text = " MODIFIKACIJA OZNAČENOG MONITORA";
@@ -42,6 +43,7 @@ namespace Oblivion_Prototip
             }
             if (this.tip == "procesor")
             {
+                myPackIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.Cpu64Bit;
                 lblNaslov.Text = "PROCESOR";
                 btnNaslovUnos.Text = " UNOS NOVOG PROCESORA";
                 btnNaslovModifikacija.Text = " MODIFIKACIJA PROCESORA";
@@ -49,17 +51,43 @@ namespace Oblivion_Prototip
             }
             if (this.tip == "maticna")
             {
-                lblNaslov.Text = "MATIČNA";
+                myPackIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.Chip;
+                lblNaslov.Text = "MATIČNA PLOČA";
                 btnNaslovUnos.Text = " UNOS NOVE MATIČNE PLOČE";
                 btnNaslovModifikacija.Text = " MODIFIKACIJA MATIČNE PLOČE";
                 btnNaslovBrisanje.Text = " OBRIŠI OZNAČENU MATIČNU";
             }
             if (this.tip == "ram")
             {
+                myPackIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.Memory;
                 lblNaslov.Text = "RAM memorije";
                 btnNaslovUnos.Text = " UNOS NOVE RAM MEMORIJE";
                 btnNaslovModifikacija.Text = " MODIFIKACIJA RAM MEMORIJE";
                 btnNaslovBrisanje.Text = " OBRIŠI OZNAČENU RAM MEMORIJU";
+            }
+            if (this.tip == "hdd")
+            {
+                myPackIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.Harddisk;
+                lblNaslov.Text = "HDD";
+                btnNaslovUnos.Text = " UNOS NOVOG HDD a";
+                btnNaslovModifikacija.Text = " MODIFIKACIJA HDD a";
+                btnNaslovBrisanje.Text = " OBRIŠI OZNAČENI HDD";
+            }
+            if (this.tip == "gpu")
+            {
+                myPackIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.ExpansionCard;
+                lblNaslov.Text = "GPU";
+                btnNaslovUnos.Text = " UNOS NOVE GPU";
+                btnNaslovModifikacija.Text = " MODIFIKACIJA GPU";
+                btnNaslovBrisanje.Text = " OBRIŠI OZNAČENU GPU";
+            }
+            if (this.tip == "dvd")
+            {
+                myPackIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.RecordCircle;
+                lblNaslov.Text = "DVD-ROM";
+                btnNaslovUnos.Text = " UNOS NOVOG DVD-ROM a";
+                btnNaslovModifikacija.Text = " MODIFIKACIJA DVD-ROM a";
+                btnNaslovBrisanje.Text = " OBRIŠI OZNAČEN DVD-ROM";
             }
         }
 
@@ -110,6 +138,36 @@ namespace Oblivion_Prototip
                     if (unos.ShowDialog() == true)
                     {
                         lvPrikazKomponenti.SelectedItem = unos.ram;
+                        lvPrikazKomponenti.Items.Refresh();
+                    }
+                }
+                if (tip == "hdd")
+                {
+                    UnosHDDWindow unos = new UnosHDDWindow((HDD)lvPrikazKomponenti.SelectedItem, false);
+
+                    if (unos.ShowDialog() == true)
+                    {
+                        lvPrikazKomponenti.SelectedItem = unos.hdd;
+                        lvPrikazKomponenti.Items.Refresh();
+                    }
+                }
+                if (tip == "gpu")
+                {
+                    UnosGPUWindow unos = new UnosGPUWindow((GPU)lvPrikazKomponenti.SelectedItem, false);
+
+                    if (unos.ShowDialog() == true)
+                    {
+                        lvPrikazKomponenti.SelectedItem = unos.gpu;
+                        lvPrikazKomponenti.Items.Refresh();
+                    }
+                }
+                if (tip == "dvd")
+                {
+                    UnosDVDWindow unos = new UnosDVDWindow((DVD)lvPrikazKomponenti.SelectedItem, false);
+
+                    if (unos.ShowDialog() == true)
+                    {
+                        lvPrikazKomponenti.SelectedItem = unos.dvd;
                         lvPrikazKomponenti.Items.Refresh();
                     }
                 }
@@ -166,6 +224,36 @@ namespace Oblivion_Prototip
                     lvPrikazKomponenti.Items.Refresh();
                 }
             }
+            if (tip == "hdd")
+            {
+                UnosHDDWindow unos = new UnosHDDWindow(new HDD(0, "", "", "", jib_racunara), true);
+
+                if (unos.ShowDialog() == true)
+                {
+                    lvPrikazKomponenti.Items.Add(unos.hdd);
+                    lvPrikazKomponenti.Items.Refresh();
+                }
+            }
+            if (tip == "gpu")
+            {
+                UnosGPUWindow unos = new UnosGPUWindow(new GPU(0, "", "", "", jib_racunara), true);
+
+                if (unos.ShowDialog() == true)
+                {
+                    lvPrikazKomponenti.Items.Add(unos.gpu);
+                    lvPrikazKomponenti.Items.Refresh();
+                }
+            }
+            if (tip == "dvd")
+            {
+                UnosDVDWindow unos = new UnosDVDWindow(new DVD(0, "", "", jib_racunara), true);
+
+                if (unos.ShowDialog() == true)
+                {
+                    lvPrikazKomponenti.Items.Add(unos.dvd);
+                    lvPrikazKomponenti.Items.Refresh();
+                }
+            }
         }
 
         private void btnBrisanjeKomponente_Click(object sender, RoutedEventArgs e)
@@ -217,6 +305,39 @@ namespace Oblivion_Prototip
                 {
                     RAM ram_za_brisanje = lvPrikazKomponenti.SelectedItem as RAM;
                     string cmd_string = "DELETE FROM `komponenta` WHERE idkomponenta = " + ram_za_brisanje.IDKomponente;
+                    MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+                    cmd.ExecuteNonQuery();
+
+                    lvPrikazKomponenti.Items.Remove(lvPrikazKomponenti.SelectedItem);
+                    lvPrikazKomponenti.Items.Refresh();
+                }
+                if (tip == "hdd")
+                {
+                    HDD hdd_za_brisanje = lvPrikazKomponenti.SelectedItem as HDD;
+                    string cmd_string = "DELETE FROM `komponenta` WHERE idkomponenta = " + hdd_za_brisanje.IDKomponente;
+                    MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+                    cmd.ExecuteNonQuery();
+
+                    lvPrikazKomponenti.Items.Remove(lvPrikazKomponenti.SelectedItem);
+                    lvPrikazKomponenti.Items.Refresh();
+                }
+                if (tip == "gpu")
+                {
+                    GPU gpu_za_brisanje = lvPrikazKomponenti.SelectedItem as GPU;
+                    string cmd_string = "DELETE FROM `komponenta` WHERE idkomponenta = " + gpu_za_brisanje.IDKomponente;
+                    MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+                    cmd.ExecuteNonQuery();
+
+                    lvPrikazKomponenti.Items.Remove(lvPrikazKomponenti.SelectedItem);
+                    lvPrikazKomponenti.Items.Refresh();
+                }
+                if (tip == "dvd")
+                {
+                    DVD dvd_za_brisanje = lvPrikazKomponenti.SelectedItem as DVD;
+                    string cmd_string = "DELETE FROM `komponenta` WHERE idkomponenta = " + dvd_za_brisanje.IDKomponente;
                     MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
 
                     cmd.ExecuteNonQuery();

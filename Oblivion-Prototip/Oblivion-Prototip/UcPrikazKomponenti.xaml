@@ -23,9 +23,12 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="lblNaslov" Grid.ColumnSpan="2"  Foreground="White" HorizontalAlignment="Left" TextWrapping="WrapWithOverflow" 
+        <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Left" Orientation="Horizontal"  Margin="0,10" VerticalAlignment="Center">
+            <materialDesign:PackIcon Name = "myPackIcon"  Kind="Monitor" Width="90" Height="60"/>
+            <TextBlock x:Name="lblNaslov"   Foreground="White"  TextWrapping="WrapWithOverflow" 
                    Text="MONITORI" 
-                   VerticalAlignment="Center" FontSize="50" Margin="0,10"/>
+                   FontSize="50"/>
+        </StackPanel>
         <Button Name="btnOdustani" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" Click="btnOdustani_Click" Grid.Column="1">
             <materialDesign:PackIcon Kind="WindowClose" />
             <Button.ToolTip>
@@ -49,14 +52,17 @@
             VerticalAlignment="Center"
             Grid.Row="2" Background="{x:Null}" Width="250" Click="btnUnosNoveKomponente_Click"  >
             <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="PlusThick" />
                 <TextBlock Name="btnNaslovUnos" Text=" UNOS NOVE KOMPONENTE"/>
             </StackPanel>
         </Button>
+        
         <Button x:Name="btnModifikacijaKomponente"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Grid.Row="2" Grid.ColumnSpan="2" Background="{x:Null}" Width="250" Click="btnModifikacijaKomponente_Click" >
             <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Wrench" />
                 <TextBlock Name="btnNaslovModifikacija" Text=" MODIFIKACIJA KOMPONENTE"/>
             </StackPanel>
         </Button>
@@ -65,6 +71,7 @@
             VerticalAlignment="Center"
             Grid.Row="2" Grid.Column="1" Background="{x:Null}" Width="250" Click="btnBrisanjeKomponente_Click" >
             <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="MinusThick" />
                 <TextBlock Name="btnNaslovBrisanje" Text=" BRISANJE KOMPONENTE"/>
             </StackPanel>
         </Button>

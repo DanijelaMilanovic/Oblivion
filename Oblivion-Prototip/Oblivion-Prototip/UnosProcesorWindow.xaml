@@ -103,7 +103,7 @@
             VerticalAlignment="Center"
             Grid.Row="6" Grid.ColumnSpan="2" Background="{x:Null}" Width="400" Click="btnPotvrda_Click" IsDefault="True">
                 <StackPanel Orientation="Horizontal">
-                    <materialDesign:PackIcon Kind="DesktopClassic"/>
+                    <materialDesign:PackIcon Kind="Cpu64Bit"/>
                     <TextBlock Name="tbBtnUnos" Text="   Potvrdi unos procesora" />
                 </StackPanel>
             </Button>

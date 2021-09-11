@@ -108,6 +108,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="GPU.cs" />
     <Compile Include="HDD.cs" />
     <Compile Include="MaticnaPloca.cs" />
     <Compile Include="Mjesto.cs" />
@@ -128,6 +129,9 @@
     </Compile>
     <Compile Include="UcZauzmi.xaml.cs">
       <DependentUpon>UcZauzmi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UnosGPUWindow.xaml.cs">
+      <DependentUpon>UnosGPUWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="UnosHDDWindow.xaml.cs">
       <DependentUpon>UnosHDDWindow.xaml</DependentUpon>
@@ -188,6 +192,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UcZauzmi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UnosGPUWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

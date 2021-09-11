@@ -24,7 +24,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Left" Orientation="Horizontal"  Margin="0,10" VerticalAlignment="Center">
-            <materialDesign:PackIcon Kind="Monitor" Width="90" Height="60"/>
+            <materialDesign:PackIcon Name = "myPackIcon"  Kind="Monitor" Width="90" Height="60"/>
             <TextBlock x:Name="lblNaslov"   Foreground="White"  TextWrapping="WrapWithOverflow" 
                    Text="MONITORI" 
                    FontSize="50"/>

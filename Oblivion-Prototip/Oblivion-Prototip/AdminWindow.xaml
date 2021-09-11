@@ -177,7 +177,7 @@
                             <DataGridTemplateColumn Width="0.75*">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Button >
+                                        <Button Name="btnGPU" Click="btnGPU_Click" >
                                             <StackPanel Orientation="Horizontal">
                                                 <materialDesign:PackIcon Kind="ExpansionCard" />
                                                 <TextBlock Text=" GPU"/>

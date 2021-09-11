@@ -81,6 +81,14 @@ namespace Oblivion_Prototip
                 btnNaslovModifikacija.Text = " MODIFIKACIJA GPU";
                 btnNaslovBrisanje.Text = " OBRIŠI OZNAČENU GPU";
             }
+            if (this.tip == "dvd")
+            {
+                myPackIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.RecordCircle;
+                lblNaslov.Text = "DVD-ROM";
+                btnNaslovUnos.Text = " UNOS NOVOG DVD-ROM a";
+                btnNaslovModifikacija.Text = " MODIFIKACIJA DVD-ROM a";
+                btnNaslovBrisanje.Text = " OBRIŠI OZNAČEN DVD-ROM";
+            }
         }
 
         private void btnOdustani_Click(object sender, RoutedEventArgs e)
@@ -150,6 +158,16 @@ namespace Oblivion_Prototip
                     if (unos.ShowDialog() == true)
                     {
                         lvPrikazKomponenti.SelectedItem = unos.gpu;
+                        lvPrikazKomponenti.Items.Refresh();
+                    }
+                }
+                if (tip == "dvd")
+                {
+                    UnosDVDWindow unos = new UnosDVDWindow((DVD)lvPrikazKomponenti.SelectedItem, false);
+
+                    if (unos.ShowDialog() == true)
+                    {
+                        lvPrikazKomponenti.SelectedItem = unos.dvd;
                         lvPrikazKomponenti.Items.Refresh();
                     }
                 }
@@ -226,6 +244,16 @@ namespace Oblivion_Prototip
                     lvPrikazKomponenti.Items.Refresh();
                 }
             }
+            if (tip == "dvd")
+            {
+                UnosDVDWindow unos = new UnosDVDWindow(new DVD(0, "", "", jib_racunara), true);
+
+                if (unos.ShowDialog() == true)
+                {
+                    lvPrikazKomponenti.Items.Add(unos.dvd);
+                    lvPrikazKomponenti.Items.Refresh();
+                }
+            }
         }
 
         private void btnBrisanjeKomponente_Click(object sender, RoutedEventArgs e)
@@ -299,6 +327,17 @@ namespace Oblivion_Prototip
                 {
                     GPU gpu_za_brisanje = lvPrikazKomponenti.SelectedItem as GPU;
                     string cmd_string = "DELETE FROM `komponenta` WHERE idkomponenta = " + gpu_za_brisanje.IDKomponente;
+                    MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+                    cmd.ExecuteNonQuery();
+
+                    lvPrikazKomponenti.Items.Remove(lvPrikazKomponenti.SelectedItem);
+                    lvPrikazKomponenti.Items.Refresh();
+                }
+                if (tip == "dvd")
+                {
+                    DVD dvd_za_brisanje = lvPrikazKomponenti.SelectedItem as DVD;
+                    string cmd_string = "DELETE FROM `komponenta` WHERE idkomponenta = " + dvd_za_brisanje.IDKomponente;
                     MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
 
                     cmd.ExecuteNonQuery();

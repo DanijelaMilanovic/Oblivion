@@ -216,7 +216,7 @@
                             <DataGridTemplateColumn Width="*">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Button>
+                                        <Button Name="btnDVD" Click="btnDVD_Click" >
                                             <StackPanel Orientation="Horizontal">
                                                 <materialDesign:PackIcon Kind="RecordCircle" />
                                                 <TextBlock  Text=" DVD-ROM"/>

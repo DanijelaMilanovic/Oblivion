@@ -75,7 +75,7 @@
             VerticalAlignment="Center"
             Grid.Row="4" Grid.ColumnSpan="2" Background="{x:Null}" Width="400" Click="btnPotvrda_Click" IsDefault="True">
                 <StackPanel Orientation="Horizontal">
-                    <materialDesign:PackIcon Kind="DesktopClassic"/>
+                    <materialDesign:PackIcon Kind="Monitor"/>
                     <TextBlock Name="tbBtnUnos" Text="   Potvrdi unos monitora" />
                 </StackPanel>
             </Button>

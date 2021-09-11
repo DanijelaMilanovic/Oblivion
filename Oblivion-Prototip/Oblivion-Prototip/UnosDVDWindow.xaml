@@ -1,5 +1,5 @@
-﻿<Window x:Class="Oblivion_Prototip.UnosProcesorWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<Window x:Class="Oblivion_Prototip.UnosDVDWindow"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -22,8 +22,6 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="1.2*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -31,7 +29,7 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock x:Name="lblNaslov"  Foreground="White" Grid.ColumnSpan="2" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow" 
-                   Text="UNOS PROCESORA" 
+                   Text="UNOS DVD-ROM" 
                    VerticalAlignment="Center" />
 
             <TextBlock Foreground="White" Grid.Row="1" HorizontalAlignment="Right" TextWrapping="WrapWithOverflow" 
@@ -58,9 +56,9 @@
             </TextBox>
 
             <TextBlock Foreground="White" Grid.Row="3" HorizontalAlignment="Right" TextWrapping="WrapWithOverflow" 
-                   Text="Ime komponente:" Margin="0,0,15,0" 
+                   Text="Brzina:" Margin="0,0,15,0" 
                    VerticalAlignment="Center" />
-            <TextBox Name="tbImeKomponente" Grid.Column="1" HorizontalAlignment="Left" Height="23" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Width="180" Margin="15,0,0,0"  >
+            <TextBox Name="tbBrzina" Grid.Column="1" HorizontalAlignment="Left" Height="23" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Width="180" Margin="15,0,0,0" PreviewTextInput="tbBrzina_PreviewTextInput"  >
                 <TextBox.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="1"/>
@@ -68,43 +66,19 @@
                     </LinearGradientBrush>
                 </TextBox.Background>
             </TextBox>
-            <TextBlock Foreground="White" Grid.Row="4" HorizontalAlignment="Right" TextWrapping="WrapWithOverflow" 
-                   Text="Frekvencija:" Margin="0,0,15,0" 
+            <TextBlock Foreground="White" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow" 
+                   Text="MB/s" Margin="100,0,15,0" 
                    VerticalAlignment="Center" />
-            <TextBox Name="tbFrekvencija" Grid.Column="1" HorizontalAlignment="Left" Height="23" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Center" Width="180" Margin="15,0,0,0" PreviewTextInput="tbFrekvencija_PreviewTextInput"  >
-                <TextBox.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="1"/>
-                        <GradientStop Color="#FF495296"/>
-                    </LinearGradientBrush>
-                </TextBox.Background>
-            </TextBox>
-            <TextBlock Foreground="White" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow" 
-                   Text="GHz" Margin="100,0,15,0" 
-                   VerticalAlignment="Center" />
-
-            <TextBlock Foreground="White" Grid.Row="5" HorizontalAlignment="Right" TextWrapping="WrapWithOverflow" 
-                   Text="Broj jezgara:" Margin="0,0,15,0" 
-                   VerticalAlignment="Center" />
-            <TextBox Name="tbBrojJezgara" Grid.Column="1" HorizontalAlignment="Left" Height="23" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Center" Width="180" Margin="15,0,0,0"  >
-                <TextBox.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="1"/>
-                        <GradientStop Color="#FF495296"/>
-                    </LinearGradientBrush>
-                </TextBox.Background>
-            </TextBox>
-
             <Button Name="btnOdustani" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" Click="btnOdustani_Click">
                 <materialDesign:PackIcon Kind="WindowClose" />
             </Button>
             <Button x:Name="btnPotvrda"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Grid.Row="6" Grid.ColumnSpan="2" Background="{x:Null}" Width="400" Click="btnPotvrda_Click" IsDefault="True">
+            Grid.Row="4" Grid.ColumnSpan="2" Background="{x:Null}" Width="400" Click="btnPotvrda_Click" IsDefault="True">
                 <StackPanel Orientation="Horizontal">
-                    <materialDesign:PackIcon Kind="Cpu64Bit"/>
-                    <TextBlock Name="tbBtnUnos" Text="   Potvrdi unos procesora" />
+                    <materialDesign:PackIcon Kind="RecordCircle"/>
+                    <TextBlock Name="tbBtnUnos" Text="   Potvrdi unos HDD a" />
                 </StackPanel>
             </Button>
         </Grid>

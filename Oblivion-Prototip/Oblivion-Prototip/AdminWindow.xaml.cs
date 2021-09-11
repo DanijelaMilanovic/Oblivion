@@ -460,8 +460,46 @@ namespace Oblivion_Prototip
 
             spRacunar.Children.Add(prikaz);
             btnDodavanjeNovogRacunara.Visibility = Visibility.Hidden;
+        }
+        private void btnDVD_Click(object sender, RoutedEventArgs e)
+        {
+            DataRowView dataRowView = (DataRowView)((Button)e.Source).DataContext;
+            int jib_racunara = Convert.ToInt32(dataRowView[0].ToString());
+            string mrezno_ime = dataRowView[1].ToString();
+            UcPrikazKomponenti prikaz = new UcPrikazKomponenti(this, "dvd", jib_racunara);
 
 
+            string cmd_string = "SELECT * FROM `komponenta` WHERE racunar_idracunara = " + jib_racunara + " AND tip_komponente = 'DVD-ROM'";
+            MySqlCommand cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            ciscenjeSPaRacunar();
+            prikaz.lvPrikazKomponenti.Items.Clear();
+
+            while (reader.Read())
+            {
+                int IDKomponente = reader.GetInt32("idkomponenta");
+                string NazivProizvodjaca = reader["ime_proizvodjaca"].ToString();
+                string brzina = reader["brzina"].ToString();
+
+                prikaz.lvPrikazKomponenti.Items.Add(new DVD(IDKomponente, NazivProizvodjaca, brzina, jib_racunara));
+            }
+            reader.Close();
+
+            if (prikaz.lvPrikazKomponenti.Items.Count == 0)
+            {
+                UnosDVDWindow unos = new UnosDVDWindow(new DVD(0, "", "", jib_racunara), true);
+
+                if (unos.ShowDialog() == true)
+                {
+                    prikaz.lvPrikazKomponenti.Items.Add(unos.dvd);
+                    prikaz.lvPrikazKomponenti.Items.Refresh();
+                }
+            }
+
+            spRacunar.Children.Add(prikaz);
+            btnDodavanjeNovogRacunara.Visibility = Visibility.Hidden;
         }
         public void ciscenjeSPaRacunar()
         {

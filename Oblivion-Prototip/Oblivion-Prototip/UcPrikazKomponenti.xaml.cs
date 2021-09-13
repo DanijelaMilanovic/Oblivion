@@ -38,7 +38,7 @@ namespace Oblivion_Prototip
                 myPackIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.Monitor;
                 lblNaslov.Text = "MONITORI";
                 btnNaslovUnos.Text = " UNOS NOVOG MONITORA";
-                btnNaslovModifikacija.Text = " MODIFIKACIJA OZNAČENOG MONITORA";
+                btnNaslovModifikacija.Text = " MODIFIKACIJA MONITORA";
                 btnNaslovBrisanje.Text = " OBRIŠI OZNAČENI MONITOR";
             }
             if (this.tip == "procesor")

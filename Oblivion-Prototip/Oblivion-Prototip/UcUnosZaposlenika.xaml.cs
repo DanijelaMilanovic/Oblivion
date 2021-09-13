@@ -182,11 +182,11 @@ namespace Oblivion_Prototip
                         {
                             if (pbLozinka.Password == pbAutorizacija.Password)
                             {
-                                if (pbLozinka.Password.Length > 4)
+                                if (pbLozinka.Password.Length > 3)
                                 {
                                     try
                                     {
-                                        string cmd_string = "INSERT INTO `radnik` (`jmbg`,`ime`,`prezime`,`dat_zaposlenja`,`plata`,`mjesto_ptt`,`igraonica_reg_broj`,`administrator`,`korisnicko_ime`,`lozinka`) " +
+                                        string cmd_string = "INSERT INTO `radnik` (`jmbg`,`ime`,`prezime`,`dat_zaposlenja`,`plata`,`mjesto_ptt`,`igraonica_reg_broj`,`administrator`,`korisnicko_ime`,`lozinka`,`zaposlen`) " +
                                             "VALUES ('" + jmbg + "','" + ime + "','" + prezime + "','" + dat_zaposlenja + "'," + plata + "," + mjesto.PostanskiBroj + "," + igraonica_reg_broj + "," + administrator + ",'" + korisnickoIme + "'," +
                                             "PASSWORD('" + lozinka + "'),1)";
 
@@ -205,7 +205,7 @@ namespace Oblivion_Prototip
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Lozinka mora imati više od 4 karaktera.", "Upozorenje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                                    MessageBox.Show("Lozinka mora imati više od 3 karaktera.", "Upozorenje", MessageBoxButton.OK, MessageBoxImage.Warning);
                                 }
                             }
                             else

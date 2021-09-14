@@ -22,14 +22,16 @@ namespace Oblivion_Prototip
     public partial class ZaposleniWindow : Window
     {
         public Korisnik zaposlenik;
-        public List<UcIgrica> igrice;
+        public  static List<UcIgrica> igrice;
         public List<UcRacunar> racunari;
+        public static Korisnik zaposleni;
 
         public ZaposleniWindow(Korisnik korisnik)
         {
             InitializeComponent();
 
             this.zaposlenik = korisnik;
+            zaposleni = zaposlenik;
             igrice = new List<UcIgrica>();
             racunari = new List<UcRacunar>();
             UcitajRacunare();

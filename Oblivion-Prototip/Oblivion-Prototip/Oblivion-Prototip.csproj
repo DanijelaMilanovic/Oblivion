@@ -128,6 +128,9 @@
     <Compile Include="UcIgrica.xaml.cs">
       <DependentUpon>UcIgrica.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UcNaplati.xaml.cs">
+      <DependentUpon>UcNaplati.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UcPrikazKomponenti.xaml.cs">
       <DependentUpon>UcPrikazKomponenti.xaml</DependentUpon>
     </Compile>
@@ -200,6 +203,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UcIgrica.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UcNaplati.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

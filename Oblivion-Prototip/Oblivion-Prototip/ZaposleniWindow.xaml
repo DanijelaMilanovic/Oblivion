@@ -73,7 +73,7 @@
                     <ScrollViewer Margin="10" Grid.Row="1"  Grid.Column="0" VerticalScrollBarVisibility="Auto">
                     <WrapPanel x:Name="wrapRacunari"/>
                 </ScrollViewer>
-                    <StackPanel Name="spPodaci" Background="DimGray"  Grid.Column="1" Height="800"/>
+                    <StackPanel Name="spPodaci" Background="DimGray"  Grid.Column="1" Height="800" />
                 </Grid>
             </TabItem>
             <TabItem>

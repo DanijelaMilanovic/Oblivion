@@ -28,7 +28,7 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock x:Name="lblNaslov"  Foreground="White" Grid.ColumnSpan="3" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow" 
-                   Text="UNOS NOVOG ZAPOSLENIKA" 
+                   Text="UNOS NOVOG ZAPOSLENOG" 
                    VerticalAlignment="Center" />
 
         <Button Name="btnOdustani" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" Click="btnOdustani_Click">
@@ -48,7 +48,7 @@
             AcceptsReturn="True"
             TextWrapping="NoWrap"
             MaxWidth="200"
-            materialDesign:HintAssist.Hint="Ime zaposlenika" 
+            materialDesign:HintAssist.Hint="Ime zaposlenog" 
             Grid.Row="1" />
 
         <TextBox
@@ -60,7 +60,7 @@
             AcceptsReturn="True"
             TextWrapping="NoWrap"
             MaxWidth="200"
-            materialDesign:HintAssist.Hint="Prezime zaposlenika"
+            materialDesign:HintAssist.Hint="Prezime zaposlenog"
             Grid.Row="2" />
 
         <TextBox
@@ -146,7 +146,7 @@
             Grid.Row="4" Grid.ColumnSpan="3" Background="{x:Null}" Width="400" Click="btnPotvrda_Click" IsDefault="True">
             <StackPanel Orientation="Horizontal">
                 <materialDesign:PackIcon Name="myPackIcon" Kind="AccountPlusOutline" />
-                <TextBlock Name="btnPotvrdaTextBlock" Text=" REGISTRUJ NOVOG ZAPOSLENIKA"/>
+                <TextBlock Name="btnPotvrdaTextBlock" Text=" REGISTRUJ NOVOG ZAPOSLENOG"/>
             </StackPanel>
         </Button>
     </Grid>

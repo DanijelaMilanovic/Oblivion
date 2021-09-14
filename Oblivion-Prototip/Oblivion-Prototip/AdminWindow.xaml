@@ -61,7 +61,7 @@
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal" >
                         <materialDesign:PackIcon Kind="AccountOutline" Foreground="WhiteSmoke"/>
-                        <TextBlock Text=" ZAPOSLENICI  " Foreground="WhiteSmoke"/>
+                        <TextBlock Text=" ZAPOSLENI  " Foreground="WhiteSmoke"/>
                     </StackPanel>
                 </TabItem.Header>
                 <Grid>
@@ -105,7 +105,7 @@
                     <Button Name="btnDodajNovogZaposlenika" Grid.Row="1" Margin="5 0 5 0" Click="btnDodajNovogZaposlenika_Click">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="AccountPlusOutline" />
-                            <TextBlock Text=" DODAJ NOVOG ZAPOSLENIKA"/>
+                            <TextBlock Text=" DODAJ NOVOG ZAPOSLENOG"/>
                         </StackPanel>
                     </Button>
                     <StackPanel Margin="5" Grid.Row="1" Grid.RowSpan="2" Name="spDodavanjeZaposlenika"/>

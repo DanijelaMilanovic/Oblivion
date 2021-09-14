@@ -118,6 +118,9 @@
       <DependentUpon>PrikazInformacijaIgraonica.xaml</DependentUpon>
     </Compile>
     <Compile Include="Procesor.cs" />
+    <Compile Include="RacunWindow.xaml.cs">
+      <DependentUpon>RacunWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RAM.cs" />
     <Compile Include="UcPrikazKomponenti.xaml.cs">
       <DependentUpon>UcPrikazKomponenti.xaml</DependentUpon>
@@ -183,6 +186,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="PrikazInformacijaIgraonica.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RacunWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

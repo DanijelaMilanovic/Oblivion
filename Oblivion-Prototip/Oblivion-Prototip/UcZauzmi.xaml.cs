@@ -29,13 +29,14 @@ namespace Oblivion_Prototip
         int ukupnoFanta = 0;
 
         int brojRacunara = 0;
+        UcRacunar racunar;
 
-        public UcZauzmi(int brojRacunara, string naziv)
+        public UcZauzmi(UcRacunar racunar, int brojRacunara, string naziv)
         {
             InitializeComponent();
             this.brojRacunara = brojRacunara;
             lblNaziv.Content = naziv;
-
+            this.racunar = racunar;
             napuniIgrice();
         }
 
@@ -175,13 +176,38 @@ namespace Oblivion_Prototip
 
         private void btnZauzmi_Click(object sender, RoutedEventArgs e)
         {
-            //zapisati na kontrolu racunar vrijeme zaueto, poceti tajmer i trenutno sistemsko vrijeme
+            if (cmbIgrice.SelectedIndex != -1)
+            {
+                racunar.zauzmi(Double.Parse(txtUkupnoSati.Text));
+                //zapisati na kontrolu racunar vrijeme zaueto, poceti tajmer i trenutno sistemsko vrijeme
+                int igrac_id = 0;
 
-            //u bazu upisati igraca ako je novi 
+                if (txtID.Text == "")
+                {
+                    Random Rand = new Random();
+                    int rand = Rand.Next();
+                    string[] imeIPrezime = txtImeiPrezime.Text.Split(' ');
+                    string upit_igrac = "insert into igrac (idigrac,ime,prezime,redovnost,reg_broj_igraonica) values (" + rand + ",'" + imeIPrezime[0] + "','" + imeIPrezime[1] + "','Mjesečni posjetilac'," + ZaposleniWindow.zaposleni.RegBrojIgraonice + ")";
+                    MySqlCommand cmd_igrac = new MySqlCommand(upit_igrac, Connection.GetConnection());
 
-            //u bazu upisati igraca koji je zauzeo racunar 
+                    cmd_igrac.ExecuteNonQuery();
+                    igrac_id = rand;
+                }
+                else
+                {
+                    igrac_id = int.Parse(txtID.Text);
+                }
+                //u bazu upisati igraca ako je novi 
 
-            //unjeti podatke u tabelu naplacuje
+                string upit = "insert into igra VALUES ((SELECT idigrica FROM igrica WHERE naziv = '" + cmbIgrice.SelectedValue.ToString() + "')," + igrac_id + "," + racunar.BrojRacunara + ")";
+                MySqlCommand cmd = new MySqlCommand(upit, Connection.GetConnection());
+
+                cmd.ExecuteNonQuery();
+                //u bazu upisati igraca koji je zauzeo racunar 
+
+                //unjeti podatke u tabelu naplacuje
+                
+            }
         }
 
 

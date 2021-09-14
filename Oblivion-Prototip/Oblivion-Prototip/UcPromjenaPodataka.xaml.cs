@@ -60,18 +60,17 @@ namespace Oblivion_Prototip
                 {
                     if (pbLozinka.Password == pbAutorizacija.Password)
                     {
-                        if (pbLozinka.Password.Length > 4)
+                        if (pbLozinka.Password.Length > 3)
                         {
                             bool izvrsena_promjena = parentWindow.admin.promjenaKorisnickogImenaiSifre(tbKorisnickoIme.Text, pbLozinka.Password, (bool)cbPromjenaSifre.IsChecked);
                             if (izvrsena_promjena)
                             {
                                 parentWindow.btnOdjava.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                            }
-                           
+                            }    
                         }
                         else
                         {
-                            MessageBox.Show("Lozinka mora imati više od 4 karaktera.", "Upozorenje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                            MessageBox.Show("Lozinka mora imati više od 3 karaktera.", "Upozorenje", MessageBoxButton.OK, MessageBoxImage.Warning);
                         }
                     }
                     else
@@ -98,7 +97,5 @@ namespace Oblivion_Prototip
                 MessageBox.Show("Unesite korisničko ime.", "Upozorenje", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
-
-     
     }
 }

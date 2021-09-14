@@ -120,6 +120,7 @@ namespace Oblivion_Prototip
                         if (zaposleniUpravljanje.DialogResult == true)
                         {
                             this.Show();
+                            tbKorisnickoIme.Focus();
                         }
                         else
                         {

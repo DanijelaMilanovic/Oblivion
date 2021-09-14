@@ -535,15 +535,7 @@ namespace Oblivion_Prototip
 
         #endregion
 
-        #region info o igraonici
-        private void btnIgraonica_Click(object sender, RoutedEventArgs e)
-        {
-            PrikazInformacijaIgraonica prikaz_info = new PrikazInformacijaIgraonica(admin);
-
-            prikaz_info.Show();
-        }
-        #endregion
-
+        #region usluge
         private void dataUsluge_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
         {
             dataUsluge.UnselectAllCells();
@@ -584,5 +576,15 @@ namespace Oblivion_Prototip
             }
             catch { }
         }
+        #endregion
+
+        #region info o igraonici
+        private void btnIgraonica_Click(object sender, RoutedEventArgs e)
+        {
+            PrikazInformacijaIgraonica prikaz_info = new PrikazInformacijaIgraonica(admin);
+
+            prikaz_info.Show();
+        }
+        #endregion
     }
 }

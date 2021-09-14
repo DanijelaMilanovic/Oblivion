@@ -21,20 +21,79 @@ namespace Oblivion_Prototip
     public partial class UcRacunar : UserControl
     {
         StackPanel podaci;
-        int brojRacunara = 0;
+        public int BrojRacunara { get; set; }
+        public string MreznoIme { get; set; }
+        public bool zauzet { get; set; }
+        System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+        TimeSpan vrijeme_zauzeca;
+
         public UcRacunar(string mrezno_ime,StackPanel podaci,int brojRacunara)
         {
             InitializeComponent();
             lblNaziv.Content = mrezno_ime;
             this.podaci = podaci;
-            this.brojRacunara = brojRacunara;
+            this.BrojRacunara = brojRacunara;
+            this.MreznoIme = mrezno_ime;
+            this.zauzet = false;
+            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
         }
 
         private void UserControl_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             podaci.Children.Clear();
-            UcZauzmi zauzmi = new UcZauzmi(brojRacunara,lblNaziv.Content.ToString());
+            UcZauzmi zauzmi = new UcZauzmi(this,BrojRacunara,lblNaziv.Content.ToString());
             podaci.Children.Add(zauzmi);
+        }
+
+        public void zauzmi(double broj_sati)
+        {
+            vrijeme_zauzeca = TimeSpan.FromHours(broj_sati);
+            dispatcherTimer.Start();
+            lblDolazak.Content = DateTime.Now.ToString("HH:mm:ss");
+
+            lblUplatio.Content = vrijeme_zauzeca.ToString("c");
+            lblPreostalo.Content = vrijeme_zauzeca.ToString("c");
+            lblPreostalo.Foreground = Brushes.Red;
+            zauzet = true;
+
+            foreach (UcIgrica igrica in ZaposleniWindow.igrice)
+            {
+                foreach (TextBlock naziv in igrica.spRacunari.Children)
+                {
+                    if (naziv.Text == this.MreznoIme)
+                    {
+                        naziv.Foreground = Brushes.Red;
+                    }
+                }
+            }
+        }
+
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            if (TimeSpan.Compare(vrijeme_zauzeca, TimeSpan.Zero) != 0)
+            {
+                vrijeme_zauzeca = vrijeme_zauzeca - TimeSpan.FromSeconds(1);
+                lblPreostalo.Content = vrijeme_zauzeca.ToString("c");
+            }
+            else
+            {
+                zauzet = false;
+                lblDolazak.Content = "00:00:00";
+                lblUplatio.Content = "00:00:00";
+                lblPreostalo.Content = "00:00:00";
+                foreach (UcIgrica igrica in ZaposleniWindow.igrice)
+                {
+                    foreach (TextBlock naziv in igrica.spRacunari.Children)
+                    {
+                        if (naziv.Text == this.MreznoIme)
+                        {
+                            naziv.Foreground = Brushes.WhiteSmoke;
+                            lblPreostalo.Foreground = Brushes.WhiteSmoke;
+                        }
+                    }
+                }
+            }
         }
     }
 }

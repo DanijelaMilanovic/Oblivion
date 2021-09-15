@@ -53,14 +53,48 @@ C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion
 C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\ZaposleniWindow.baml
 C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcPromjenaPodataka.g.cs
 C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcPromjenaPodataka.baml
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\PrikazInformacijaIgraonica.g.cs
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcPrikazKomponenti.g.cs
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcZauzmi.g.cs
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosDVDWindow.g.cs
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosGPUWindow.g.cs
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosHDDWindow.g.cs
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosMaticnaWindow.g.cs
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosMonitorWindow.g.cs
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosProcesorWindow.g.cs
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosRacunaraWindow.g.cs
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosRAMWindow.g.cs
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\PrikazInformacijaIgraonica.baml
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcPrikazKomponenti.baml
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcZauzmi.baml
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosDVDWindow.baml
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosGPUWindow.baml
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosHDDWindow.baml
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosMaticnaWindow.baml
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosMonitorWindow.baml
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosProcesorWindow.baml
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosRacunaraWindow.baml
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosRAMWindow.baml
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.csprojAssemblyReference.cache
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\AdminWindow.g.cs
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\MainWindow.g.cs
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\PrikazInformacijaIgraonica.g.cs
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\PromjenaPodatakaWindow.g.cs
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcIgrica.g.cs
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcNaplati.g.cs
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcPrikazKomponenti.g.cs
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcPromjenaPodataka.g.cs
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcRacunar.g.cs
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcUnosZaposlenika.g.cs
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcZauzmi.g.cs
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosDVDWindow.g.cs
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosGPUWindow.g.cs
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosHDDWindow.g.cs
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosMaticnaWindow.g.cs
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosMonitorWindow.g.cs
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosProcesorWindow.g.cs
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosRacunaraWindow.g.cs
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosRAMWindow.g.cs
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\ZaposleniWindow.g.cs
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\App.g.cs
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip_MarkupCompile.cache
@@ -68,6 +102,7 @@ C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Obli
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\Oblivion-Prototip.exe.config
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\Oblivion-Prototip.exe
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\Oblivion-Prototip.pdb
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\DotNetProjects.Input.Toolkit.dll
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\Dragablz.dll
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\MaterialDesignColors.dll
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\MaterialDesignThemes.Wpf.dll
@@ -99,12 +134,23 @@ C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Obli
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\App.baml
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\AdminWindow.baml
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\MainWindow.baml
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\PrikazInformacijaIgraonica.baml
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\PromjenaPodatakaWindow.baml
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcIgrica.baml
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcNaplati.baml
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcPrikazKomponenti.baml
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcPromjenaPodataka.baml
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcRacunar.baml
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcUnosZaposlenika.baml
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcZauzmi.baml
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosDVDWindow.baml
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosGPUWindow.baml
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosHDDWindow.baml
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosMaticnaWindow.baml
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosMonitorWindow.baml
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosProcesorWindow.baml
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosRacunaraWindow.baml
+C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosRAMWindow.baml
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\ZaposleniWindow.baml
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.g.resources
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion_Prototip.Properties.Resources.resources
@@ -113,49 +159,3 @@ C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Obli
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.csproj.CopyComplete
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.exe
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.pdb
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcZauzmi.g.cs
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcZauzmi.baml
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosProcesorWindow.g.cs
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosProcesorWindow.baml
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosMaticnaWindow.g.cs
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosMaticnaWindow.baml
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosRAMWindow.g.cs
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosRAMWindow.baml
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosHDDWindow.g.cs
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosHDDWindow.baml
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosGPUWindow.g.cs
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosGPUWindow.baml
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\PrikazInformacijaIgraonica.g.cs
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosDVDWindow.g.cs
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\PrikazInformacijaIgraonica.baml
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosDVDWindow.baml
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\PrikazInformacijaIgraonica.g.cs
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcPrikazKomponenti.g.cs
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcZauzmi.g.cs
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosDVDWindow.g.cs
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosGPUWindow.g.cs
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosHDDWindow.g.cs
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosMaticnaWindow.g.cs
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosMonitorWindow.g.cs
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosProcesorWindow.g.cs
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosRacunaraWindow.g.cs
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosRAMWindow.g.cs
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\PrikazInformacijaIgraonica.baml
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcPrikazKomponenti.baml
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcZauzmi.baml
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosDVDWindow.baml
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosGPUWindow.baml
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosHDDWindow.baml
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosMaticnaWindow.baml
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosMonitorWindow.baml
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosProcesorWindow.baml
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosRacunaraWindow.baml
-C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UnosRAMWindow.baml
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\PromjenaPodatakaWindow.g.cs
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\PromjenaPodatakaWindow.baml
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcIgrica.g.cs
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcIgrica.baml
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\DotNetProjects.Input.Toolkit.dll
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.csprojAssemblyReference.cache
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcNaplati.g.cs
-C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcNaplati.baml

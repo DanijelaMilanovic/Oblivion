@@ -82,9 +82,13 @@ namespace Oblivion_Prototip
 
         private void txtUkupnoSati_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if(txtUkupnoSati.Text == "")
+            if (txtUkupnoSati.Text == "")
             {
                 ukupnoSati = 0;
+            }
+            else
+            {
+                ukupnoSati = Double.Parse(txtUkupnoSati.Text);
             }
         }
 
@@ -142,6 +146,10 @@ namespace Oblivion_Prototip
             {
                 ukupnoKafa = 0;
             }
+            else
+            {
+                ukupnoKafa = int.Parse(txtKolicinaKafa.Text);
+            }
         }
 
         private void txtKolicinaVoda_TextChanged(object sender, TextChangedEventArgs e)
@@ -149,6 +157,10 @@ namespace Oblivion_Prototip
             if (txtKolicinaVoda.Text == "")
             {
                 ukupnoVoda = 0;
+            }
+            else
+            {
+                ukupnoVoda = int.Parse(txtKolicinaVoda.Text);
             }
         }
 
@@ -158,6 +170,10 @@ namespace Oblivion_Prototip
             {
                 ukupnoKokaKola = 0;
             }
+            else
+            {
+                ukupnoKokaKola = int.Parse(txtKolicinaKokaKola.Text);
+            }
         }
 
         private void txtKolicinaFanta_TextChanged(object sender, TextChangedEventArgs e)
@@ -165,6 +181,10 @@ namespace Oblivion_Prototip
             if (txtKolicinaFanta.Text == "")
             {
                 ukupnoFanta = 0;
+            }
+            else
+            {
+                ukupnoFanta = int.Parse(txtKolicinaFanta.Text);
             }
         }
 
@@ -178,11 +198,10 @@ namespace Oblivion_Prototip
         {
             if (cmbIgrice.SelectedIndex != -1)
             {
-                racunar.zauzmi(Double.Parse(txtUkupnoSati.Text));
                 //zapisati na kontrolu racunar vrijeme zaueto, poceti tajmer i trenutno sistemsko vrijeme
                 int igrac_id = 0;
 
-                if (txtID.Text == "")
+                if (txtID.Text == "" && txtImeiPrezime.Text != "")
                 {
                     Random Rand = new Random();
                     int rand = Rand.Next();
@@ -203,10 +222,13 @@ namespace Oblivion_Prototip
                 MySqlCommand cmd = new MySqlCommand(upit, Connection.GetConnection());
 
                 cmd.ExecuteNonQuery();
-                //u bazu upisati igraca koji je zauzeo racunar 
 
+                racunar.zauzmi(ukupnoSati, ukupnoKokaKola, ukupnoFanta, ukupnoKafa, ukupnoVoda, igrac_id);
+
+                //u bazu upisati igraca koji je zauzeo racunar 
+                ZaposleniWindow.sp.Children.Clear();
                 //unjeti podatke u tabelu naplacuje
-                
+
             }
         }
 

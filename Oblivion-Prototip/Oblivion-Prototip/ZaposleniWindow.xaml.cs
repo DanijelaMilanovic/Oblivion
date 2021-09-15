@@ -25,6 +25,7 @@ namespace Oblivion_Prototip
         public  static List<UcIgrica> igrice;
         public List<UcRacunar> racunari;
         public static Korisnik zaposleni;
+        public static StackPanel sp;
 
         public ZaposleniWindow(Korisnik korisnik)
         {
@@ -37,6 +38,7 @@ namespace Oblivion_Prototip
             UcitajRacunare();
             UcitajIgrice();
             acSearchBox.FilterMode = AutoCompleteFilterMode.Contains;
+            sp = spPodaci;
         }
 
         /// <summary>

@@ -6,11 +6,11 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:Oblivion_Prototip"
              mc:Ignorable="d" 
-             d:DesignHeight="700" d:DesignWidth="400" Background="DimGray">
+             Height="600" d:DesignWidth="400" Background="DimGray">
 
     <!-- Definicija redova -->
 
-    <Border BorderBrush="	#353935" BorderThickness="2" CornerRadius="2" Margin="10">
+    <Border BorderBrush="#353935" BorderThickness="2" CornerRadius="2" Margin="5,0,5,0" >
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="82*"/>
@@ -20,17 +20,17 @@
                 <ColumnDefinition Width="81*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="20*"/>
-                <RowDefinition Height="5*"/>
-                <RowDefinition Height="10*"/>
-                <RowDefinition Height="10*"/>
-                <RowDefinition Height="5*"/>
-                <RowDefinition Height="15*"/>
-                <RowDefinition Height="8*"/>
-                <RowDefinition Height="5*"/>
-                <RowDefinition Height="15*"/>
+                <RowDefinition Height="17*"/>
+                <RowDefinition Height="4.5*"/>
                 <RowDefinition Height="8*"/>
                 <RowDefinition Height="8*"/>
+                <RowDefinition Height="4.5*"/>
+                <RowDefinition Height="12*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="4.5*"/>
+                <RowDefinition Height="12*"/>
+                <RowDefinition Height="7*"/>
+                <RowDefinition Height="7*"/>
             </Grid.RowDefinitions>
 
             <!-- Zaglavlje -->
@@ -42,9 +42,9 @@
                         <GradientStop Color="#FF673AB7" Offset="0.627"/>
                     </LinearGradientBrush>
                 </StackPanel.Background>
-                <Image Source="imageRacunar-removebg-preview.png" Stretch="Fill" Height="138" />
+                <Image Source="imageRacunar-removebg-preview.png" Stretch="Fill" Height="100" />
             </StackPanel>
-            <Label Name="lblNaziv" Content="Racunar__1" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="27" FontWeight="Bold" Grid.ColumnSpan="4">
+            <Label Name="lblNaziv" Content="Racunar__1" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontWeight="Bold" Grid.ColumnSpan="4">
                 <Label.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="White" Offset="0"/>
@@ -69,10 +69,10 @@
                 AcceptsReturn="True" TextWrapping="NoWrap" MaxWidth="250" materialDesign:HintAssist.Hint="Ime i prezime igrača" 
                 Grid.Row="2"/>
             <TextBox Name="txtID"  Background="DimGray" Foreground="White" VerticalAlignment="Center" Style="{StaticResource MaterialDesignFilledTextBox}"
-                AcceptsReturn="True" TextWrapping="NoWrap" MaxWidth="150" materialDesign:HintAssist.Hint="ID" 
+                AcceptsReturn="True" TextWrapping="NoWrap" MaxWidth="120" materialDesign:HintAssist.Hint="ID" Margin="0,0,5,0"
                 Grid.Row="2" Grid.Column="4"/>
             <ComboBox Name="cmbIgrice" materialDesign:HintAssist.Hint="Igrica koju igra" Background="DimGray" Foreground="White" materialDesign:HintAssist.HintOpacity=".26"
-                MaxWidth="350" Height="40" IsEditable="True" Grid.Row="3" Grid.ColumnSpan="5" Grid.Column="0" MaxDropDownHeight="250" Margin="0,10"/>
+                MaxWidth="350" Height="40" IsEditable="True" Grid.Row="3" Grid.ColumnSpan="5" Grid.Column="0" MaxDropDownHeight="250" Margin="0,5"/>
 
 
             <!-- Vrijeme -->
@@ -87,7 +87,7 @@
                     </LinearGradientBrush>
                 </Label.Background>
             </Label>
-            <Button Name="btn3sata" HorizontalAlignment="Center" Grid.Column="4" Grid.Row="5" VerticalAlignment="Center" Width="60" Height="60"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,10,14" Click="btn3sata_Click">
+            <Button Name="btn3sata" HorizontalAlignment="Center" Grid.Column="4" Grid.Row="5" VerticalAlignment="Center" Width="50" Height="50"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,10,14" Click="btn3sata_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="3sata-removebg-preview-removebg-preview.jpg" Stretch="UniformToFill"/>
                 </Button.Background>
@@ -97,7 +97,7 @@
                     </ToolTip>
                 </Button.ToolTip>
             </Button>
-            <Button Name="btn30min" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" Width="60" Height="60"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,11,14" Click="btn30min_Click">
+            <Button Name="btn30min" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" Width="50" Height="50"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,11,14" Click="btn30min_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="30min2-removebg-preview-removebg-preview.jpg" Stretch="UniformToFill"/>
                 </Button.Background>
@@ -107,7 +107,7 @@
                     </ToolTip>
                 </Button.ToolTip>
             </Button>
-            <Button Name="btn1Sat" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Width="60" Height="60"  Style="{StaticResource MaterialDesignFloatingActionButton}" Grid.ColumnSpan="2" Margin="11,15,11,14" Click="btn1Sat_Click">
+            <Button Name="btn1Sat" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Width="50" Height="50"  Style="{StaticResource MaterialDesignFloatingActionButton}" Grid.ColumnSpan="2" Margin="11,15,11,14" Click="btn1Sat_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="1sat-removebg-preview-removebg-preview.jpg" Stretch="UniformToFill"/>
                 </Button.Background>
@@ -117,7 +117,7 @@
                     </ToolTip>
                 </Button.ToolTip>
             </Button>
-            <Button Name="btn2Sata" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="5" VerticalAlignment="Center" Width="60" Height="60"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="10,15,11,14" Click="btn2Sata_Click">
+            <Button Name="btn2Sata" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="5" VerticalAlignment="Center" Width="50" Height="50"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="10,15,11,14" Click="btn2Sata_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="2sata-removebg-preview-removebg-preview.jpg" Stretch="UniformToFill"/>
                 </Button.Background>
@@ -143,7 +143,7 @@
                     </LinearGradientBrush>
                 </Label.Background>
             </Label>
-            <Button Name="btnKafa" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="8" VerticalAlignment="Center" Width="60" Height="60"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,10,14" Click="btnKafa_Click">
+            <Button Name="btnKafa" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="8" VerticalAlignment="Center" Width="50" Height="50"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,10,14" Click="btnKafa_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="kafa.jpg" Stretch="UniformToFill"/>
                 </Button.Background>
@@ -155,7 +155,7 @@
             </Button>
             <TextBox Name="txtKolicinaKafa" Grid.Column="0" Foreground="White" HorizontalAlignment="Center" Margin="0,0,10,0" Height="24" Grid.Row="9" TextWrapping="NoWrap" Text="0" VerticalAlignment="Center" Width="50" PreviewTextInput="txtKolicinaKafa_PreviewTextInput" TextChanged="txtKolicinaKafa_TextChanged"/>
 
-            <Button Name="btnVoda" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="8" VerticalAlignment="Center" Width="60" Height="60"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,10,14" Click="btnVoda_Click">
+            <Button Name="btnVoda" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="8" VerticalAlignment="Center" Width="50" Height="50"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,10,14" Click="btnVoda_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="voda.jpg" Stretch="UniformToFill"/>
                 </Button.Background>
@@ -166,7 +166,7 @@
                 </Button.ToolTip>
             </Button>
             <TextBox Name="txtKolicinaVoda" Grid.Column="1" Grid.ColumnSpan="2" Foreground="White" HorizontalAlignment="Center" Margin="0,0,10,0" Height="24" Grid.Row="9" TextWrapping="NoWrap" Text="0" VerticalAlignment="Center" Width="50" PreviewTextInput="txtKolicinaVoda_PreviewTextInput" TextChanged="txtKolicinaVoda_TextChanged" />
-            <Button Name="btnKokaKola" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="8" VerticalAlignment="Center" Width="60" Height="60"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,10,14" Click="btnKokaKola_Click">
+            <Button Name="btnKokaKola" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="8" VerticalAlignment="Center" Width="50" Height="50"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,10,14" Click="btnKokaKola_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="kokakola.png" Stretch="UniformToFill"/>
                 </Button.Background>
@@ -177,7 +177,7 @@
                 </Button.ToolTip>
             </Button>
             <TextBox Name="txtKolicinaKokaKola" Grid.Column="3" Foreground="White" HorizontalAlignment="Center" Margin="0,0,10,0" Height="24" Grid.Row="9" TextWrapping="NoWrap" Text="0" VerticalAlignment="Center" Width="50" PreviewTextInput="txtKolicinaKokaKola_PreviewTextInput" TextChanged="txtKolicinaKokaKola_TextChanged"/>
-            <Button Name="btnFanta" HorizontalAlignment="Center" Grid.Column="4" Grid.Row="8" VerticalAlignment="Center" Width="60" Height="60"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,10,14" Click="btnFanta_Click">
+            <Button Name="btnFanta" HorizontalAlignment="Center" Grid.Column="4" Grid.Row="8" VerticalAlignment="Center" Width="50" Height="50"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,10,14" Click="btnFanta_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="fanta.png" Stretch="UniformToFill"/>
                 </Button.Background>
@@ -188,8 +188,7 @@
                 </Button.ToolTip>
             </Button>
             <TextBox Name="txtKolicinaFanta" Grid.Column="4" Foreground="White" HorizontalAlignment="Center" Margin="0,0,10,0" Height="24" Grid.Row="9" TextWrapping="NoWrap" Text="0" VerticalAlignment="Center" Width="50" PreviewTextInput="txtKolicinaFanta_PreviewTextInput" TextChanged="txtKolicinaFanta_TextChanged" />
-            <Button Name="btnZauzmi" Content="ZAUZMI" Margin="10,0" Grid.ColumnSpan="5" Grid.Row="10" Click="btnZauzmi_Click" />
-
+            <Button Name="btnZauzmi" Content="ZAUZMI" Margin="10,10,10,10" Grid.ColumnSpan="5" Grid.Row="10" Click="btnZauzmi_Click" />
         </Grid>
     </Border>
 </UserControl>

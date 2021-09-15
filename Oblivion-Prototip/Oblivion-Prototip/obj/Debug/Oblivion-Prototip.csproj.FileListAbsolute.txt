@@ -159,3 +159,10 @@ C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Obli
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\Oblivion-Prototip.csprojAssemblyReference.cache
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcNaplati.g.cs
 C:\Users\Korisnik\Desktop\Projekat SI\Projekat igraonica\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcNaplati.baml
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\bin\Debug\DotNetProjects.Input.Toolkit.dll
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\PromjenaPodatakaWindow.g.cs
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcIgrica.g.cs
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcNaplati.g.cs
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\PromjenaPodatakaWindow.baml
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcIgrica.baml
+C:\Users\Notebook\Desktop\Projekti\Projekat_Igraonica\Oblivion-Prototip\Oblivion-Prototip\obj\Debug\UcNaplati.baml

@@ -60,6 +60,7 @@ namespace Oblivion_Prototip
         #region SignIn
         private void btnSignIn_Click(object sender, RoutedEventArgs e)
         {
+
             MySqlDataReader reader = null;
             try
             {

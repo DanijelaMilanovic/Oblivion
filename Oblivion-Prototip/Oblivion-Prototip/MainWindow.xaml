@@ -29,8 +29,9 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Image Name="imgLogo" Grid.Column="1" Height="450" Width="450" Source="logo.png" Grid.RowSpan="2"/>
 
+        <Image Name="imgLogo" Grid.Column="1" Height="450" Width="450" Source="logo.png" Grid.RowSpan="2"/>
+        
         <TextBox
             Name="tbKorisnickoIme"
             Background="#AA0B0808"

@@ -187,7 +187,13 @@ namespace Oblivion_Prototip
 
                 cmd.ExecuteNonQuery();
 
-                cmd_string = "DELETE FROM `racunar`WHERE broj_racunara = " + jib_racunara;
+
+                cmd_string = "DELETE FROM `igra` WHERE racunar_idracunara = " + jib_racunara;
+                cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
+
+                cmd.ExecuteNonQuery();
+
+                cmd_string = "DELETE FROM `racunar` WHERE broj_racunara = " + jib_racunara;
                 cmd = new MySqlCommand(cmd_string, Connection.GetConnection());
 
                 cmd.ExecuteNonQuery();

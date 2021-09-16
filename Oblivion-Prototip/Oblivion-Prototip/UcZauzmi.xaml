@@ -6,7 +6,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:Oblivion_Prototip"
              mc:Ignorable="d" 
-             Height="600" d:DesignWidth="400" Background="DimGray">
+             Height="650" d:DesignWidth="400" Background="DimGray">
 
     <!-- Definicija redova -->
 
@@ -87,7 +87,7 @@
                     </LinearGradientBrush>
                 </Label.Background>
             </Label>
-            <Button Name="btn3sata" HorizontalAlignment="Center" Grid.Column="4" Grid.Row="5" VerticalAlignment="Center" Width="50" Height="50"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,10,14" Click="btn3sata_Click">
+            <Button Name="btn3sata" HorizontalAlignment="Center" Grid.Column="4" Grid.Row="5" VerticalAlignment="Center" Width="60" Height="60"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,10,14" Click="btn3sata_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="3sata-removebg-preview-removebg-preview.jpg" Stretch="UniformToFill"/>
                 </Button.Background>
@@ -97,7 +97,7 @@
                     </ToolTip>
                 </Button.ToolTip>
             </Button>
-            <Button Name="btn30min" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" Width="50" Height="50"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,11,14" Click="btn30min_Click">
+            <Button Name="btn30min" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" Width="60" Height="60"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,11,14" Click="btn30min_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="30min2-removebg-preview-removebg-preview.jpg" Stretch="UniformToFill"/>
                 </Button.Background>
@@ -107,7 +107,7 @@
                     </ToolTip>
                 </Button.ToolTip>
             </Button>
-            <Button Name="btn1Sat" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Width="50" Height="50"  Style="{StaticResource MaterialDesignFloatingActionButton}" Grid.ColumnSpan="2" Margin="11,15,11,14" Click="btn1Sat_Click">
+            <Button Name="btn1Sat" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Width="60" Height="60"  Style="{StaticResource MaterialDesignFloatingActionButton}" Grid.ColumnSpan="2" Margin="11,15,11,14" Click="btn1Sat_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="1sat-removebg-preview-removebg-preview.jpg" Stretch="UniformToFill"/>
                 </Button.Background>
@@ -117,7 +117,7 @@
                     </ToolTip>
                 </Button.ToolTip>
             </Button>
-            <Button Name="btn2Sata" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="5" VerticalAlignment="Center" Width="50" Height="50"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="10,15,11,14" Click="btn2Sata_Click">
+            <Button Name="btn2Sata" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="5" VerticalAlignment="Center" Width="60" Height="60"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="10,15,11,14" Click="btn2Sata_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="2sata-removebg-preview-removebg-preview.jpg" Stretch="UniformToFill"/>
                 </Button.Background>
@@ -143,7 +143,7 @@
                     </LinearGradientBrush>
                 </Label.Background>
             </Label>
-            <Button Name="btnKafa" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="8" VerticalAlignment="Center" Width="50" Height="50"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,10,14" Click="btnKafa_Click">
+            <Button Name="btnKafa" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="8" VerticalAlignment="Center" Width="60" Height="60"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,10,14" Click="btnKafa_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="kafa.jpg" Stretch="UniformToFill"/>
                 </Button.Background>
@@ -155,7 +155,7 @@
             </Button>
             <TextBox Name="txtKolicinaKafa" Grid.Column="0" Foreground="White" HorizontalAlignment="Center" Margin="0,0,10,0" Height="24" Grid.Row="9" TextWrapping="NoWrap" Text="0" VerticalAlignment="Center" Width="50" PreviewTextInput="txtKolicinaKafa_PreviewTextInput" TextChanged="txtKolicinaKafa_TextChanged"/>
 
-            <Button Name="btnVoda" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="8" VerticalAlignment="Center" Width="50" Height="50"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,10,14" Click="btnVoda_Click">
+            <Button Name="btnVoda" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="8" VerticalAlignment="Center" Width="60" Height="60"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,10,14" Click="btnVoda_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="voda.jpg" Stretch="UniformToFill"/>
                 </Button.Background>
@@ -166,7 +166,7 @@
                 </Button.ToolTip>
             </Button>
             <TextBox Name="txtKolicinaVoda" Grid.Column="1" Grid.ColumnSpan="2" Foreground="White" HorizontalAlignment="Center" Margin="0,0,10,0" Height="24" Grid.Row="9" TextWrapping="NoWrap" Text="0" VerticalAlignment="Center" Width="50" PreviewTextInput="txtKolicinaVoda_PreviewTextInput" TextChanged="txtKolicinaVoda_TextChanged" />
-            <Button Name="btnKokaKola" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="8" VerticalAlignment="Center" Width="50" Height="50"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,10,14" Click="btnKokaKola_Click">
+            <Button Name="btnKokaKola" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="8" VerticalAlignment="Center" Width="60" Height="60"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,10,14" Click="btnKokaKola_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="kokakola.png" Stretch="UniformToFill"/>
                 </Button.Background>
@@ -177,7 +177,7 @@
                 </Button.ToolTip>
             </Button>
             <TextBox Name="txtKolicinaKokaKola" Grid.Column="3" Foreground="White" HorizontalAlignment="Center" Margin="0,0,10,0" Height="24" Grid.Row="9" TextWrapping="NoWrap" Text="0" VerticalAlignment="Center" Width="50" PreviewTextInput="txtKolicinaKokaKola_PreviewTextInput" TextChanged="txtKolicinaKokaKola_TextChanged"/>
-            <Button Name="btnFanta" HorizontalAlignment="Center" Grid.Column="4" Grid.Row="8" VerticalAlignment="Center" Width="50" Height="50"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,10,14" Click="btnFanta_Click">
+            <Button Name="btnFanta" HorizontalAlignment="Center" Grid.Column="4" Grid.Row="8" VerticalAlignment="Center" Width="60" Height="60"  Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="11,15,10,14" Click="btnFanta_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="fanta.png" Stretch="UniformToFill"/>
                 </Button.Background>

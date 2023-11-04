@@ -35,7 +35,7 @@ Oblivion is a system designed for the management of a chain of gaming centers. I
 
 ## Technical Specifications
 
-- The application is developed as a desktop application using WPF and C# for the user interface.
+- The application is developed as a desktop application using WPF .NET (.NET Framework 4.5).
 - Data is stored in a MySQL database.
 
 ## Prototype Startup

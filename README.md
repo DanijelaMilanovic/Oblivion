@@ -46,9 +46,7 @@ To run the prototype, use the following specifications:
 - Visual Studio Version: 16.0.31205.134
 - Minimum Visual Studio Version: 10.0.40219.1
 
-The MySQL database is required for the application, and the script can be found at the following path in the repository:
-
-`Oblivion-Baza/igraonica.sql`
+The MySQL database is required for the application, and the script can be found at the following path in the repository: `Oblivion-Baza/igraonica.sql`
 
 ## Authors
 
